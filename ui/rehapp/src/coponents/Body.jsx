@@ -1,9 +1,11 @@
-<<<<<<< Updated upstream
-import { textAlign } from "@mui/system";
+/* eslint-disable no-use-before-define */
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/default-props-match-prop-types */
 import PropTypes from "prop-types";
 
 const Body = function ({ title }) {
   return (
+    // eslint-disable-next-line react/jsx-no-comment-textnodes
     <body>
       <h1 style={bodyStyle}>{title}</h1>
     </body>
@@ -12,34 +14,13 @@ const Body = function ({ title }) {
 
 Body.defaultProps = {
   title:
+    // eslint-disable-next-line no-multi-str
     "Rejestrując się do naszej aplikacji dowiesz się,\
-    jakie badania warto wykonać po przejściu COVID-19, jak dieta jest dla Ciebie najlepsza,\
-    a także jakie ćwiczenia warto wykonywać, by polepszyć jakoś życia.\
+    jakie badania warto wykonać po przejściu COVID-19, jaka dieta jest dla Ciebie najlepsza,\
+    a także jakie ćwiczenia warto wykonywać, by polepszyć jakość życia.\
     \n Zapraszamy!",
 };
 
-=======
-import { textAlign } from '@mui/system'
-import PropTypes from 'prop-types'
-
-function Body({title}) {
-    return (
-        <body>
-             <h1 style={bodyStyle}>
-                {title}
-            </h1>
-        </body>
-    )
-}
-
-Body.defaultProps = {
-    title: 'Rejestrując się do naszej aplikacji dowiesz się,\
-    jakie badania warto wykonać po przejściu COVID-19, jaka dieta jest dla Ciebie najlepsza,\
-    a także jakie ćwiczenia warto wykonywać, by polepszyć jakość życia.\
-    \n Zapraszamy!'
-}
-   
->>>>>>> Stashed changes
 Body.propTypes = {
   title: PropTypes.string.isRequired,
 };

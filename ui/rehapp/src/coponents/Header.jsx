@@ -1,6 +1,6 @@
-import { fontSize, shadows } from "@mui/system";
-
-const Header = function ({ title }) {
+/* eslint-disable no-use-before-define */
+// eslint-disable-next-line func-names
+const Header = function () {
   return (
     <header>
       <h1 style={headingStyle}>WITAMY!</h1>

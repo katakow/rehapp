@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { textAlign } from "@mui/system";
 import PropTypes from "prop-types";
 
@@ -17,6 +18,28 @@ Body.defaultProps = {
     \n Zapraszamy!",
 };
 
+=======
+import { textAlign } from '@mui/system'
+import PropTypes from 'prop-types'
+
+function Body({title}) {
+    return (
+        <body>
+             <h1 style={bodyStyle}>
+                {title}
+            </h1>
+        </body>
+    )
+}
+
+Body.defaultProps = {
+    title: 'Rejestrując się do naszej aplikacji dowiesz się,\
+    jakie badania warto wykonać po przejściu COVID-19, jaka dieta jest dla Ciebie najlepsza,\
+    a także jakie ćwiczenia warto wykonywać, by polepszyć jakość życia.\
+    \n Zapraszamy!'
+}
+   
+>>>>>>> Stashed changes
 Body.propTypes = {
   title: PropTypes.string.isRequired,
 };

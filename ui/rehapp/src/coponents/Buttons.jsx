@@ -1,23 +1,16 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/button-has-type */
-import * as React from "react";
-// import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
+/* eslint-disable no-use-before-define */
+import { Button, Typography } from "@mui/material";
 
-const Buttons = function ({ title }) {
+const Buttons = function () {
   return (
-    <Button variant="text" className="button1">
-      {" "}
-      {title}{" "}
-    </Button>
+    <div>
+      <Button variant="text">
+        <Typography className="button1">
+          jeśli chcesz dowiedzieć się więcej na temat COvid-19, kliklnij tutaj!
+        </Typography>
+      </Button>
+    </div>
   );
-};
-
-// eslint-disable-next-line no-use-before-define
-Buttons.defaultProps = {
-  title:
-    "jeśli chcesz dowiedzieć się więcej na temat COvid-19, kliklnij tutaj!",
 };
 
 export default Buttons;

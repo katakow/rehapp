@@ -2,25 +2,31 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/default-props-match-prop-types */
 /* eslint-disable no-multi-str */
+import { Container, Grid } from "@mui/material";
 import Buttons from "./Buttons";
-
-const bodyStyle = {
-  fontSize: 25,
-  position: "absolute",
-  width: 888,
-  height: 153,
-  left: 276,
-  top: 221,
-};
 
 const Body = function ({ title }) {
   return (
     <body>
-      <h1 style={bodyStyle}>{title}</h1>
-      <Buttons className="myButton"> </Buttons>
+      <Container>
+        <Container maxWidth="lg" align="center">
+          <h1 className="body" align="center" position="center">
+            {title}
+          </h1>
+        </Container>
+        <Grid container spacing={10}>
+          <Grid item>
+            <Buttons> </Buttons>
+          </Grid>
+          <Grid item>
+            <Buttons> </Buttons>
+          </Grid>
+        </Grid>
+      </Container>
     </body>
   );
 };
+
 Body.defaultProps = {
   title:
     "Rejestrując się do naszej aplikacji dowiesz się,\

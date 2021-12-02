@@ -1,9 +1,15 @@
 body {
-  margin: 20;
+  margin: 30px;
   font-family: "Sora", sans-serif;
   color: black;
   text-align: justify;
-  
+  align-items: "center";
+  font-size: 12px;
+  position: "center";
+  margin-bottom: 10px;
+}
+.bodyText {
+
 }
 
 code {
@@ -11,14 +17,30 @@ code {
     monospace;
 }
 
-.button1 {
-  color: #FD698B;
-}
-
 .header {
-  //align-items: center;
-  margin-left: 60;
-  color: rgba(106, 144, 100, 0.6);
-  font-size: xx-large;
-
+  margin-left: 50px;
+  font-size: 64px;
+  font-family: "Sora", sans-serif;
 }
+.headerText {
+  color: rgba(106, 144, 100, 0.6);
+  font-family: "Sora", sans-serif;
+  font-size: 64px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: "Sora", sans-serif;
+  color: #fd698b;
+}
+// .buttonText {
+//   color: #fd698b;
+//   // position: absolute;
+//   // bottom: 0;
+//   font-family: "Sora", sans-serif;
+//   font-size: xx-large;
+// }
+

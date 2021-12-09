@@ -1,11 +1,11 @@
 /* eslint-disable no-use-before-define */
 import { Button, Typography } from "@mui/material";
 
-const Buttons = function () {
+const Button1 = function () {
   return (
     <div>
-      <Button variant="text">
-        <Typography className="button">
+      <Button variant="text" size="large">
+        <Typography className="button1">
           Jeśli chcesz dowiedzieć się więcej na temat COvid-19, kliklnij tutaj!
         </Typography>
       </Button>
@@ -13,4 +13,4 @@ const Buttons = function () {
   );
 };
 
-export default Buttons;
+export default Button1;

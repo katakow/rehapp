@@ -3,23 +3,24 @@
 /* eslint-disable react/default-props-match-prop-types */
 /* eslint-disable no-multi-str */
 import { Container, Grid } from "@mui/material";
-import Buttons from "./Buttons";
+import Button1 from "./Button1";
+import Button2 from "./Button2";
 
 const Body = function ({ title }) {
   return (
     <body>
       <Container>
-        <Container maxWidth="lg" align="center">
+        <Container maxWidth="lg">
           <h1 className="body" align="center" position="center">
             {title}
           </h1>
         </Container>
         <Grid container spacing={10}>
           <Grid item>
-            <Buttons> </Buttons>
+            <Button1> </Button1>
           </Grid>
           <Grid item>
-            <Buttons> </Buttons>
+            <Button2> </Button2>
           </Grid>
         </Grid>
       </Container>

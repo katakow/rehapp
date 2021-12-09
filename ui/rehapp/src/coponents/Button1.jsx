@@ -1,15 +1,12 @@
-/* eslint-disable no-use-before-define */
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 
 const Button1 = function () {
   return (
-    <div>
+    <button1>
       <Button variant="text" size="large">
-        <Typography className="button1">
-          Jeśli chcesz dowiedzieć się więcej na temat COvid-19, kliklnij tutaj!
-        </Typography>
+        Jeśli chcesz dowiedzieć się więcej na temat COvid-19, kliklnij tutaj!
       </Button>
-    </div>
+    </button1>
   );
 };
 

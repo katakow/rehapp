@@ -1,15 +1,12 @@
-/* eslint-disable no-use-before-define */
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 
 const Button2 = function () {
   return (
-    <div>
+    <button2>
       <Button variant="text">
-        <Typography className="button2">
-          Jeśli chcesz dołączyć do nas lub się zalogować, kliklnij tuaj!
-        </Typography>
+        Jeśli chcesz dołączyć do nas lub się zalogować, kliklnij tuaj!
       </Button>
-    </div>
+    </button2>
   );
 };
 

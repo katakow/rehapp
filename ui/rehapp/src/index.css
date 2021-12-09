@@ -1,12 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
 
 body {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Sora';
+  margin: 30px;
+  color: black;
+  text-align: justify;
+  align-items: "center";
+  font-size: 12px;
+  position: "center";
+  margin-bottom: 10px;
 }
 
+header {
+  margin-left: 50px;
+  font-size: 64px;
+  font-family: 'Sora';
+  color: rgba(106, 144, 100, 0.6);
+}
 
+.headerText {
+  color: rgba(106, 144, 100, 0.6);
+  font-family: "Sora", sans-serif;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.button1 {
+  display: flex;
+  font-family: "Sora", sans-serif;
+  color: rgba(253, 105, 139, 0.85);
+}
+.button2 {
+  display: flex;
+  font-family: "Sora", sans-serif;
+  color: rgba(106, 144, 100, 0.85);
+}
+.buttonText {
+   color: #fd698b;
+   position: absolute;
+   bottom: 0;
+   font-family: "Sora", sans-serif;
+   font-size: xx-large;
+ }
+
+ .buttons{
+   position: absolute;
+ }

@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 const About = function () {
   return (
     <div>

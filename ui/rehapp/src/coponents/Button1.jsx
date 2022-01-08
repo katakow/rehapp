@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable react/prop-types */
 import { Button } from "@mui/material";
 import PropTypes from "prop-types";

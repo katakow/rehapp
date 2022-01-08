@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 import { Button } from "@mui/material";
 
 const Button2 = function () {

@@ -3,7 +3,7 @@ const Footer = function () {
   return (
     <footer>
       <p> Copyright &copy; 2021 </p>
-      <a href="/about"> About </a>
+      <a href="/"> Main Page </a>
     </footer>
   );
 };

@@ -7,9 +7,6 @@ import Button1 from "./Button1";
 import Button2 from "./Button2";
 
 const Body = function ({ title }) {
-  const onClick = () => {
-    console.log("Click");
-  };
   return (
     <body>
       <Container maxWidth="lg">
@@ -19,7 +16,7 @@ const Body = function ({ title }) {
       </Container>
       <Container align="center" top="100px">
         <button1>
-          <Button1 onClick={onClick}> </Button1>
+          <Button1> </Button1>
         </button1>
         <button2>
           <Button2> </Button2>

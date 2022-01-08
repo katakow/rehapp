@@ -2,7 +2,7 @@
 import React from "react";
 
 const ErrorPage = function () {
-  return <div>ERROR! PAGE NOT FOUND! </div>;
+  return <h1 className="error">ERROR! PAGE NOT FOUND! </h1>;
 };
 
 export default ErrorPage;

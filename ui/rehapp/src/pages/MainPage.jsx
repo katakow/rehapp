@@ -3,15 +3,16 @@
 /* eslint-disable react/prop-types */
 
 import { Container } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import Button1 from "../coponents/Button1";
 import Button2 from "../coponents/Button2";
+import Header from "../coponents/Header";
 
 const MainPage = function ({ title }) {
-  const onClick = () => {
-    console.log("Click");
-  };
+  const navigate = useNavigate();
   return (
     <body>
+      <Header />
       <Container maxWidth="lg">
         <h1 className="body" align="center">
           {title}
@@ -19,10 +20,15 @@ const MainPage = function ({ title }) {
       </Container>
       <Container align="center" top="100px">
         <button1>
-          <Button1 onClick={onClick}> </Button1>
+          <Button1 />
         </button1>
-        <button2>
-          <Button2> </Button2>
+        <button2
+          onClick={() => {
+            navigate("/login");
+          }}
+        >
+          {" "}
+          <Button2 />
         </button2>
       </Container>
     </body>

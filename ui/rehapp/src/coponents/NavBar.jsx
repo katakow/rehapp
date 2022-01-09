@@ -1,23 +1,26 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/function-component-definition */
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import PhoneIcon from "@mui/icons-material/Phone";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import PersonPinIcon from "@mui/icons-material/PersonPin";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-export default function IconTabs() {
+export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (_event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
-    <Tabs value={value} onChange={handleChange} aria-label="icon tabs example">
-      <Tab icon={<PhoneIcon />} aria-label="phone" />
-      <Tab icon={<FavoriteIcon />} aria-label="favorite" />
-      <Tab icon={<PersonPinIcon />} aria-label="person" />
-    </Tabs>
+    <navbar className="navbar">
+      <Box sx={{ width: 50 }}>
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(_event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <BottomNavigationAction icon={<ArrowBackIcon />} width="1440px" />
+        </BottomNavigation>
+      </Box>
+    </navbar>
   );
 }

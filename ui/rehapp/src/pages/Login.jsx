@@ -1,10 +1,16 @@
-import Header from "../coponents/Header";
+import { Container } from "@mui/material";
+import HeaderLogin from "../coponents/HeaderLogin";
+import NavBar from "../coponents/NavBar";
 
 const Login = function () {
   return (
-    <body>
-      <Header />
-    </body>
+    <div className="loginPage">
+      <Container>
+        <NavBar />
+        <div className="bodyLogin">LOGOWANIE</div>
+      </Container>
+      <HeaderLogin />
+    </div>
   );
 };
 

@@ -4,15 +4,49 @@ body {
   font-family: 'Sora';
   margin: 30px;
   color: black;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
   margin-top: 70px;
 }
 
-header {
+header{
+  margin-left: 50px;
+  font-size: 64px;
+  font-family: 'Sora';
+  color: rgba(253, 105, 139, 0.6);
+}
+
+footer{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.bodyLogin{
+  color: black;
+  font-family: 'Sora';
+  margin: 30px;
+  font-size: 20px;
+}
+
+.headerStart {
   margin-left: 50px;
   font-size: 64px;
   font-family: 'Sora';
   color: rgba(106, 144, 100, 0.6);
+}
+
+.navbar{
+  color: rgba(253, 105, 139, 0.6);
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.loginPage{
+  margin-top: -50px;
+  margin-left: 0px;
+  color: rgba(253, 105, 139, 0.6);
 }
 
 .error {
@@ -32,11 +66,11 @@ header {
   color: rgba(106, 144, 100, 0.85);
 }
 
- .buttons{
+.buttons{
    position: center;
    text-align: center;
    font-family: "Sora", sans-serif;
- }
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -4,8 +4,9 @@ body {
   font-family: 'Sora';
   margin: 30px;
   color: black;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   margin-top: 70px;
+  border-bottom: 140px;
 }
 
 header{
@@ -14,18 +15,24 @@ header{
   font-family: 'Sora';
   color: rgba(253, 105, 139, 0.6);
 }
+.myDiv{
+  margin-top: inherit;
+}
 
-footer{
-  position:absolute;
-  left:0;
-  bottom:0;
-  right:0;
+.bodyNav{
+  color: black;
+  font-family: 'Sora';
+  margin: 30px;
+  font-size: 20px;
+  position: absolute;
+  top: -5px;
+  left: 50px;
 }
 
 .bodyLogin{
   color: black;
   font-family: 'Sora';
-  margin: 30px;
+  margin: 330px;
   font-size: 20px;
 }
 
@@ -36,6 +43,10 @@ footer{
   color: rgba(106, 144, 100, 0.6);
 }
 
+.loginContainer{
+  align-content: center;
+}
+
 .navbar{
   color: rgba(253, 105, 139, 0.6);
   position: absolute;
@@ -43,11 +54,6 @@ footer{
   left: 16px;
 }
 
-.loginPage{
-  margin-top: -50px;
-  margin-left: 0px;
-  color: rgba(253, 105, 139, 0.6);
-}
 
 .error {
  font-family: 'Sora';
@@ -75,4 +81,11 @@ footer{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+footer{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
 }

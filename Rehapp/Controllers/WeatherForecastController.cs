@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Rehapp.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase

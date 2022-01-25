@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{3790F1DD-2984-498F-810A-487ADC14A405}|rehapp">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rehapp/ClientApp/src/components/Counter.jsx">
+    <Files>
+      <File FileName="Rehapp/Program.cs" Line="1" Column="1" />
+      <File FileName="Rehapp/Startup.cs" />
+      <File FileName="Rehapp/RehappServices.cs" />
+      <File FileName="Rehapp/Controllers/WeatherForecastController.cs" Line="10" Column="20" />
+      <File FileName="Rehapp/Logic/WeatherForecastProvider.cs" />
+      <File FileName="Rehapp/README.md" />
+      <File FileName="Rehapp/Models/Entities/Symptom.cs" />
+      <File FileName="Rehapp/Infrastructure/ApplicationDbContext.cs" />
+      <File FileName="Rehapp/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Rehapp/Properties/serviceDependencies.json" Line="1" Column="1" />
+      <File FileName="Rehapp/ClientApp/src/components/Counter.jsx" Line="19" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Rehapp" expanded="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="Rehapp" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="components" expanded="True">
+                    <Node name="Counter.jsx" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Infrastructure" expanded="True" />
+              <Node name="Logic" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Entities" expanded="True" />
+              </Node>
+              <Node name="Pages" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Rehapp PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

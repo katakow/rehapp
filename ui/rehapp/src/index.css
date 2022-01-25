@@ -7,6 +7,7 @@ body {
   margin-bottom: 70px;
   margin-top: 70px;
   border-bottom: 140px;
+  height: 700px;
 }
 
 header{
@@ -29,11 +30,25 @@ header{
   left: 50px;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.greenSmallButton {
+  width: 143px;
+  height: 53px;
+  color: black;
+  background-color: rgba(106, 144, 100, 0.37);
+  font-family: 'Sora';
+}
 .bodyLogin{
   color: black;
   font-family: 'Sora';
-  margin: 330px;
+  margin-top: 70px;
   font-size: 20px;
+  align-items: stretch;
+  justify-content: stretch;
 }
 
 .headerStart {

@@ -1,10 +1,10 @@
-import { Grid, TextField } from "@mui/material";
+import { TextField, Grid } from "@mui/material";
 import GreenSmallButton from "./GreenSmallButton";
 
-const LogIn = function () {
+const LogInDoctor = function () {
   return (
     <div>
-      Zaloguj się
+      Zaloguj się jako lekarz
       <Grid />
       <TextField
         fullWidth
@@ -24,4 +24,4 @@ const LogIn = function () {
   );
 };
 
-export default LogIn;
+export default LogInDoctor;

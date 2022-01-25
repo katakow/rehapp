@@ -25,7 +25,16 @@ export default function SimpleBottomNavigation() {
             navigate("/");
           }}
         >
-          <BottomNavigationAction icon={<ArrowBackIcon />} width="1440px" />
+          <BottomNavigationAction
+            icon={
+              <ArrowBackIcon
+                sx={{
+                  color: "rgba(253, 105, 139, 0.85)",
+                }}
+              />
+            }
+            width="1440px"
+          />
         </BottomNavigation>
       </Box>
     </navbar>

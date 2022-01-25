@@ -3,7 +3,7 @@ import HeaderLogin from "../coponents/HeaderLogin";
 import NavBar from "../coponents/NavBar";
 import LogIn from "../coponents/LogIn";
 import LogInDoctor from "../coponents/LogInDoctor";
-import GreenButtons from "../coponents/GreenButtons";
+import GreenButtons from "../coponents/buttons/GreenButtons";
 
 const Login = function () {
   return (

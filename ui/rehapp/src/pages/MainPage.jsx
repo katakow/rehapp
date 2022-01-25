@@ -4,8 +4,8 @@
 
 import { Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import Button1 from "../coponents/Button1";
-import Button2 from "../coponents/Button2";
+import Button1 from "../coponents/buttons/Button1";
+import Button2 from "../coponents/buttons/Button2";
 import Header from "../coponents/Header";
 
 const MainPage = function ({ title }) {

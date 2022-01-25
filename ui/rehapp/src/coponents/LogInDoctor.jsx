@@ -1,5 +1,5 @@
 import { TextField, Grid } from "@mui/material";
-import GreenSmallButton from "./GreenSmallButton";
+import GreenSmallButton from "./buttons/GreenSmallButton";
 
 const LogInDoctor = function () {
   return (

@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Container, Grid, TextField } from "@mui/material";
-import ButtonToR3 from "../../coponents/buttons/ButtonToR3";
+import ButtonToR4 from "../../coponents/buttons/ButtonToR4";
 import NavBar from "../../coponents/NavBar";
 import PrevBToR1 from "../../coponents/buttons/PrevBToR1";
 import CheckboxR from "../../coponents/CheckboxR";
+import RadioR3 from "../../coponents/RadioR3";
 
-const Register2 = function () {
+const Register3 = function () {
   return (
     <body>
       <NavBar />
@@ -30,7 +31,7 @@ const Register2 = function () {
             <Container>
               <TextField
                 id="standard-basic"
-                label="choroby współistniejące"
+                label="alergie"
                 variant="standard"
                 fullWidth
               />
@@ -54,7 +55,7 @@ const Register2 = function () {
             <Container>
               <TextField
                 id="standard-basic"
-                label="przebyte operacje / zabiegi"
+                label="odbyte szczepienia"
                 variant="standard"
                 fullWidth
               />
@@ -78,7 +79,7 @@ const Register2 = function () {
             <Container>
               <TextField
                 id="standard-basic"
-                label="zażywane leki"
+                label="dieta"
                 variant="standard"
                 fullWidth
               />
@@ -90,10 +91,7 @@ const Register2 = function () {
                 className="bodyLogin"
               >
                 <Grid item>
-                  <CheckboxR />
-                </Grid>
-                <Grid item>
-                  <CheckboxR />
+                  <RadioR3 />
                 </Grid>
               </Grid>
             </Container>
@@ -101,13 +99,13 @@ const Register2 = function () {
         </Grid>
       </Container>
       <Container className="nextButton" maxWidth="2250px" align="right">
-        <Grid container direction="row" spacing="15px" />
+        <Grid container direction="row" spacing="75px" />
         <PrevBToR1 />
-        <ButtonToR3 />
+        <ButtonToR4 />
       </Container>
-      Strona 2/6
+      Strona 3/6
     </body>
   );
 };
 
-export default Register2;
+export default Register3;

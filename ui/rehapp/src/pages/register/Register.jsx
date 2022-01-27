@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Container, Grid } from "@mui/material";
-import NextButtonReg from "../../coponents/buttons/NextButtonReg";
+import ButtonToR2 from "../../coponents/buttons/ButtonToR2";
 import NavBar from "../../coponents/NavBar";
 import TextRegL from "../../coponents/TextRegL";
 import TextRegR from "../../coponents/TextRegR";
@@ -32,8 +32,9 @@ const Register = function () {
       <Radio />
       <Container className="nextButton" maxWidth="2250px" align="right">
         <Grid container direction="row" spacing="15px" />
-        <NextButtonReg />
+        <ButtonToR2 />
       </Container>{" "}
+      Strona 1/6
     </body>
   );
 };

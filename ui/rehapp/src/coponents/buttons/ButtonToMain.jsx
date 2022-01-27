@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
-const NextButtonReg = function () {
+const ButtonToMain = function () {
   const navigate = useNavigate();
   return (
     <Button
@@ -25,4 +25,4 @@ const NextButtonReg = function () {
   );
 };
 
-export default NextButtonReg;
+export default ButtonToMain;

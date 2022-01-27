@@ -8,6 +8,7 @@ import Register from "./pages/register/Register";
 import Register2 from "./pages/register/Register2";
 import ErrorPage from "./pages/ErrorPage";
 import Info from "./pages/Info";
+import Register3 from "./pages/register/Register3";
 
 const App = function () {
   return (
@@ -17,7 +18,7 @@ const App = function () {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/register2" element={<Register2 />} />
-        <Route path="/register3" element={<Register />} />
+        <Route path="/register3" element={<Register3 />} />
         <Route path="/register4" element={<Register />} />
         <Route path="/register5" element={<Register />} />
         <Route path="/register6" element={<Register />} />

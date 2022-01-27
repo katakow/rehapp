@@ -1,7 +1,8 @@
 import { Button } from "@mui/material";
+
 import { useNavigate } from "react-router-dom";
 
-const PrevButtonReg = function () {
+const ButtonToR3 = function () {
   const navigate = useNavigate();
   return (
     <Button
@@ -16,12 +17,12 @@ const PrevButtonReg = function () {
         borderColor: "rgba(106, 144, 100, 0.37)",
       }}
       onClick={() => {
-        navigate(-1);
+        navigate("/register3");
       }}
     >
-      POPRZEDNIA STRONA
+      NASTĘPNA STRONA
     </Button>
   );
 };
 
-export default PrevButtonReg;
+export default ButtonToR3;

@@ -9,12 +9,78 @@ export default function CheckboxLabels() {
   return (
     <Container>
       <FormGroup>
-        <FormControlLabel control={<Checkbox />} label="Label" />
-        <FormControlLabel control={<Checkbox />} label="Disabled" />
-        <FormControlLabel control={<Checkbox />} label="Label" />
-        <FormControlLabel control={<Checkbox />} label="Disabled" />
-        <FormControlLabel control={<Checkbox />} label="Label" />
-        <FormControlLabel control={<Checkbox />} label="Disabled" />
+        <FormControlLabel
+          control={
+            <Checkbox
+              sx={{
+                "&.Mui-checked": {
+                  color: "rgba(253, 105, 139, 0.85)",
+                },
+              }}
+            />
+          }
+          label="Label"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              sx={{
+                "&.Mui-checked": {
+                  color: "rgba(253, 105, 139, 0.85)",
+                },
+              }}
+            />
+          }
+          label="Disabled"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              sx={{
+                "&.Mui-checked": {
+                  color: "rgba(253, 105, 139, 0.85)",
+                },
+              }}
+            />
+          }
+          label="Label"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              sx={{
+                "&.Mui-checked": {
+                  color: "rgba(253, 105, 139, 0.85)",
+                },
+              }}
+            />
+          }
+          label="Disabled"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              sx={{
+                "&.Mui-checked": {
+                  color: "rgba(253, 105, 139, 0.85)",
+                },
+              }}
+            />
+          }
+          label="Label"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              sx={{
+                "&.Mui-checked": {
+                  color: "rgba(253, 105, 139, 0.85)",
+                },
+              }}
+            />
+          }
+          label="Disabled"
+        />
       </FormGroup>
     </Container>
   );

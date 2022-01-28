@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Container, Grid, TextField } from "@mui/material";
+import { Container, Grid } from "@mui/material";
+import FormLabel from "@mui/material/FormLabel";
 import ButtonToR3 from "../../coponents/buttons/ButtonToR3";
 import NavBar from "../../coponents/NavBar";
 import PrevBToR1 from "../../coponents/buttons/PrevBToR1";
@@ -27,76 +28,60 @@ const Register2 = function () {
           className="bodyLogin"
         >
           <Grid item>
-            <Container>
-              <TextField
-                id="standard-basic"
-                label="choroby współistniejące"
-                variant="standard"
-                fullWidth
-              />
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin"
-              >
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
+            <FormLabel component="legend">choroby współistniejące</FormLabel>
+
+            <Grid
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              className="bodyLogin2"
+            >
+              <Grid item>
+                <CheckboxR />
               </Grid>
-            </Container>
+              <Grid item>
+                <CheckboxR />
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item>
-            <Container>
-              <TextField
-                id="standard-basic"
-                label="przebyte operacje / zabiegi"
-                variant="standard"
-                fullWidth
-              />
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin"
-              >
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
+            <FormLabel component="legend">
+              przebyte operacje / zabiegi
+            </FormLabel>
+
+            <Grid
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              className="bodyLogin2"
+            >
+              <Grid item>
+                <CheckboxR />
               </Grid>
-            </Container>
+              <Grid item>
+                <CheckboxR />
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item>
-            <Container>
-              <TextField
-                id="standard-basic"
-                label="zażywane leki"
-                variant="standard"
-                fullWidth
-              />
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin"
-              >
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
+            <FormLabel component="legend">zażywane leki</FormLabel>
+
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-around"
+              alignItems="stretch"
+              className="bodyLogin2"
+            >
+              <Grid item>
+                <CheckboxR />
               </Grid>
-            </Container>
+              <Grid item>
+                <CheckboxR />
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

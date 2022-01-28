@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Container, Grid, TextField } from "@mui/material";
+import { Container, Grid } from "@mui/material";
+import FormLabel from "@mui/material/FormLabel";
 import ButtonToR4 from "../../coponents/buttons/ButtonToR4";
 import NavBar from "../../coponents/NavBar";
 import PrevBToR1 from "../../coponents/buttons/PrevBToR1";
@@ -28,73 +29,53 @@ const Register3 = function () {
           className="bodyLogin"
         >
           <Grid item>
-            <Container>
-              <TextField
-                id="standard-basic"
-                label="alergie"
-                variant="standard"
-                fullWidth
-              />
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin"
-              >
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
+            <FormLabel component="legend">alergie</FormLabel>
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-around"
+              alignItems="stretch"
+              className="bodyLogin2"
+            >
+              <Grid item>
+                <CheckboxR />
               </Grid>
-            </Container>
+              <Grid item>
+                <CheckboxR />
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item>
-            <Container>
-              <TextField
-                id="standard-basic"
-                label="odbyte szczepienia"
-                variant="standard"
-                fullWidth
-              />
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin"
-              >
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
+            <FormLabel component="legend">odbyte szczepienia</FormLabel>
+
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-around"
+              alignItems="stretch"
+              className="bodyLogin2"
+            >
+              <Grid item>
+                <CheckboxR />
               </Grid>
-            </Container>
+              <Grid item>
+                <CheckboxR />
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item>
-            <Container>
-              <TextField
-                id="standard-basic"
-                label="dieta"
-                variant="standard"
-                fullWidth
-              />
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin"
-              >
-                <Grid item>
-                  <RadioR3 />
-                </Grid>
+            <FormLabel component="legend">stosowana dieta</FormLabel>
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-around"
+              alignItems="stretch"
+              className="bodyLogin2"
+            >
+              <Grid item>
+                <RadioR3 />
               </Grid>
-            </Container>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

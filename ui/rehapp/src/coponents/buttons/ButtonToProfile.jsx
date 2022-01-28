@@ -9,8 +9,8 @@ const ButtonToR7 = function () {
       item
       variant="outlined"
       sx={{
-        width: "160px",
-        height: "53px",
+        width: "204px",
+        height: "95px",
         color: "black",
         backgroundColor: "rgba(106, 144, 100, 0.37)",
         fontFamily: "Sora",
@@ -20,7 +20,7 @@ const ButtonToR7 = function () {
         navigate("/registerEnd");
       }}
     >
-      NASTĘPNA STRONA
+      PRZEJDŹ DO STRONY GŁÓWNEJ
     </Button>
   );
 };

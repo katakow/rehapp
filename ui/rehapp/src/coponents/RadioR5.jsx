@@ -10,11 +10,12 @@ export default function RadioButtonsGroup() {
     <FormControl>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="inna"
+        defaultValue="nie"
         name="radio-buttons-group"
       >
         <FormControlLabel
-          value="kobieta"
+          value="bezobjawowy"
+          label="bezobjawowy"
           control={
             <Radio
               sx={{
@@ -22,7 +23,6 @@ export default function RadioButtonsGroup() {
               }}
             />
           }
-          label="kobieta"
         />
         <FormControlLabel
           control={
@@ -32,8 +32,8 @@ export default function RadioButtonsGroup() {
               }}
             />
           }
-          value="mężcfdzyzna"
-          label="mężczyzna"
+          value="lekki"
+          label="lekki"
         />
         <FormControlLabel
           control={
@@ -43,8 +43,8 @@ export default function RadioButtonsGroup() {
               }}
             />
           }
-          value="mężczysxzna"
-          label="mężczyzna"
+          value="średni"
+          label="średni"
         />
         <FormControlLabel
           control={
@@ -54,52 +54,8 @@ export default function RadioButtonsGroup() {
               }}
             />
           }
-          value="mężczwyzna"
-          label="mężczyzna"
-        />
-        <FormControlLabel
-          control={
-            <Radio
-              sx={{
-                "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-              }}
-            />
-          }
-          value="mężczssyzna"
-          label="mężczyzna"
-        />
-        <FormControlLabel
-          control={
-            <Radio
-              sx={{
-                "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-              }}
-            />
-          }
-          value="aa"
-          label="mężczyzna"
-        />
-        <FormControlLabel
-          value="la"
-          control={
-            <Radio
-              sx={{
-                "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-              }}
-            />
-          }
-          label="la"
-        />
-        <FormControlLabel
-          value="inna"
-          control={
-            <Radio
-              sx={{
-                "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-              }}
-            />
-          }
-          label="inna"
+          value="ciężki"
+          label="ciężki"
         />
       </RadioGroup>
     </FormControl>

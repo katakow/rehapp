@@ -87,6 +87,8 @@ const TextDoc = function () {
           label="numer PWZ"
           variant="standard"
         />
+        <Grid />
+        <TextField id="standard-basic" label="płeć" variant="standard" />
       </Grid>
     </div>
   );

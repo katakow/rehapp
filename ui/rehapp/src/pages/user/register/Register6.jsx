@@ -2,11 +2,11 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
-import ButtonToR7 from "../../../coponents/buttons/register/ButtonToR7";
+import ButtonToR7 from "../../../coponents/userPage/ButtonToR7";
 import NavBar from "../../../coponents/NavBar";
-import PrevBToR1 from "../../../coponents/buttons/PrevBToR1";
-import Calendar2 from "../../../coponents/poll/Calendar2";
-import RadioR4 from "../../../coponents/poll/RadioR4";
+import PrevBToR1 from "../../../coponents/userPage/PrevBToR1";
+import Calendar2 from "../../../coponents/userPage/poll/Calendar2";
+import RadioR4 from "../../../coponents/userPage/poll/RadioR4";
 
 const Register6 = function () {
   return (

@@ -1,6 +1,6 @@
 import { Grid, TextField } from "@mui/material";
 
-import LogInUser from "./buttons/LogInUser";
+import LogInUser from "./LogInUser";
 
 const LogIn = function () {
   return (

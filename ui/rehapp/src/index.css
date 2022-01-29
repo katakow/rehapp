@@ -10,6 +10,13 @@ body {
   height: 700px;
 }
 
+.bodydoc {
+  font-family: 'Sora';
+  margin: 30px;
+  color: black;
+  margin-top: 100px;
+}
+
 .body2 {
   font-family: 'Sora';
   margin: 30px;
@@ -128,6 +135,11 @@ header{
 
 .radio{
   margin-left: 1650px;
+}
+
+.radiodoc{
+  margin-left: 1650px;
+  margin-top: -450px
 }
 
 .headerStart {

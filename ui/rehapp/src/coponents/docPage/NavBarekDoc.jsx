@@ -27,19 +27,31 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction
           label="Strona główna"
           icon={<HomeIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          onClick={() => {
+            navigate("/docMain");
+          }}
         />
         <BottomNavigationAction
           label="Mój profil"
           icon={<FavoriteIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          onClick={() => {
+            navigate("/docProfile");
+          }}
         />
 
         <BottomNavigationAction
           label="Pacjenci"
           icon={<FavoriteIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          onClick={() => {
+            navigate("/docPatients");
+          }}
         />
         <BottomNavigationAction
           label="Informacje"
           icon={<FavoriteIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          onClick={() => {
+            navigate("/docInfo");
+          }}
         />
         <BottomNavigationAction
           label="Wyloguj"

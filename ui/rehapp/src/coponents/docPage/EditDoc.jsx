@@ -1,27 +1,28 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const ButtonToDocProf = function () {
+const EditDoc = function () {
   const navigate = useNavigate();
   return (
     <Button
       item
       variant="outlined"
       sx={{
-        width: "204px",
-        height: "95px",
+        width: "143px",
+        height: "53px",
         color: "black",
         backgroundColor: "rgba(106, 144, 100, 0.37)",
         fontFamily: "Sora",
         borderColor: "rgba(106, 144, 100, 0.37)",
+        marginLeft: "1600px",
       }}
       onClick={() => {
-        navigate("/docMain");
+        navigate("/docEdit");
       }}
     >
-      PRZEJDŹ DO STRONY GŁÓWNEJ
+      EDYTUJ
     </Button>
   );
 };
 
-export default ButtonToDocProf;
+export default EditDoc;

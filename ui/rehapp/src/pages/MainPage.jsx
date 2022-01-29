@@ -4,6 +4,7 @@
 
 import { Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import CoronavirusIcon from "@mui/icons-material/Coronavirus";
 import Button1 from "../coponents/buttons/Button1";
 import Button2 from "../coponents/buttons/Button2";
 import Header from "../coponents/Header";
@@ -13,6 +14,14 @@ const MainPage = function ({ title }) {
   return (
     <body>
       <Header />
+      <CoronavirusIcon
+        sx={{
+          fontSize: "200px",
+          marginLeft: "1800px",
+          marginTop: "-40px",
+          color: "rgba(253, 105, 139, 0.85)",
+        }}
+      />
       <Container maxWidth="lg">
         <h1 className="body" align="center">
           {title}

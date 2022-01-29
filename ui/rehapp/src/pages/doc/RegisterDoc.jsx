@@ -2,7 +2,7 @@
 
 import { Container, Grid } from "@mui/material";
 import * as React from "react";
-import ButtonToR2 from "../../coponents/userPage/ButtonToR2";
+import ButtonToProfile from "../../coponents/docPage/ButtonToProfile";
 import NavBar from "../../coponents/NavBar";
 import TextFieldDoc from "../../coponents/docPage/TextFieldDoc";
 import Specki from "../../coponents/docPage/Specki";
@@ -17,7 +17,6 @@ const Register = function () {
         container
         direction="row"
         justifyContent="space-around"
-        alignItems="stretch"
         className="bodyLogin"
       >
         <Specki />
@@ -26,7 +25,7 @@ const Register = function () {
       <Radiodoc />
       <Container className="nextButton" maxWidth="2250px" align="right">
         <Grid container direction="row" spacing="15px" />
-        <ButtonToR2 />
+        <ButtonToProfile />
       </Container>
       Strona 1/6
     </div>

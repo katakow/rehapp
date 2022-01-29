@@ -38,6 +38,9 @@ const GreenButtons = function () {
             fontFamily: "Sora",
             borderColor: "rgba(106, 144, 100, 0.37)",
           }}
+          onClick={() => {
+            navigate("/registerDoc");
+          }}
         >
           ZAREJESTRUJ SIĘ JAKO LEKARZ
         </Button>

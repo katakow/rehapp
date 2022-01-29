@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Container, Grid } from "@mui/material";
-import ButtonToProfile from "../../coponents/buttons/ButtonToProfile";
-import PrevBToR1 from "../../coponents/buttons/PrevBToR1";
-import NavBar from "../../coponents/NavBar";
+import ButtonToProfile from "../../../coponents/buttons/ButtonToProfile";
+import PrevBToR1 from "../../../coponents/buttons/PrevBToR1";
+import NavBar from "../../../coponents/NavBar";
 
 const Register = function () {
   return (

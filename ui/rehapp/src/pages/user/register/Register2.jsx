@@ -2,13 +2,12 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
-import ButtonToR4 from "../../coponents/buttons/register/ButtonToR4";
-import NavBar from "../../coponents/NavBar";
-import PrevBToR1 from "../../coponents/buttons/PrevBToR1";
-import CheckboxR from "../../coponents/poll/CheckboxR";
-import RadioR3 from "../../coponents/poll/RadioR3";
+import ButtonToR3 from "../../../coponents/buttons/register/ButtonToR3";
+import NavBar from "../../../coponents/NavBar";
+import PrevBToR1 from "../../../coponents/buttons/PrevBToR1";
+import CheckboxR from "../../../coponents/poll/CheckboxR";
 
-const Register3 = function () {
+const Register2 = function () {
   return (
     <body>
       <NavBar />
@@ -29,12 +28,13 @@ const Register3 = function () {
           className="bodyLogin"
         >
           <Grid item>
-            <FormLabel component="legend">alergie</FormLabel>
+            <FormLabel component="legend">choroby współistniejące</FormLabel>
+
             <Grid
               container
               direction="row"
-              justifyContent="space-around"
-              alignItems="stretch"
+              justifyContent="center"
+              alignItems="center"
               className="bodyLogin2"
             >
               <Grid item>
@@ -46,7 +46,27 @@ const Register3 = function () {
             </Grid>
           </Grid>
           <Grid item>
-            <FormLabel component="legend">odbyte szczepienia</FormLabel>
+            <FormLabel component="legend">
+              przebyte operacje / zabiegi
+            </FormLabel>
+
+            <Grid
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              className="bodyLogin2"
+            >
+              <Grid item>
+                <CheckboxR />
+              </Grid>
+              <Grid item>
+                <CheckboxR />
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <FormLabel component="legend">zażywane leki</FormLabel>
 
             <Grid
               container
@@ -60,33 +80,19 @@ const Register3 = function () {
               </Grid>
               <Grid item>
                 <CheckboxR />
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <FormLabel component="legend">stosowana dieta</FormLabel>
-            <Grid
-              container
-              direction="row"
-              justifyContent="space-around"
-              alignItems="stretch"
-              className="bodyLogin2"
-            >
-              <Grid item>
-                <RadioR3 />
               </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Container>
       <Container className="nextButton" maxWidth="2250px" align="right">
-        <Grid container direction="row" spacing="75px" />
+        <Grid container direction="row" spacing="15px" />
         <PrevBToR1 />
-        <ButtonToR4 />
+        <ButtonToR3 />
       </Container>
-      Strona 3/6
+      Strona 2/6
     </body>
   );
 };
 
-export default Register3;
+export default Register2;

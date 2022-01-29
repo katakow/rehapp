@@ -2,13 +2,13 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
-import ButtonToR7 from "../../coponents/buttons/register/ButtonToR7";
-import NavBar from "../../coponents/NavBar";
-import PrevBToR1 from "../../coponents/buttons/PrevBToR1";
-import Calendar2 from "../../coponents/poll/Calendar2";
-import RadioR4 from "../../coponents/poll/RadioR4";
+import ButtonToR5 from "../../../coponents/buttons/register/ButtonToR5";
+import NavBar from "../../../coponents/NavBar";
+import PrevBToR1 from "../../../coponents/buttons/PrevBToR1";
+import Calendar from "../../../coponents/poll/Calendar";
+import RadioR4 from "../../../coponents/poll/RadioR4";
 
-const Register6 = function () {
+const Register4 = function () {
   return (
     <body>
       <NavBar />
@@ -32,7 +32,7 @@ const Register6 = function () {
             <Grid item>
               <Container>
                 <FormLabel component="legend">
-                  Czy szczepiłaś / szczepiłeś się na COVID-19?
+                  Czy kiedykolwiek miałeś pozytywny wynik testu na COVID-19?
                 </FormLabel>
                 <Grid
                   container
@@ -50,7 +50,7 @@ const Register6 = function () {
             <Grid item>
               <Container>
                 <FormLabel component="legend">
-                  Podaj datę otrzymania ostatniej dawki szczepionki *
+                  Zaznacz dzień, w którym wyszedł Ci pozytywny wynik testu.*
                 </FormLabel>
 
                 <Grid
@@ -61,7 +61,7 @@ const Register6 = function () {
                   className="bodyLogin"
                 >
                   <Grid item>
-                    <Calendar2 />
+                    <Calendar />
                   </Grid>
                 </Grid>
               </Container>
@@ -69,14 +69,18 @@ const Register6 = function () {
           </Grid>
         </Container>
       </div>
+      <div className="divek2">
+        * W przypadku wielokrotnego przejścia choroby, istotna jest tylko data
+        ostatniego przechorowania.
+      </div>
       <Container className="nextButton" maxWidth="2250px" align="right">
         <Grid container direction="row" spacing="75px" />
         <PrevBToR1 />
-        <ButtonToR7 />
+        <ButtonToR5 />
       </Container>
-      Strona 6/6
+      Strona 4/6
     </body>
   );
 };
 
-export default Register6;
+export default Register4;

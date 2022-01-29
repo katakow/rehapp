@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Container, Grid } from "@mui/material";
-import ButtonToR2 from "../../coponents/buttons/register/ButtonToR2";
-import NavBar from "../../coponents/NavBar";
-import TextRegL from "../../coponents/poll/TextRegL";
-import TextRegR from "../../coponents/poll/TextRegR";
-import Radio from "../../coponents/poll/Radio";
+import ButtonToR2 from "../../../coponents/buttons/register/ButtonToR2";
+import NavBar from "../../../coponents/NavBar";
+import TextRegL from "../../../coponents/poll/TextRegL";
+import TextRegR from "../../../coponents/poll/TextRegR";
+import Radio from "../../../coponents/poll/Radio";
 
 const Register = function () {
   return (

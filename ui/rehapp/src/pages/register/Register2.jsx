@@ -2,10 +2,10 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
-import ButtonToR3 from "../../coponents/buttons/ButtonToR3";
+import ButtonToR3 from "../../coponents/buttons/register/ButtonToR3";
 import NavBar from "../../coponents/NavBar";
 import PrevBToR1 from "../../coponents/buttons/PrevBToR1";
-import CheckboxR from "../../coponents/CheckboxR";
+import CheckboxR from "../../coponents/poll/CheckboxR";
 
 const Register2 = function () {
   return (

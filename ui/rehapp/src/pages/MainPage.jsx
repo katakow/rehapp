@@ -19,7 +19,11 @@ const MainPage = function ({ title }) {
         </h1>
       </Container>
       <Container align="center" top="100px">
-        <button1>
+        <button1
+          onClick={() => {
+            navigate("/info");
+          }}
+        >
           <Button1 />
         </button1>
         <button2
@@ -27,7 +31,6 @@ const MainPage = function ({ title }) {
             navigate("/login");
           }}
         >
-          {" "}
           <Button2 />
         </button2>
       </Container>

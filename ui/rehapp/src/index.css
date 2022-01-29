@@ -27,6 +27,21 @@ body {
   height: 70px;
 }
 
+.body4 {
+  font-family: 'Sora';
+  color: black;
+  margin-top: -100px;
+}
+
+.body5 {
+  font-family: 'Sora';
+  color: black;
+  margin-top: 100px;
+  font-size: 32px;
+  width: 1300px;
+  margin-left: 450px;
+}
+
 .divek {
   font-family: 'Sora';
   margin: 30px;
@@ -151,6 +166,18 @@ header{
    position: center;
    text-align: center;
    font-family: "Sora", sans-serif;
+}
+
+.box{
+  position: center;
+  text-align: center;
+  font-family: "Sora", sans-serif;
+  align-self: center;
+  justify-self: center;
+  margin: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-stretch: normal;
 }
 
 code {

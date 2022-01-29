@@ -1,5 +1,6 @@
 import { Grid, TextField } from "@mui/material";
-import GreenSmallButton from "./buttons/GreenSmallButton";
+
+import LogInUser from "./buttons/LogInUser";
 
 const LogIn = function () {
   return (
@@ -19,7 +20,7 @@ const LogIn = function () {
         label="hasło"
         variant="standard"
       />
-      <GreenSmallButton />
+      <LogInUser />
     </div>
   );
 };

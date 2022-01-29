@@ -13,6 +13,7 @@ import Register5 from "./pages/register/Register5";
 import Register4 from "./pages/register/Register4";
 import Register6 from "./pages/register/Register6";
 import RegisterEnd from "./pages/register/RegisterEnd";
+import UserProfile from "./pages/user/UserProfile";
 
 const App = function () {
   return (
@@ -28,6 +29,7 @@ const App = function () {
         <Route path="/register6" element={<Register6 />} />
         <Route path="/registerEnd" element={<RegisterEnd />} />
         <Route path="/info" element={<Info />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

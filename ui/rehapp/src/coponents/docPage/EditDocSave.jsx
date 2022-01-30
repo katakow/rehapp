@@ -1,28 +1,28 @@
 import { Button } from "@mui/material";
-
 import { useNavigate } from "react-router-dom";
 
-const ButtonToR3 = function () {
+const EditDoc = function () {
   const navigate = useNavigate();
   return (
     <Button
       item
       variant="outlined"
       sx={{
-        width: "160px",
+        width: "143px",
         height: "53px",
         color: "black",
         backgroundColor: "rgba(106, 144, 100, 0.37)",
         fontFamily: "Sora",
         borderColor: "rgba(106, 144, 100, 0.37)",
+        marginLeft: "1800px",
       }}
       onClick={() => {
-        navigate("/register/3");
+        navigate("/doc/profile");
       }}
     >
-      NASTĘPNA STRONA
+      ZAPISZ
     </Button>
   );
 };
 
-export default ButtonToR3;
+export default EditDoc;

@@ -17,7 +17,7 @@ const EditDoc = function () {
         marginLeft: "1600px",
       }}
       onClick={() => {
-        navigate("/docEdit");
+        navigate("/doc/edit");
       }}
     >
       EDYTUJ

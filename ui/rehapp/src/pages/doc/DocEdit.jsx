@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import { Container, Grid } from "@mui/material";
-import FormLabel from "@mui/material/FormLabel";
+import { Container, Grid, TextField } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
-import EditDoc from "../../coponents/docPage/EditDoc";
+import EditDocSave from "../../coponents/docPage/EditDocSave";
+import SpeckiEdit from "../../coponents/docPage/SpeckiEdit";
 
 const UserMain = function ({ title }) {
   return (
@@ -14,7 +14,7 @@ const UserMain = function ({ title }) {
       </h1>
       <body>
         <Container maxWidth="xl">
-          <Grid container direction="row" spacing="350px">
+          <Grid container direction="row" spacing="250px">
             <Grid item>
               <Container maxWidth="xl">
                 <PersonIcon
@@ -28,32 +28,50 @@ const UserMain = function ({ title }) {
             </Grid>
             <Grid item>
               <Container maxWidth="xl">
-                <Grid container direction="column" spacing="100px">
+                <Grid container direction="column" spacing="50px">
                   <Grid item>
-                    <FormLabel component="legend">imię</FormLabel>
+                    <TextField
+                      id="standard-basic"
+                      label="imię"
+                      variant="standard"
+                    />
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">nazwisko</FormLabel>
+                    <TextField
+                      id="standard-basic"
+                      label="nazwisko"
+                      variant="standard"
+                    />
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">e-mail</FormLabel>
+                    <TextField
+                      id="standard-basic"
+                      label="e-mail"
+                      variant="standard"
+                    />
                   </Grid>
                 </Grid>
               </Container>
             </Grid>
             <Grid item>
               <Container maxWidth="xl">
-                <Grid container direction="column" spacing="100px">
+                <Grid container direction="column" spacing="50px">
                   <Grid item>
-                    <FormLabel component="legend">PESEL</FormLabel>
+                    <TextField
+                      id="standard-basic"
+                      label="PESEL"
+                      variant="standard"
+                    />
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">
-                      główna specjalizacja
-                    </FormLabel>
+                    <TextField
+                      id="standard-basic"
+                      label="numer PWZ"
+                      variant="standard"
+                    />
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">numer PWZ</FormLabel>
+                    <SpeckiEdit />
                   </Grid>
                 </Grid>
               </Container>
@@ -61,7 +79,7 @@ const UserMain = function ({ title }) {
           </Grid>
         </Container>
       </body>
-      <EditDoc />
+      <EditDocSave />
     </div>
   );
 };

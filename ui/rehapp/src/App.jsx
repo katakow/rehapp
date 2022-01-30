@@ -36,28 +36,28 @@ const App = function () {
         <Route path="/login" element={<Login />} />
         <Route path="/info" element={<Info />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/register2" element={<Register2 />} />
-        <Route path="/register3" element={<Register3 />} />
-        <Route path="/register4" element={<Register4 />} />
-        <Route path="/register5" element={<Register5 />} />
-        <Route path="/register6" element={<Register6 />} />
-        <Route path="/registerEnd" element={<RegisterEnd />} />
+        <Route path="/register/2" element={<Register2 />} />
+        <Route path="/register/3" element={<Register3 />} />
+        <Route path="/register/4" element={<Register4 />} />
+        <Route path="/register/5" element={<Register5 />} />
+        <Route path="/register/6" element={<Register6 />} />
+        <Route path="/register/end" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/user/profile2" element={<UserProfile2 />} />
-        <Route path="/userMain" element={<UserMain />} />
-        <Route path="/userInfo" element={<UserInfo />} />
-        <Route path="/userRec" element={<UserRec />} />
-        <Route path="/userExam" element={<UserExam />} />
-        <Route path="/userExam2" element={<UserExam2 />} />
+        <Route path="/user/main" element={<UserMain />} />
+        <Route path="/user/info" element={<UserInfo />} />
+        <Route path="/user/rec" element={<UserRec />} />
+        <Route path="/user/exam" element={<UserExam />} />
+        <Route path="/user/exam2" element={<UserExam2 />} />
 
-        <Route path="/docMain" element={<DocMain />} />
-        <Route path="/docProfile" element={<DocProfile />} />
-        <Route path="/docPatients" element={<DocPatients />} />
-        <Route path="/docEditPatient" element={<DocEditPatient />} />
-        <Route path="/docInfo" element={<DocInfo />} />
-        <Route path="/docEdit" element={<DocEdit />} />
-        <Route path="/registerDoc" element={<RegisterDoc />} />
+        <Route path="/doc/main" element={<DocMain />} />
+        <Route path="/doc/profile" element={<DocProfile />} />
+        <Route path="/doc/patients" element={<DocPatients />} />
+        <Route path="/doc/patients/edit" element={<DocEditPatient />} />
+        <Route path="/doc/info" element={<DocInfo />} />
+        <Route path="/doc/edit" element={<DocEdit />} />
+        <Route path="/register/doc" element={<RegisterDoc />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

@@ -5,6 +5,7 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { createSvgIcon } from "@mui/material/utils";
 import { useNavigate } from "react-router-dom";
+import Box from "@mui/material/Box";
 
 const HomeIcon = createSvgIcon(
   <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />,
@@ -16,7 +17,7 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   return (
-    <div className="body4">
+    <Box sx={{ width: 2200 }}>
       <BottomNavigation
         showLabels
         value={value}
@@ -26,47 +27,71 @@ export default function SimpleBottomNavigation() {
       >
         <BottomNavigationAction
           label="Strona główna"
-          icon={<HomeIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          icon={
+            <HomeIcon
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+            />
+          }
           onClick={() => {
             navigate("/user/main");
           }}
         />
         <BottomNavigationAction
           label="Mój profil"
-          icon={<FavoriteIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          icon={
+            <FavoriteIcon
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+            />
+          }
           onClick={() => {
-            navigate("/userProfile");
+            navigate("/user/profile");
           }}
         />
         <BottomNavigationAction
           label="Zalecenia"
-          icon={<FavoriteIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          icon={
+            <FavoriteIcon
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+            />
+          }
           onClick={() => {
-            navigate("/userRec");
+            navigate("/user/rec");
           }}
         />
         <BottomNavigationAction
           label="Badania"
-          icon={<FavoriteIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          icon={
+            <FavoriteIcon
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+            />
+          }
           onClick={() => {
-            navigate("/userExam");
+            navigate("/user/exam");
           }}
         />
         <BottomNavigationAction
           label="Informacje"
-          icon={<FavoriteIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          icon={
+            <FavoriteIcon
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+            />
+          }
           onClick={() => {
-            navigate("/userInfo");
+            navigate("/user/info");
           }}
         />
         <BottomNavigationAction
           label="Wyloguj"
-          icon={<FavoriteIcon sx={{ color: "rgba(253, 105, 139, 0.85)" }} />}
+          icon={
+            <FavoriteIcon
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+            />
+          }
           onClick={() => {
             navigate("/login");
           }}
         />
       </BottomNavigation>
-    </div>
+    </Box>
   );
 }

@@ -1,34 +1,37 @@
 /* eslint-disable react/prop-types */
+
 import { Container, Grid } from "@mui/material";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
-import BoxDoc from "../../coponents/docPage/BoxDoc";
-import BoxDoc2 from "../../coponents/docPage/BoxDoc2";
-import BoxDoc3 from "../../coponents/docPage/BoxDoc3";
+import PatientText1 from "../../coponents/docPage/PatientText1";
+import PatientText2 from "../../coponents/docPage/PatientText2";
+import PatientText3 from "../../coponents/docPage/PatientText3";
+import EditPatientSave from "../../coponents/docPage/EditPatientSave";
 
-const UserMain = function ({ title }) {
+const DocPatients = function ({ title }) {
   return (
     <div>
       <NavBarekDoc />
-      <h1 className="body5" align="center">
+      <h1 className="main" align="center">
         {title}
       </h1>
-      <Container maxWidth="xl">
-        <Grid container direction="row" spacing="250px">
+      <Container className="centerEditPatient">
+        <Grid container direction="row" spacing="50px">
           <Grid item>
-            <BoxDoc />
+            <PatientText1 />
           </Grid>
           <Grid item>
-            <BoxDoc2 />
+            <PatientText2 />
           </Grid>
           <Grid item>
-            <BoxDoc3 />
+            <PatientText3 />
           </Grid>
         </Grid>
+        <EditPatientSave />
       </Container>
     </div>
   );
 };
-UserMain.defaultProps = {
-  title: "Witamy w trybie lekarza / specjalisty! ",
+DocPatients.defaultProps = {
+  title: "Edytuj zalecenia / badania",
 };
-export default UserMain;
+export default DocPatients;

@@ -1,5 +1,5 @@
 import { TextField, Grid, Container } from "@mui/material";
-import LogInDoc from "./buttons/LogInDoc";
+import LogInDoc from "./docPage/LogInDoc";
 
 const LogInDoctor = function () {
   return (

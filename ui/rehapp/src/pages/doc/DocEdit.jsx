@@ -3,9 +3,9 @@ import { Container, Grid, TextField } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 import EditDocSave from "../../coponents/docPage/EditDocSave";
-import SpeckiEdit from "../../coponents/docPage/SpeckiEdit";
+import Specki from "../../coponents/docPage/Specki";
 
-const UserMain = function ({ title }) {
+const DocEdit = function ({ title }) {
   return (
     <div>
       <NavBarekDoc />
@@ -69,7 +69,7 @@ const UserMain = function ({ title }) {
             <Container>
               <Grid container direction="column" spacing="100px">
                 <Grid item>
-                  <SpeckiEdit />
+                  <Specki />
                 </Grid>
               </Grid>
             </Container>
@@ -80,7 +80,7 @@ const UserMain = function ({ title }) {
     </div>
   );
 };
-UserMain.defaultProps = {
+DocEdit.defaultProps = {
   title: "Edytuj wprowadzone wcześniej dane",
 };
-export default UserMain;
+export default DocEdit;

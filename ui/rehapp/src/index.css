@@ -89,6 +89,14 @@ header{
   font-family: 'Sora';
   color: rgba(253, 105, 139, 0.6);
 }
+
+.headerEdit{
+  font-family: 'Sora';
+  position:absolute;
+  top: -60px;
+  left: -30px;
+}
+
 .myDiv{
   width: 400px;
   margin-top: 100px;
@@ -123,6 +131,19 @@ header{
   right:0;
   top:40%;
 }
+
+.center{
+  position: relative;
+  left: 35%;
+  top: 250px;
+}
+
+.centerEditPatient{
+  position: relative;
+  left: 0;
+  top: 250px;
+}
+
 .bodyLogin{
   color: black;
   font-family: 'Sora';

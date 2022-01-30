@@ -2,10 +2,14 @@
 import * as React from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { createSvgIcon } from "@mui/material/utils";
 import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
+import PersonIcon from "@mui/icons-material/Person";
+import MedicationIcon from "@mui/icons-material/Medication";
+import BloodtypeIcon from "@mui/icons-material/Bloodtype";
+import LogoutIcon from "@mui/icons-material/Logout";
+import InfoIcon from "@mui/icons-material/Info";
 
 const HomeIcon = createSvgIcon(
   <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />,
@@ -17,7 +21,7 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ width: 2200 }}>
+    <Box className="navbarek">
       <BottomNavigation
         showLabels
         value={value}
@@ -39,7 +43,7 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction
           label="Mój profil"
           icon={
-            <FavoriteIcon
+            <PersonIcon
               sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
             />
           }
@@ -50,7 +54,7 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction
           label="Zalecenia"
           icon={
-            <FavoriteIcon
+            <MedicationIcon
               sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
             />
           }
@@ -61,7 +65,7 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction
           label="Badania"
           icon={
-            <FavoriteIcon
+            <BloodtypeIcon
               sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
             />
           }
@@ -72,7 +76,7 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction
           label="Informacje"
           icon={
-            <FavoriteIcon
+            <InfoIcon
               sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
             />
           }
@@ -83,7 +87,7 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction
           label="Wyloguj"
           icon={
-            <FavoriteIcon
+            <LogoutIcon
               sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
             />
           }

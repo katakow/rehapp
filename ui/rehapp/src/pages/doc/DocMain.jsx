@@ -9,22 +9,24 @@ const UserMain = function ({ title }) {
   return (
     <div>
       <NavBarekDoc />
-      <h1 className="body5" align="center">
+      <h1 className="main" align="center">
         {title}
       </h1>
-      <Container maxWidth="xl">
-        <Grid container direction="row" spacing="250px">
-          <Grid item>
-            <BoxDoc />
+      <div>
+        <Container align="center">
+          <Grid container direction="row" spacing="390px">
+            <Grid item>
+              <BoxDoc />
+            </Grid>
+            <Grid item>
+              <BoxDoc2 />
+            </Grid>
+            <Grid item>
+              <BoxDoc3 />
+            </Grid>
           </Grid>
-          <Grid item>
-            <BoxDoc2 />
-          </Grid>
-          <Grid item>
-            <BoxDoc3 />
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const LogInDoc = function () {
+const LogInUser = function () {
   const navigate = useNavigate();
   return (
     <Button
@@ -16,7 +16,7 @@ const LogInDoc = function () {
         borderColor: "rgba(106, 144, 100, 0.37)",
       }}
       onClick={() => {
-        navigate("/doc/main");
+        navigate("/user/main");
       }}
     >
       ZALOGUJ SIĘ
@@ -24,4 +24,4 @@ const LogInDoc = function () {
   );
 };
 
-export default LogInDoc;
+export default LogInUser;

@@ -22,7 +22,7 @@ export default function SimpleBottomNavigation() {
             setValue(newValue);
           }}
           onClick={() => {
-            navigate("/login");
+            navigate("/");
           }}
         >
           <BottomNavigationAction

@@ -1,26 +1,32 @@
-import { TextField, Grid } from "@mui/material";
-import GreenSmallButton from "./buttons/LogInDoc";
+import { TextField, Grid, Container } from "@mui/material";
+import LogInDoc from "./buttons/LogInDoc";
 
 const LogInDoctor = function () {
   return (
-    <div>
-      Zaloguj się jako lekarz
-      <Grid />
-      <TextField
-        fullWidth
-        id="standard-basic"
-        label="e-mail / PESEL"
-        variant="standard"
-      />
-      <Grid />
-      <TextField
-        fullWidth
-        id="standard-basic"
-        label="hasło"
-        variant="standard"
-      />
-      <GreenSmallButton />
-    </div>
+    <Container>
+      <Grid container direction="column" spacing="40px">
+        <Grid item>Zaloguj się jako lekarz</Grid>
+        <Grid item>
+          <TextField
+            fullWidth
+            id="standard-basic"
+            label="e-mail / PESEL"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item>
+          <TextField
+            fullWidth
+            id="standard-basic"
+            label="hasło"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item>
+          <LogInDoc />
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

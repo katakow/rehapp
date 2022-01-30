@@ -1,51 +1,54 @@
-import { Button } from "@mui/material";
+import { Button, Grid, Container } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
 const GreenButtons = function () {
   const navigate = useNavigate();
   return (
-    <div>
-      Nie masz konta?
-      <div>
-        <Button
-          item
-          variant="outlined"
-          sx={{
-            width: "175px",
-            height: "53px",
-            color: "black",
-            backgroundColor: "rgba(106, 144, 100, 0.37)",
-            fontFamily: "Sora",
-            borderColor: "rgba(106, 144, 100, 0.37)",
-          }}
-          onClick={() => {
-            navigate("/register");
-          }}
-        >
-          ZAREJESTRUJ SIĘ
-        </Button>
-      </div>
-      <div>
-        <Button
-          item
-          variant="outlined"
-          sx={{
-            width: "175px",
-            height: "53px",
-            color: "black",
-            backgroundColor: "rgba(106, 144, 100, 0.37)",
-            fontFamily: "Sora",
-            borderColor: "rgba(106, 144, 100, 0.37)",
-          }}
-          onClick={() => {
-            navigate("/register/doc");
-          }}
-        >
-          ZAREJESTRUJ SIĘ JAKO LEKARZ
-        </Button>
-      </div>
-    </div>
+    <Container align="center">
+      <Grid container direction="column" spacing="50px">
+        <Grid item>Nie masz konta?</Grid>
+
+        <Grid item>
+          <Button
+            item
+            variant="outlined"
+            sx={{
+              width: "255px",
+              height: "93px",
+              color: "black",
+              backgroundColor: "rgba(106, 144, 100, 0.37)",
+              fontFamily: "Sora",
+              borderColor: "rgba(106, 144, 100, 0.37)",
+            }}
+            onClick={() => {
+              navigate("/register");
+            }}
+          >
+            ZAREJESTRUJ SIĘ
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button
+            item
+            variant="outlined"
+            sx={{
+              width: "255px",
+              height: "93px",
+              color: "black",
+              backgroundColor: "rgba(106, 144, 100, 0.37)",
+              fontFamily: "Sora",
+              borderColor: "rgba(106, 144, 100, 0.37)",
+            }}
+            onClick={() => {
+              navigate("/register/doc");
+            }}
+          >
+            ZAREJESTRUJ SIĘ JAKO LEKARZ
+          </Button>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

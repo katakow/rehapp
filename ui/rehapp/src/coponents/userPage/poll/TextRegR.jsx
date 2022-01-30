@@ -15,14 +15,14 @@ const TextRegR = function () {
         <TextField
           fullWidth
           id="standard-basic"
-          label="wzrost"
+          label="wzrost [cm]"
           variant="standard"
         />
         <Grid />
         <TextField
           fullWidth
           id="standard-basic"
-          label="waga"
+          label="waga [kg]"
           variant="standard"
         />
         <Grid />

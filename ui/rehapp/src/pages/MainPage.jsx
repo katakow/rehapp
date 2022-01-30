@@ -2,7 +2,7 @@
 /* eslint-disable func-names */
 /* eslint-disable react/prop-types */
 
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import CoronavirusIcon from "@mui/icons-material/Coronavirus";
 import Button1 from "../coponents/buttons/Button1";
@@ -15,34 +15,45 @@ const MainPage = function ({ title }) {
     <body>
       <Header />
       <CoronavirusIcon
+        className="covid"
         sx={{
           fontSize: "200px",
-          marginLeft: "1800px",
-          marginTop: "-40px",
           color: "rgba(253, 105, 139, 0.85)",
         }}
       />
-      <Container maxWidth="lg">
-        <h1 className="body" align="center">
-          {title}
-        </h1>
-      </Container>
-      <Container align="center" top="100px">
-        <button1
-          onClick={() => {
-            navigate("/info");
-          }}
-        >
-          <Button1 />
-        </button1>
-        <button2
-          onClick={() => {
-            navigate("/login");
-          }}
-        >
-          <Button2 />
-        </button2>
-      </Container>
+      <div className="container">
+        <Container maxWidth="lg">
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-around"
+            alignItems="stretch"
+            className="bodyLogin"
+          >
+            <Grid item>
+              <h1 className="body" align="center">
+                {title}
+              </h1>
+            </Grid>
+            <Container align="center">
+              <button1
+                onClick={() => {
+                  navigate("/info");
+                }}
+              >
+                <Button1 />
+              </button1>
+              <button2
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                <Button2 />
+              </button2>
+            </Container>
+          </Grid>
+        </Container>
+      </div>
     </body>
   );
 };

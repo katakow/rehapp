@@ -18,10 +18,7 @@ export default function NestedList() {
   };
 
   return (
-    <List
-      sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-      component="nav"
-    >
+    <List sx={{ width: "100%", bgcolor: "background.paper" }} component="nav">
       <ListItemButton onClick={handleClick}>
         <ListItemText primary="główna specjalizacja" />
         {open ? <ExpandLess /> : <ExpandMore />}
@@ -59,7 +56,6 @@ export default function NestedList() {
           <ListItemButton
             sx={{
               pl: 4,
-              "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
             }}
             selected={selectedIndex === 4}
             onClick={(event) => handleListItemClick(event, 4)}

@@ -10,25 +10,27 @@ const UserMain = function ({ title }) {
   return (
     <div>
       <NavBarek />
-      <h1 className="body5" align="center">
+      <h1 className="main" align="center">
         {title}
       </h1>
-      <Container maxWidth="xl">
-        <Grid container direction="row" spacing="60px">
-          <Grid item>
-            <Box />
+      <div>
+        <Container maxWidth="xl">
+          <Grid container direction="row" spacing="390px">
+            <Grid item>
+              <Box />
+            </Grid>
+            <Grid item>
+              <Box2 />
+            </Grid>
+            <Grid item>
+              <Box3 />
+            </Grid>
+            <Grid item>
+              <Box4 />
+            </Grid>
           </Grid>
-          <Grid item>
-            <Box2 />
-          </Grid>
-          <Grid item>
-            <Box3 />
-          </Grid>
-          <Grid item>
-            <Box4 />
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </div>
     </div>
   );
 };

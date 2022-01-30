@@ -1,27 +1,34 @@
-import { Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Grid, TextField, Container } from "@mui/material";
 
-const GreenSmallButton = function () {
-  const navigate = useNavigate();
+import LogInUser from "./userPage/LogInUser";
+
+const LogIn = function () {
   return (
-    <Button
-      item
-      variant="outlined"
-      sx={{
-        width: "143px",
-        height: "53px",
-        color: "black",
-        backgroundColor: "rgba(106, 144, 100, 0.37)",
-        fontFamily: "Sora",
-        borderColor: "rgba(106, 144, 100, 0.37)",
-      }}
-      onClick={() => {
-        navigate("/user/main");
-      }}
-    >
-      ZALOGUJ SIĘ
-    </Button>
+    <Container maxWidth="xl">
+      <Grid container direction="column" spacing="40px">
+        <Grid item>Zaloguj się</Grid>
+        <Grid item maxWidth="100px">
+          <TextField
+            fullWidth
+            id="standard-basic"
+            label="e-mail / PESEL"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item>
+          <TextField
+            fullWidth
+            id="standard-basic"
+            label="hasło"
+            variant="standard"
+          />
+        </Grid>
+        <Grid item>
+          <LogInUser />
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 
-export default GreenSmallButton;
+export default LogIn;

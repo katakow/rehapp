@@ -9,33 +9,38 @@ import Radio from "../../../coponents/userPage/poll/Radio";
 
 const Register = function () {
   return (
-    <body>
-      <NavBar />
-      <div className="bodyNav">REJESTRACJA</div>
-      <h1 className="body" align="center">
-        <p>
-          Prosimy o rzetelność wprowadzanych informacji, abyśmy mogli Ci jak
-          najlepiej pomóc.
-        </p>
-        <p>Dziękujemy!</p>
-      </h1>
-      <Grid
-        container
-        direction="row"
-        justifyContent="space-around"
-        alignItems="stretch"
-        className="bodyLogin"
-      >
-        <TextRegL />
-        <TextRegR />
-      </Grid>
-      <Radio />
-      <Container className="nextButton" maxWidth="2250px" align="right">
-        <Grid container direction="row" spacing="15px" />
-        <ButtonToR2 />
-      </Container>{" "}
-      Strona 1/6
-    </body>
+    <div>
+      <body>
+        <NavBar />
+        <div className="bodyNav">REJESTRACJA</div>
+        <h1 className="body" align="center">
+          <p>
+            Prosimy o rzetelność wprowadzanych informacji, abyśmy mogli Ci jak
+            najlepiej pomóc.
+          </p>
+          <p>Dziękujemy!</p>
+        </h1>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-around"
+          alignItems="stretch"
+          className="bodyLogin"
+        >
+          <TextRegL />
+          <TextRegR />
+        </Grid>
+        <Radio />
+        <Container className="nextButton" align="right">
+          <Grid container direction="row">
+            <Grid item>
+              <ButtonToR2 />
+            </Grid>
+          </Grid>
+        </Container>{" "}
+      </body>
+      <div className="divek2">Strona 1/6</div>
+    </div>
   );
 };
 

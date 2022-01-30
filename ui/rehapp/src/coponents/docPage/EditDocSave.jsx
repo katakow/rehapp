@@ -14,11 +14,11 @@ const EditDoc = function () {
         backgroundColor: "rgba(106, 144, 100, 0.37)",
         fontFamily: "Sora",
         borderColor: "rgba(106, 144, 100, 0.37)",
-        marginLeft: "1800px",
       }}
       onClick={() => {
         navigate("/doc/profile");
       }}
+      className="editButton"
     >
       ZAPISZ
     </Button>

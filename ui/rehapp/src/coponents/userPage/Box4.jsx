@@ -11,7 +11,8 @@ export default function BoxSx() {
         backgroundColor: "rgba(106, 144, 100, 0.37)",
         color: "black",
         borderRadius: 15,
-        marginTop: "300px",
+        position: "absolute",
+        bottom: 200,
       }}
     >
       <div className="box">

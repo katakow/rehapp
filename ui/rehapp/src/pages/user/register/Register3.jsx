@@ -10,82 +10,89 @@ import RadioR3 from "../../../coponents/userPage/poll/RadioR3";
 
 const Register3 = function () {
   return (
-    <body>
-      <NavBar />
-      <div className="bodyNav">REJESTRACJA</div>
-      <h1 className="body" align="center">
-        <p>
-          Prosimy o rzetelność wprowadzanych informacji, abyśmy mogli Ci jak
-          najlepiej pomóc.
-        </p>
-        <p>Dziękujemy!</p>
-      </h1>
-      <Container>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-around"
-          alignItems="stretch"
-          className="bodyLogin"
-        >
-          <Grid item>
-            <FormLabel component="legend">alergie</FormLabel>
-            <Grid
-              container
-              direction="row"
-              justifyContent="space-around"
-              alignItems="stretch"
-              className="bodyLogin2"
-            >
-              <Grid item>
-                <CheckboxR />
-              </Grid>
-              <Grid item>
-                <CheckboxR />
+    <div>
+      <body>
+        <NavBar />
+        <div className="bodyNav">REJESTRACJA</div>
+        <h1 className="body" align="center">
+          <p>
+            Prosimy o rzetelność wprowadzanych informacji, abyśmy mogli Ci jak
+            najlepiej pomóc.
+          </p>
+          <p>Dziękujemy!</p>
+        </h1>
+        <Container>
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-around"
+            alignItems="stretch"
+            className="bodyLogin"
+          >
+            <Grid item>
+              <FormLabel component="legend">alergie</FormLabel>
+              <Grid
+                container
+                direction="row"
+                justifyContent="space-around"
+                alignItems="stretch"
+                className="bodyLogin2"
+              >
+                <Grid item>
+                  <CheckboxR />
+                </Grid>
+                <Grid item>
+                  <CheckboxR />
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid item>
-            <FormLabel component="legend">odbyte szczepienia</FormLabel>
+            <Grid item>
+              <FormLabel component="legend">odbyte szczepienia</FormLabel>
 
-            <Grid
-              container
-              direction="row"
-              justifyContent="space-around"
-              alignItems="stretch"
-              className="bodyLogin2"
-            >
-              <Grid item>
-                <CheckboxR />
+              <Grid
+                container
+                direction="row"
+                justifyContent="space-around"
+                alignItems="stretch"
+                className="bodyLogin2"
+              >
+                <Grid item>
+                  <CheckboxR />
+                </Grid>
+                <Grid item>
+                  <CheckboxR />
+                </Grid>
               </Grid>
-              <Grid item>
-                <CheckboxR />
+            </Grid>
+            <Grid item>
+              <FormLabel component="legend">stosowana dieta</FormLabel>
+              <Grid
+                container
+                direction="row"
+                justifyContent="space-around"
+                alignItems="stretch"
+                className="bodyLogin2"
+              >
+                <Grid item>
+                  <RadioR3 />
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
-            <FormLabel component="legend">stosowana dieta</FormLabel>
-            <Grid
-              container
-              direction="row"
-              justifyContent="space-around"
-              alignItems="stretch"
-              className="bodyLogin2"
-            >
-              <Grid item>
-                <RadioR3 />
-              </Grid>
+        </Container>
+        <Container className="nextButton" align="right">
+          <Grid container direction="row" spacing="50px">
+            <Grid item>
+              <PrevBToR1 />
+            </Grid>
+            <Grid item>
+              <ButtonToR4 />
             </Grid>
           </Grid>
-        </Grid>
-      </Container>
-      <Container className="nextButton" maxWidth="2250px" align="right">
-        <Grid container direction="row" spacing="75px" />
-        <PrevBToR1 />
-        <ButtonToR4 />
-      </Container>
-      Strona 3/6
-    </body>
+        </Container>
+      </body>
+      <div className="divek2">Strona 3/6</div>
+    </div>
   );
 };
 

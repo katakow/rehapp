@@ -40,13 +40,23 @@ body {
   margin-top: -70px;
 }
 
-.body5 {
+.main {
   font-family: 'Sora';
   color: black;
   margin-top: 100px;
   font-size: 32px;
-  width: 1300px;
-  margin-left: 450px;
+  width: 70%;
+  position: absolute;
+  left: 15%;
+}
+
+.container
+{
+  margin-top: 250px;
+}
+
+.navbarek {
+  width: 100%;
 }
 
 .divek {
@@ -59,11 +69,13 @@ body {
 }
 .divek2 {
   font-family: 'Sora';
+  font-size: 25px;
   margin: 30px;
-  margin-top: 100px;
   color: black;
-  margin-bottom: 20px;
-  height: 10px;
+  position:absolute;
+  left:0;
+  right:0;
+  top:85%;
 }
 .headeR {
   font-family: 'Sora';
@@ -71,16 +83,6 @@ body {
   font-size: 46px;
   height: 240px;
 }
-.bold {
-  font-family: 'Sora';
-  font-weight: bold;
-  margin: 10px;
-  margin-top: 10px;
-  color: black;
-  margin-bottom: 70px;
-  height: 20px;
-}
-
 header{
   margin-left: 50px;
   font-size: 64px;
@@ -102,20 +104,24 @@ header{
   left: 50px;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .nextButton {
-  align-self: flex-end;
-  justify-self: flex-end;
-  margin-top: 250px;
+  position:absolute;
+  left:70%;
+  top: 85%;
 }
 
-.prevButton {
-  align-self: flex-end;
-  justify-self: flex-end;
+.editButton {
+  position:absolute;
+  left:90%;
+}
+.docProf {
+  font-family: 'Sora';
+  font-size: 25px;
+  color: black;
+  position:absolute;
+  left:0;
+  right:0;
+  top:40%;
 }
 .bodyLogin{
   color: black;
@@ -156,41 +162,27 @@ header{
   left: 16px;
 }
 
-
+.covid{
+  position:absolute;
+  left: 80%;
+  top: 5%
+}
 .error {
  font-family: 'Sora';
  margin-left: 350px;
- margin-top: 100px;
+ margin-top: 200px;
  font-size: 70px;
 }
 
-.button1 {
-  font-family: "Sora", sans-serif;
-  color: rgba(253, 105, 139, 0.85);
-}
-
-.button2 {
-  font-family: "Sora", sans-serif;
-  color: rgba(106, 144, 100, 0.85);
-}
-
-.buttons{
-   position: center;
-   text-align: center;
-   font-family: "Sora", sans-serif;
-}
-
 .box{
-  position: center;
   text-align: center;
   font-family: "Sora", sans-serif;
-  align-self: center;
-  justify-self: center;
-  margin: 30px;
+  margin: 40px;
   text-align: center;
   font-size: 20px;
-  font-stretch: normal;
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

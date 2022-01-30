@@ -19,10 +19,15 @@ const Register = function () {
           informacje, które wprowadziłaś / wprowadziłeś.
         </h1>
       </Container>
-      <Container className="nextButton" maxWidth="2250px" align="right">
-        <Grid container direction="row" spacing="75px" />
-        <PrevBToR1 />
-        <ButtonToProfile />
+      <Container className="nextButton" align="right">
+        <Grid container direction="row" spacing="50px">
+          <Grid item>
+            <PrevBToR1 />
+          </Grid>
+          <Grid item>
+            <ButtonToProfile />
+          </Grid>
+        </Grid>
       </Container>
     </body>
   );

@@ -20,7 +20,7 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ width: 2200 }}>
+    <Box className="navbarek">
       <BottomNavigation
         showLabels
         value={value}

@@ -26,6 +26,8 @@ import UserInfo from "./pages/user/UserInfo";
 import UserExam from "./pages/user/UserExam";
 import UserExam2 from "./pages/user/UserExam2";
 import UserRec from "./pages/user/UserRec";
+import UserEdit1 from "./pages/user/UserEdit1";
+import UserEdit2 from "./pages/user/UserEdit2";
 import RegisterDoc from "./pages/doc/RegisterDoc";
 
 const App = function () {
@@ -44,12 +46,14 @@ const App = function () {
         <Route path="/register/end" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />
-        <Route path="/user/profile2" element={<UserProfile2 />} />
+        <Route path="/user/profile/2" element={<UserProfile2 />} />
+        <Route path="/user/edit/profile" element={<UserEdit1 />} />
+        <Route path="/user/edit/profile/2" element={<UserEdit2 />} />
         <Route path="/user/main" element={<UserMain />} />
         <Route path="/user/info" element={<UserInfo />} />
         <Route path="/user/rec" element={<UserRec />} />
         <Route path="/user/exam" element={<UserExam />} />
-        <Route path="/user/exam2" element={<UserExam2 />} />
+        <Route path="/user/exam/2" element={<UserExam2 />} />
 
         <Route path="/doc/main" element={<DocMain />} />
         <Route path="/doc/profile" element={<DocProfile />} />

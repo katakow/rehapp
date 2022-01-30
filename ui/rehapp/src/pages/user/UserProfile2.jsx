@@ -1,41 +1,73 @@
 /* eslint-disable react/prop-types */
 import { Container, Grid } from "@mui/material";
+import FormLabel from "@mui/material/FormLabel";
 import NavBarek from "../../coponents/userPage/NavBarek";
-import Box from "../../coponents/userPage/Box";
-import Box2 from "../../coponents/userPage/Box2";
-import Box3 from "../../coponents/userPage/Box3";
-import Box4 from "../../coponents/userPage/Box4";
+import EditUser2 from "../../coponents/userPage/EditUser2";
+import PrevBToR1 from "../../coponents/userPage/PrevBToR1";
 
-const UserMain = function ({ title }) {
+const UserProfile = function ({ title }) {
   return (
     <div>
       <NavBarek />
-      <h1 className="body5" align="center">
+      <h1 className="main" align="center">
         {title}
       </h1>
-      <Container maxWidth="xl">
-        <Grid container direction="row" spacing="60px">
+      <Container maxWidth="xl" className="centerEditPatient">
+        <Grid container direction="row" spacing="450px">
           <Grid item>
-            <Box />
+            <Container>
+              <Grid container direction="column" spacing="50px">
+                <Grid item>
+                  <FormLabel component="legend">
+                    data przejścia COVID-19
+                  </FormLabel>
+                </Grid>
+                <Grid item>
+                  <FormLabel component="legend">
+                    objawy podczas COVID-19
+                  </FormLabel>
+                </Grid>
+                <Grid item>
+                  <FormLabel component="legend">przebieg COVID-19</FormLabel>
+                </Grid>
+                <Grid item>
+                  <FormLabel component="legend">zażywane leki</FormLabel>
+                </Grid>
+              </Grid>
+            </Container>
           </Grid>
           <Grid item>
-            <Box2 />
+            <Container>
+              <Grid container direction="column" spacing="60px">
+                <Grid item>
+                  <FormLabel component="legend">
+                    data szczepienia na COVID-19
+                  </FormLabel>
+                </Grid>
+                <Grid item>
+                  <FormLabel component="legend">
+                    preparat, którym się szczepiłaś / eś
+                  </FormLabel>
+                </Grid>
+              </Grid>
+            </Container>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container className="nextButton" align="right">
+        <Grid container direction="row" spacing="50px">
+          <Grid item>
+            <PrevBToR1 />
           </Grid>
           <Grid item>
-            <Box3 />
-          </Grid>
-          <Grid item>
-            <Box4 />
+            <EditUser2 />
           </Grid>
         </Grid>
       </Container>
     </div>
   );
 };
-UserMain.defaultProps = {
-  title:
-    "Pragniemy zaznaczyć, że wszystkie porady, które są widoczne na tej stronie nie są równoznaczne z wizytą u specjalisty. " +
-    "Gdyby wystąpiły jakiekolwiek objawy niepokojące, należy niezwłocznie udać się do lekarza pierwszego kontaktu, " +
-    "lub zadzwonić pod numer 999/112.",
+UserProfile.defaultProps = {
+  title: "Tu możesz przejrzeć i edytować wprowadzone wcześniej dane",
 };
-export default UserMain;
+export default UserProfile;

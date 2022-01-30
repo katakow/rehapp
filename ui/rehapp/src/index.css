@@ -117,7 +117,11 @@ header{
   left:70%;
   top: 85%;
 }
-
+.profileNext {
+  position:absolute;
+  top: 85%;
+  right: 0;
+}
 .editButton {
   position:absolute;
   left:90%;

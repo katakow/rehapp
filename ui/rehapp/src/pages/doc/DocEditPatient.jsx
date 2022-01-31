@@ -15,7 +15,14 @@ const DocPatients = function ({ title }) {
         {title}
       </h1>
       <Container className="centerEditPatient">
-        <Grid container direction="row" spacing="50px">
+        <Grid
+          container
+          direction="row"
+          spacing="50px"
+          alignContent="center"
+          alignItems="center"
+          alignSelf="center"
+        >
           <Grid item>
             <PatientText1 />
           </Grid>

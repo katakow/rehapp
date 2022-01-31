@@ -83,9 +83,11 @@ const TextDoc = function () {
         <Grid />
         <TextField
           fullWidth
-          id="standard-basic"
           label="numer PWZ"
           variant="standard"
+          required
+          id="outlined-required"
+          defaultValue="Hello World"
         />
         <Grid />
         <TextField id="standard-basic" label="płeć" variant="standard" />

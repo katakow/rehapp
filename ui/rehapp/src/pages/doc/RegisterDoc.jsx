@@ -14,15 +14,17 @@ const Register = function () {
       <body>
         <NavBar />
         <div className="bodyNav">REJESTRACJA</div>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-around"
-          alignItems="stretch"
-          className="bodyLogin"
-        >
-          <Specki />
-          <TextFieldDoc />
+        <h1 className="body" align="center">
+          <p>Prosimy o rzetelność wprowadzanych informacji.</p>
+          <p>Dziękujemy!</p>
+        </h1>
+        <Grid container direction="row" justifyContent="space-around">
+          <Grid item>
+            <Specki />
+          </Grid>
+          <Grid item>
+            <TextFieldDoc />
+          </Grid>
         </Grid>
         <Radiodoc />
         <div className="nextButton">

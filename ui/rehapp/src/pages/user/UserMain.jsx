@@ -8,7 +8,7 @@ import Box4 from "../../coponents/userPage/Box4";
 
 const UserMain = function ({ title }) {
   return (
-    <div>
+    <body className="userProfile">
       <NavBarek />
       <h1 className="main" align="center">
         {title}
@@ -31,7 +31,7 @@ const UserMain = function ({ title }) {
           </Grid>
         </Container>
       </div>
-    </div>
+    </body>
   );
 };
 UserMain.defaultProps = {

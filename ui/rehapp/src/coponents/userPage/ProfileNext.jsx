@@ -17,7 +17,7 @@ const ProfileNext = function () {
         borderColor: "rgba(106, 144, 100, 0.37)",
       }}
       onClick={() => {
-        navigate("/user/profile/2");
+        navigate("/user/profile2");
       }}
     >
       NASTĘPNA STRONA

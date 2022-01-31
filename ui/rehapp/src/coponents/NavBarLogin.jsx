@@ -13,7 +13,7 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   return (
-    <navbar className="navbar">
+    <navbar className="navbarReg">
       <Box sx={{ width: 50 }}>
         <BottomNavigation
           showLabels

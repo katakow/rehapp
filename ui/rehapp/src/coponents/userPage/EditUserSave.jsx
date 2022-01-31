@@ -18,7 +18,6 @@ const EditDoc = function () {
       onClick={() => {
         navigate("/user/profile");
       }}
-      className="editButton"
     >
       ZAPISZ
     </Button>

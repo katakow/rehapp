@@ -6,7 +6,7 @@ import Box2 from "../../coponents/userPage/Box2";
 import Box3 from "../../coponents/userPage/Box3";
 import Box4 from "../../coponents/userPage/Box4";
 
-const UserMain = function ({ title }) {
+const UserExam2 = function ({ title }) {
   return (
     <div>
       <NavBarek />
@@ -32,10 +32,10 @@ const UserMain = function ({ title }) {
     </div>
   );
 };
-UserMain.defaultProps = {
+UserExam2.defaultProps = {
   title:
     "Pragniemy zaznaczyć, że wszystkie porady, które są widoczne na tej stronie nie są równoznaczne z wizytą u specjalisty. " +
     "Gdyby wystąpiły jakiekolwiek objawy niepokojące, należy niezwłocznie udać się do lekarza pierwszego kontaktu, " +
     "lub zadzwonić pod numer 999/112.",
 };
-export default UserMain;
+export default UserExam2;

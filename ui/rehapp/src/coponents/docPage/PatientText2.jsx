@@ -3,7 +3,7 @@ import FormLabel from "@mui/material/FormLabel";
 
 const PatientEditText = function () {
   return (
-    <div className="body">
+    <div>
       <Container maxWidth="400px">
         <Grid container direction="column" spacing="50px">
           <Grid item>

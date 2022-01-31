@@ -1,18 +1,36 @@
 /* eslint-disable react/prop-types */
 
+import { Container, Grid } from "@mui/material";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
+import InfoPrevent from "../../coponents/InfoPrevent";
+import InfoSymptoms from "../../coponents/InfoSymptoms";
+import InfoTreatment from "../../coponents/InfoTreatment";
 
-const UserMain = function ({ title }) {
+const DocInfo = function ({ title }) {
   return (
     <div>
       <NavBarekDoc />
-      <h1 className="body5" align="center">
+      <h1 className="main" align="center">
         {title}
       </h1>
+      <Container className="container">
+        <Grid container direction="row" spacing="30px">
+          <Grid item>
+            <InfoPrevent />
+          </Grid>
+          <Grid item>
+            <InfoSymptoms />
+          </Grid>
+          <Grid item>
+            <InfoTreatment />
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 };
-UserMain.defaultProps = {
-  title: "Witamy w trybie lekarza / specjalisty! ",
+DocInfo.defaultProps = {
+  title:
+    "COVID-19 (ang. coronavirus disease 2019) - jest to ostra choroba zakaźna układu oddechowego wywołana zakażeniem wirusem SARS-CoV-2.",
 };
-export default UserMain;
+export default DocInfo;

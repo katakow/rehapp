@@ -11,7 +11,7 @@ const PatientEditText = function () {
           JAN KOWALSKI
         </FormLabel>{" "}
       </div>
-      <div className="body">
+      <div>
         <Container maxWidth="400px">
           <Grid container direction="column" spacing="50px">
             <Grid item>

@@ -14,7 +14,7 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   return (
-    <Box>
+    <Box className="navbarek">
       <BottomNavigation showLabels>
         <BottomNavigationAction
           label="Strona główna"

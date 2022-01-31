@@ -46,9 +46,9 @@ const App = function () {
         <Route path="/register/end" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />
-        <Route path="/user/profile/2" element={<UserProfile2 />} />
-        <Route path="/user/edit/profile" element={<UserEdit1 />} />
-        <Route path="/user/edit/profile/2" element={<UserEdit2 />} />
+        <Route path="/user/profile2" element={<UserProfile2 />} />
+        <Route path="/user/profile/edit" element={<UserEdit1 />} />
+        <Route path="/user/profile2/edit" element={<UserEdit2 />} />
         <Route path="/user/main" element={<UserMain />} />
         <Route path="/user/info" element={<UserInfo />} />
         <Route path="/user/rec" element={<UserRec />} />

@@ -3,7 +3,7 @@ import { Container, Grid, TextField } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
 import EditUserSave2 from "../../coponents/userPage/EditUserSave2";
 
-const UserProfile = function ({ title }) {
+const UserEdit2 = function ({ title }) {
   return (
     <div>
       <NavBarek />
@@ -140,7 +140,7 @@ const UserProfile = function ({ title }) {
     </div>
   );
 };
-UserProfile.defaultProps = {
+UserEdit2.defaultProps = {
   title: "Tu możesz przejrzeć i edytować wprowadzone wcześniej dane",
 };
-export default UserProfile;
+export default UserEdit2;

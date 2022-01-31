@@ -15,13 +15,13 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   return (
-    <Box>
+    <Box className="navbarek">
       <BottomNavigation showLabels>
         <BottomNavigationAction
           label="Strona główna"
           icon={
             <HomeIcon
-              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "40px" }}
             />
           }
           onClick={() => {
@@ -32,7 +32,7 @@ export default function SimpleBottomNavigation() {
           label="Mój profil"
           icon={
             <PersonIcon
-              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "40px" }}
             />
           }
           onClick={() => {
@@ -43,7 +43,7 @@ export default function SimpleBottomNavigation() {
           label="Zalecenia"
           icon={
             <MedicationIcon
-              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "40px" }}
             />
           }
           onClick={() => {
@@ -54,7 +54,7 @@ export default function SimpleBottomNavigation() {
           label="Badania"
           icon={
             <BloodtypeIcon
-              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "40px" }}
             />
           }
           onClick={() => {
@@ -65,7 +65,7 @@ export default function SimpleBottomNavigation() {
           label="Informacje"
           icon={
             <InfoIcon
-              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "40px" }}
             />
           }
           onClick={() => {
@@ -76,7 +76,7 @@ export default function SimpleBottomNavigation() {
           label="Wyloguj"
           icon={
             <LogoutIcon
-              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "50px" }}
+              sx={{ color: "rgba(253, 105, 139, 0.85)", fontSize: "40px" }}
             />
           }
           onClick={() => {

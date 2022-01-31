@@ -1,20 +1,36 @@
 /* eslint-disable react/prop-types */
+
+import { Container, Grid } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
+import InfoPrevent from "../../coponents/InfoPrevent";
+import InfoSymptoms from "../../coponents/InfoSymptoms";
+import InfoTreatment from "../../coponents/InfoTreatment";
 
 const UserInfo = function ({ title }) {
   return (
-    <div>
+    <body className="userProfile">
       <NavBarek />
-      <h1 className="body5" align="center">
+      <h1 className="main" align="center">
         {title}
       </h1>
-    </div>
+      <Container className="container">
+        <Grid container direction="row" spacing="30px">
+          <Grid item>
+            <InfoPrevent />
+          </Grid>
+          <Grid item>
+            <InfoSymptoms />
+          </Grid>
+          <Grid item>
+            <InfoTreatment />
+          </Grid>
+        </Grid>
+      </Container>
+    </body>
   );
 };
 UserInfo.defaultProps = {
   title:
-    "Pragniemy zaznaczyć, że wszystkie porady, które są widoczne na tej stronie nie są równoznaczne z wizytą u specjalisty. " +
-    "Gdyby wystąpiły jakiekolwiek objawy niepokojące, należy niezwłocznie udać się do lekarza pierwszego kontaktu, " +
-    "lub zadzwonić pod numer 999/112.",
+    "COVID-19 (ang. coronavirus disease 2019) - jest to ostra choroba zakaźna układu oddechowego wywołana zakażeniem wirusem SARS-CoV-2.",
 };
 export default UserInfo;

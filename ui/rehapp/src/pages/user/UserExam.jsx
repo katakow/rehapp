@@ -1,32 +1,20 @@
 /* eslint-disable react/prop-types */
 import { Container, Grid } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
-import Box from "../../coponents/userPage/Box";
-import Box2 from "../../coponents/userPage/Box2";
-import Box3 from "../../coponents/userPage/Box3";
-import Box4 from "../../coponents/userPage/Box4";
 
 const UserExam = function ({ title }) {
   return (
-    <body className="userProfile">
+    <body>
       <NavBarek />
-      <h1 className="body5" align="center">
+      <h1 className="main" align="center">
         {title}
       </h1>
-      <Container maxWidth="xl">
+      <Container>
         <Grid container direction="row" spacing="60px">
-          <Grid item>
-            <Box />
-          </Grid>
-          <Grid item>
-            <Box2 />
-          </Grid>
-          <Grid item>
-            <Box3 />
-          </Grid>
-          <Grid item>
-            <Box4 />
-          </Grid>
+          <Grid item />
+          <Grid item />
+          <Grid item />
+          <Grid item />
         </Grid>
       </Container>
     </body>

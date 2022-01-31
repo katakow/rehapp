@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import ButtonToR2 from "../../../coponents/userPage/ButtonToR2";
 import NavBar from "../../../coponents/NavBar";
 import TextRegL from "../../../coponents/userPage/poll/TextRegL";
@@ -20,24 +20,14 @@ const Register = function () {
           </p>
           <p>Dziękujemy!</p>
         </h1>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-around"
-          alignItems="stretch"
-          className="bodyLogin"
-        >
+        <Grid container direction="row" justifyContent="space-around">
           <TextRegL />
           <TextRegR />
         </Grid>
         <Radio />
-        <Container className="nextButton" align="right">
-          <Grid container direction="row">
-            <Grid item>
-              <ButtonToR2 />
-            </Grid>
-          </Grid>
-        </Container>{" "}
+        <div className="nextButton">
+          <ButtonToR2 />
+        </div>
       </body>
       <div className="divek2">Strona 1/6</div>
     </div>

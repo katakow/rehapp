@@ -87,7 +87,6 @@ const TextDoc = function () {
           variant="standard"
           required
           id="outlined-required"
-          defaultValue="Hello World"
         />
         <Grid />
         <TextField id="standard-basic" label="płeć" variant="standard" />

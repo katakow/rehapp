@@ -1,6 +1,11 @@
 /* eslint-disable react/prop-types */
 import { Container, Grid } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
+import UserCheck1 from "../../coponents/userPage/UserCheck1";
+import UserCheck2 from "../../coponents/userPage/UserCheck2";
+import UserCheck3 from "../../coponents/userPage/UserCheck3";
+import UserCheck4 from "../../coponents/userPage/UserCheck4";
+import UserExamNext from "../../coponents/userPage/UserExamNext";
 
 const UserExam = function ({ title }) {
   return (
@@ -10,11 +15,26 @@ const UserExam = function ({ title }) {
         {title}
       </h1>
       <Container>
-        <Grid container direction="row" spacing="60px">
-          <Grid item />
-          <Grid item />
-          <Grid item />
-          <Grid item />
+        <Grid container direction="column" spacing="90px">
+          <Grid item>
+            <Grid container direction="row" spacing="90px">
+              <Grid item>
+                <UserCheck1 />
+              </Grid>
+              <Grid item>
+                <UserCheck2 />
+              </Grid>
+              <Grid item>
+                <UserCheck3 />
+              </Grid>
+              <Grid item>
+                <UserCheck4 />
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <UserExamNext />
+          </Grid>
         </Grid>
       </Container>
     </body>

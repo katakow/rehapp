@@ -19,7 +19,7 @@ const Register = function () {
           informacje, które wprowadziłaś / wprowadziłeś.
         </h1>
       </Container>
-      <Container className="nextButton" align="right">
+      <div className="nextButton">
         <Grid container direction="row" spacing="50px">
           <Grid item>
             <PrevBToR1 />
@@ -28,7 +28,7 @@ const Register = function () {
             <ButtonToProfile />
           </Grid>
         </Grid>
-      </Container>
+      </div>
     </body>
   );
 };

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Container, Grid, FormLabel } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
+import UserExamPrev from "../../coponents/userPage/UserExamPrev";
 
 const UserExam2 = function ({ title }) {
   return (
@@ -20,6 +21,9 @@ const UserExam2 = function ({ title }) {
             <FormLabel component="legend" sx={{ fontSize: "26px" }}>
               warto poprosić lekarza rodzinnego o skierowanie na badania
             </FormLabel>
+          </Grid>
+          <Grid item>
+            <UserExamPrev />{" "}
           </Grid>
         </Grid>
       </Container>

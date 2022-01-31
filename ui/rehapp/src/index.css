@@ -171,8 +171,14 @@ header{
 
 .nextButton {
   position:absolute;
-  left:70%;
   top: 85%;
+  margin-left: 70%;
+}
+
+.nexButtonDoc {
+  position: absolute;
+  top: 85%;
+  margin-left: 50%;
 }
 .profileNext {
   position:absolute;
@@ -188,12 +194,11 @@ header{
 }
 
 .radio{
-  margin-left: 1650px;
+  margin-left: 77%;
 }
 
 .radiodoc{
-  margin-left: 1650px;
-  margin-top: -450px
+  margin-left: 75%;
 }
 
 .navbarReg{

@@ -72,7 +72,7 @@ const Register4 = function () {
         </div>
         * W przypadku wielokrotnego przejścia choroby, istotna jest tylko data
         ostatniego przechorowania.
-        <Container className="nextButton" align="right">
+        <div className="nextButton">
           <Grid container direction="row" spacing="50px">
             <Grid item>
               <PrevBToR1 />
@@ -81,7 +81,7 @@ const Register4 = function () {
               <ButtonToR5 />
             </Grid>
           </Grid>
-        </Container>
+        </div>
       </body>
       <div className="divek2">Strona 4/6</div>
     </div>

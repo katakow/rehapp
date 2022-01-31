@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
-const ProfilePrev = function () {
+const UserExamNext = function () {
   const navigate = useNavigate();
   return (
     <Button
@@ -17,12 +17,12 @@ const ProfilePrev = function () {
         borderColor: "rgba(106, 144, 100, 0.37)",
       }}
       onClick={() => {
-        navigate(-1);
+        navigate("/user/exam/2");
       }}
     >
-      POPRZEDNIA STRONA
+      NASTĘPNA STRONA
     </Button>
   );
 };
 
-export default ProfilePrev;
+export default UserExamNext;

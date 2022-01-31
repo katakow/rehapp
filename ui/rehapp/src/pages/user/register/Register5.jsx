@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
 import ButtonToR6 from "../../../coponents/userPage/ButtonToR6";
 import NavBar from "../../../coponents/NavBar";
@@ -83,7 +83,7 @@ const Register5 = function () {
             </Grid>
           </Grid>
         </Grid>
-        <Container className="nextButton" align="right">
+        <div className="nextButton">
           <Grid container direction="row" spacing="50px">
             <Grid item>
               <PrevBToR1 />
@@ -92,7 +92,7 @@ const Register5 = function () {
               <ButtonToR6 />
             </Grid>
           </Grid>
-        </Container>
+        </div>
       </body>
       <div className="divek2">Strona 5/6</div>
     </div>

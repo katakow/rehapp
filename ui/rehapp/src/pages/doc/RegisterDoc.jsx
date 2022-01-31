@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import * as React from "react";
 import ButtonToProfile from "../../coponents/docPage/ButtonToProfile";
 import NavBar from "../../coponents/NavBar";
@@ -18,14 +18,16 @@ const Register = function () {
           <p>Prosimy o rzetelność wprowadzanych informacji.</p>
           <p>Dziękujemy!</p>
         </h1>
-        <Grid container direction="row" justifyContent="space-around">
-          <Grid item>
-            <Specki />
+        <Container>
+          <Grid container direction="row" spacing="400px">
+            <Grid item>
+              <Specki />
+            </Grid>
+            <Grid item>
+              <TextFieldDoc />
+            </Grid>
           </Grid>
-          <Grid item>
-            <TextFieldDoc />
-          </Grid>
-        </Grid>
+        </Container>
         <Radiodoc />
         <div className="nextButton">
           <ButtonToProfile />

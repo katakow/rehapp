@@ -80,7 +80,7 @@ const Register3 = function () {
             </Grid>
           </Grid>
         </Container>
-        <Container className="nextButton" align="right">
+        <div className="nextButton">
           <Grid container direction="row" spacing="50px">
             <Grid item>
               <PrevBToR1 />
@@ -89,7 +89,7 @@ const Register3 = function () {
               <ButtonToR4 />
             </Grid>
           </Grid>
-        </Container>
+        </div>
       </body>
       <div className="divek2">Strona 3/6</div>
     </div>

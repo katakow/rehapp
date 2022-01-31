@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
-const ProfilePrev = function () {
+const UserExamPrev = function () {
   const navigate = useNavigate();
   return (
     <Button
@@ -25,4 +25,4 @@ const ProfilePrev = function () {
   );
 };
 
-export default ProfilePrev;
+export default UserExamPrev;

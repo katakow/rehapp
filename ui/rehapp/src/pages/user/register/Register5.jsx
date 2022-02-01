@@ -84,7 +84,7 @@ const Register5 = function () {
           </Grid>
         </Grid>
         <div className="nextButton">
-          <Grid container direction="row" spacing="50px">
+          <Grid container direction="row" spacing="30px">
             <Grid item>
               <PrevBToR1 />
             </Grid>

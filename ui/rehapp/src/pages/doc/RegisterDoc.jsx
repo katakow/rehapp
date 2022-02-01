@@ -19,7 +19,7 @@ const Register = function () {
           <p>Dziękujemy!</p>
         </h1>
         <Container>
-          <Grid container direction="row" spacing="400px">
+          <Grid container direction="row" spacing="300px">
             <Grid item>
               <Specki />
             </Grid>

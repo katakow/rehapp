@@ -17,7 +17,7 @@ const ProfilePrev = function () {
         borderColor: "rgba(106, 144, 100, 0.37)",
       }}
       onClick={() => {
-        navigate(-1);
+        navigate("/user/profile");
       }}
     >
       POPRZEDNIA STRONA

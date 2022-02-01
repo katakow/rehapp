@@ -96,7 +96,7 @@ body {
   position:absolute;
   left:0;
   right:0;
-  top:40%;
+  top:30%;
 }
 
 .userProfile{
@@ -198,7 +198,7 @@ header{
 }
 
 .radiodoc{
-  margin-left: 75%;
+  margin-left: 65%;
 }
 
 .navbarReg{

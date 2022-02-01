@@ -73,7 +73,7 @@ const Register4 = function () {
         * W przypadku wielokrotnego przejścia choroby, istotna jest tylko data
         ostatniego przechorowania.
         <div className="nextButton">
-          <Grid container direction="row" spacing="50px">
+          <Grid container direction="row" spacing="30px">
             <Grid item>
               <PrevBToR1 />
             </Grid>

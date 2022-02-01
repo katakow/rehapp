@@ -15,7 +15,7 @@ const DocEdit = function ({ title }) {
       <Container maxWidth="xl" className="docProf">
         <Grid container direction="row" spacing="250px">
           <Grid item>
-            <Container maxWidth="xl">
+            <Container>
               <PersonIcon
                 sx={{
                   fontSize: "300px",

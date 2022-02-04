@@ -3,7 +3,7 @@ import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
 import PersonIcon from "@mui/icons-material/Person";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
-import EditDoc from "../../coponents/docPage/EditDoc";
+import EditDoc from "../../coponents/docPage/buttons/EditDoc";
 
 const DocProfile = function ({ title }) {
   return (

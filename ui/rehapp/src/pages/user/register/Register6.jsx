@@ -2,11 +2,11 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
-import ButtonToR7 from "../../../coponents/userPage/ButtonToR7";
-import NavBar from "../../../coponents/NavBar";
-import PrevBToR1 from "../../../coponents/userPage/PrevBToR1";
-import Calendar2 from "../../../coponents/userPage/poll/Calendar2";
-import RadioR4 from "../../../coponents/userPage/poll/RadioR4";
+import ButtonToR7 from "../../../coponents/userPage/register/buttons/ButtonToR7";
+import NavBar from "../../../coponents/mainPages/NavBar";
+import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
+import VaccineDate from "../../../coponents/userPage/register/VaccineDate";
+import RadioR4 from "../../../coponents/userPage/register/CovidTest";
 
 const Register6 = function () {
   return (
@@ -62,7 +62,7 @@ const Register6 = function () {
                     className="bodyLogin"
                   >
                     <Grid item>
-                      <Calendar2 />
+                      <VaccineDate />
                     </Grid>
                   </Grid>
                 </Container>

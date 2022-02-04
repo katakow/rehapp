@@ -2,8 +2,8 @@
 import { Container, Grid, TextField } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
-import EditDocSave from "../../coponents/docPage/EditDocSave";
-import Specki from "../../coponents/docPage/Specki";
+import EditDocSave from "../../coponents/docPage/buttons/EditDocSave";
+import Specializations from "../../coponents/docPage/Specializations";
 
 const DocEdit = function ({ title }) {
   return (
@@ -69,7 +69,7 @@ const DocEdit = function ({ title }) {
             <Container>
               <Grid container direction="column" spacing="100px">
                 <Grid item>
-                  <Specki />
+                  <Specializations />
                 </Grid>
               </Grid>
             </Container>

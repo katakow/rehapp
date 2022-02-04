@@ -162,13 +162,6 @@ header{
   left: -30px;
 }
 
-.headerStart {
-  margin-left: 50px;
-  font-size: 64px;
-  font-family: 'Sora';
-  color: rgba(106, 144, 100, 0.6);
-}
-
 .nextButton {
   position:absolute;
   top: 85%;

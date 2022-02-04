@@ -2,10 +2,12 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
-import ButtonToR3 from "../../../coponents/userPage/ButtonToR3";
-import NavBar from "../../../coponents/NavBar";
-import PrevBToR1 from "../../../coponents/userPage/PrevBToR1";
-import CheckboxR from "../../../coponents/userPage/poll/CheckboxR";
+import ButtonToR3 from "../../../coponents/userPage/register/buttons/ButtonToR3";
+import NavBar from "../../../coponents/mainPages/NavBar";
+import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
+import Diseases from "../../../coponents/userPage/register/Diseases";
+import Vaccines from "../../../coponents/userPage/register/Vaccines";
+import Vaccines2 from "../../../coponents/userPage/register/Vaccines2";
 
 const Register2 = function () {
   return (
@@ -29,22 +31,7 @@ const Register2 = function () {
             className="bodyLogin"
           >
             <Grid item>
-              <FormLabel component="legend">choroby współistniejące</FormLabel>
-
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-                className="bodyLogin2"
-              >
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
-                <Grid item>
-                  <CheckboxR />
-                </Grid>
-              </Grid>
+              <Diseases />
             </Grid>
             <Grid item>
               <FormLabel component="legend">
@@ -59,10 +46,10 @@ const Register2 = function () {
                 className="bodyLogin2"
               >
                 <Grid item>
-                  <CheckboxR />
+                  <Vaccines />
                 </Grid>
                 <Grid item>
-                  <CheckboxR />
+                  <Vaccines2 />
                 </Grid>
               </Grid>
             </Grid>
@@ -77,10 +64,10 @@ const Register2 = function () {
                 className="bodyLogin2"
               >
                 <Grid item>
-                  <CheckboxR />
+                  <Vaccines2 />
                 </Grid>
                 <Grid item>
-                  <CheckboxR />
+                  <Vaccines />
                 </Grid>
               </Grid>
             </Grid>

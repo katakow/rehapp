@@ -2,11 +2,11 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
-import ButtonToR4 from "../../../coponents/userPage/ButtonToR4";
-import NavBar from "../../../coponents/NavBar";
-import PrevBToR1 from "../../../coponents/userPage/PrevBToR1";
-import CheckboxR from "../../../coponents/userPage/poll/CheckboxR";
-import RadioR3 from "../../../coponents/userPage/poll/RadioR3";
+import ButtonToR4 from "../../../coponents/userPage/register/buttons/ButtonToR4";
+import NavBar from "../../../coponents/mainPages/NavBar";
+import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
+import Alergies from "../../../coponents/userPage/register/Alergies";
+import Diet from "../../../coponents/userPage/register/Diet";
 
 const Register3 = function () {
   return (
@@ -39,10 +39,10 @@ const Register3 = function () {
                 className="bodyLogin2"
               >
                 <Grid item>
-                  <CheckboxR />
+                  <Alergies />
                 </Grid>
                 <Grid item>
-                  <CheckboxR />
+                  <Alergies />
                 </Grid>
               </Grid>
             </Grid>
@@ -57,10 +57,10 @@ const Register3 = function () {
                 className="bodyLogin2"
               >
                 <Grid item>
-                  <CheckboxR />
+                  <Alergies />
                 </Grid>
                 <Grid item>
-                  <CheckboxR />
+                  <Alergies />
                 </Grid>
               </Grid>
             </Grid>
@@ -74,7 +74,7 @@ const Register3 = function () {
                 className="bodyLogin2"
               >
                 <Grid item>
-                  <RadioR3 />
+                  <Diet />
                 </Grid>
               </Grid>
             </Grid>

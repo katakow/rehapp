@@ -2,10 +2,10 @@
 
 import { Container, Grid } from "@mui/material";
 import * as React from "react";
-import ButtonToProfile from "../../coponents/docPage/ButtonToProfile";
-import NavBar from "../../coponents/NavBar";
+import ButtonToProfile from "../../coponents/docPage/buttons/ButtonToProfile";
+import NavBar from "../../coponents/mainPages/NavBar";
 import TextFieldDoc from "../../coponents/docPage/TextFieldDoc";
-import Specki from "../../coponents/docPage/Specki";
+import Specializations from "../../coponents/docPage/Specializations";
 import Radiodoc from "../../coponents/docPage/Radiodoc";
 
 const Register = function () {
@@ -21,7 +21,7 @@ const Register = function () {
         <Container>
           <Grid container direction="row" spacing="300px">
             <Grid item>
-              <Specki />
+              <Specializations />
             </Grid>
             <Grid item>
               <TextFieldDoc />

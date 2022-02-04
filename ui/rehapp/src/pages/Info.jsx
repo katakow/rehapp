@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 
 import { Container, Grid } from "@mui/material";
-import InfoPrevent from "../coponents/InfoPrevent";
-import InfoSymptoms from "../coponents/InfoSymptoms";
-import InfoTreatment from "../coponents/InfoTreatment";
-import NavBarLogin from "../coponents/NavBarLogin";
+import InfoPrevent from "../coponents/infoPage/InfoPrevent";
+import InfoSymptoms from "../coponents/infoPage/InfoSymptoms";
+import InfoTreatment from "../coponents/infoPage/InfoTreatment";
+import NavBarLogin from "../coponents/mainPages/NavBarLogin";
 
 const Info = function ({ title }) {
   return (

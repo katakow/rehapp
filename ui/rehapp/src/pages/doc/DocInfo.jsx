@@ -2,9 +2,9 @@
 
 import { Container, Grid } from "@mui/material";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
-import InfoPrevent from "../../coponents/InfoPrevent";
-import InfoSymptoms from "../../coponents/InfoSymptoms";
-import InfoTreatment from "../../coponents/InfoTreatment";
+import InfoPrevent from "../../coponents/infoPage/InfoPrevent";
+import InfoSymptoms from "../../coponents/infoPage/InfoSymptoms";
+import InfoTreatment from "../../coponents/infoPage/InfoTreatment";
 
 const DocInfo = function ({ title }) {
   return (

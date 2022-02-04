@@ -69,7 +69,7 @@ export default function SimpleBottomNavigation() {
             />
           }
           onClick={() => {
-            navigate("/login");
+            navigate("/main");
           }}
         />
       </BottomNavigation>

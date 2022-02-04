@@ -5,7 +5,7 @@ import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 import PatientText1 from "../../coponents/docPage/PatientText1";
 import PatientText2 from "../../coponents/docPage/PatientText2";
 import PatientText3 from "../../coponents/docPage/PatientText3";
-import EditPatientSave from "../../coponents/docPage/EditPatientSave";
+import EditPatientSave from "../../coponents/docPage/buttons/EditPatientSave";
 
 const DocPatients = function ({ title }) {
   return (

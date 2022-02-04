@@ -231,3 +231,11 @@ footer{
   bottom:0;
   right:0;
 }
+
+.base{
+  font-size: large;
+}
+
+.inBase,.base{
+  color: aliceblue;
+}

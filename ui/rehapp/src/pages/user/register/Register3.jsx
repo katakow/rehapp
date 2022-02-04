@@ -11,7 +11,7 @@ import Diet from "../../../coponents/userPage/register/Diet";
 const Register3 = function () {
   return (
     <div>
-      <body>
+      <content>
         <NavBar />
         <div className="bodyNav">REJESTRACJA</div>
         <h1 className="body" align="center">
@@ -80,17 +80,19 @@ const Register3 = function () {
             </Grid>
           </Grid>
         </Container>
-        <div className="nextButton">
-          <Grid container direction="row" spacing="30px">
-            <Grid item>
-              <PrevBToR1 />
+        <footer>
+          <div className="nextButton">
+            <Grid container direction="row" spacing="30px">
+              <Grid item>
+                <PrevBToR1 />
+              </Grid>
+              <Grid item>
+                <ButtonToR4 />
+              </Grid>
             </Grid>
-            <Grid item>
-              <ButtonToR4 />
-            </Grid>
-          </Grid>
-        </div>
-      </body>
+          </div>
+        </footer>
+      </content>
       <div className="divek2">Strona 3/6</div>
     </div>
   );

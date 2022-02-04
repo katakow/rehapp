@@ -8,6 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 import { Container, Grid } from "@mui/material";
 
 export default function CheckboxLabels() {
+  const diseases = ["cukrzyca", "chorby tarczycy", "nadciśnienie", "gówno"];
   return (
     <Container>
       <FormLabel component="legend">choroby współistniejące</FormLabel>
@@ -21,154 +22,20 @@ export default function CheckboxLabels() {
       >
         <Grid item>
           <FormGroup>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="cukrzyca"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="choroby tarczycy"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="osteoporoza"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="nadciśnienie"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="reumatyzm"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="migrena"
-            />
-          </FormGroup>
-        </Grid>
-        <Grid item>
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="nowotwór"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="zapalenie jelit"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="wrzody"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="choroby na tle psychicznym"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="inne"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  sx={{
-                    "&.Mui-checked": {
-                      color: "rgba(253, 105, 139, 0.85)",
-                    },
-                  }}
-                />
-              }
-              label="brak"
-            />
+            {diseases.map((d) => (
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    sx={{
+                      "&.Mui-checked": {
+                        color: "rgba(253, 105, 139, 0.85)",
+                      },
+                    }}
+                  />
+                }
+                label={d}
+              />
+            ))}
           </FormGroup>
         </Grid>
       </Grid>

@@ -1,39 +1,42 @@
 /* eslint-disable react/prop-types */
 
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import * as React from "react";
 import ButtonToProfile from "../../coponents/docPage/buttons/ButtonToProfile";
 import NavBar from "../../coponents/mainPages/NavBar";
 import TextFieldDoc from "../../coponents/docPage/TextFieldDoc";
 import Specializations from "../../coponents/docPage/Specializations";
-import Radiodoc from "../../coponents/docPage/Radiodoc";
+import SexDoc from "../../coponents/docPage/SexDoc";
 
 const Register = function () {
   return (
-    <div>
-      <body>
-        <NavBar />
-        <div className="bodyNav">REJESTRACJA</div>
-        <h1 className="body" align="center">
-          <p>Prosimy o rzetelność wprowadzanych informacji.</p>
-          <p>Dziękujemy!</p>
-        </h1>
-        <Container>
-          <Grid container direction="row" spacing="300px">
-            <Grid item>
-              <Specializations />
-            </Grid>
-            <Grid item>
-              <TextFieldDoc />
-            </Grid>
-          </Grid>
-        </Container>
-        <Radiodoc />
-        <div className="nextButton">
+    <content>
+      <NavBar />
+      <div className="bodyNav">REJESTRACJA</div>
+      <h1 align="center">
+        <p>Prosimy o rzetelność wprowadzanych informacji.</p>
+        <p>Dziękujemy!</p>
+      </h1>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-around"
+        alignItems="center"
+        spacing="30"
+      >
+        <Grid item>
+          <Specializations />
+        </Grid>
+        <Grid item>
+          <TextFieldDoc />
+          <SexDoc />
+        </Grid>
+
+        <Grid item alignSelf="flex-end">
           <ButtonToProfile />
-        </div>
-      </body>
-    </div>
+        </Grid>
+      </Grid>
+    </content>
   );
 };
 

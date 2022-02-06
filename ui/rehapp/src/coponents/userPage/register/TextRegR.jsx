@@ -2,7 +2,7 @@ import { Grid, TextField } from "@mui/material";
 
 const TextRegR = function () {
   return (
-    <div className="myDiv">
+    <div>
       <Grid>
         <Grid />
         <TextField

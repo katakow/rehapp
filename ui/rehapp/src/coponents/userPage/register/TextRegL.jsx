@@ -31,7 +31,7 @@ const TextRegL = function () {
     setValues({ ...values, [prop]: event.target.value });
   };
   return (
-    <div className="myDiv">
+    <div>
       <Grid />
       <TextField
         fullWidth

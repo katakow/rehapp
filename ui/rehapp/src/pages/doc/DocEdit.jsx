@@ -77,7 +77,7 @@ const DocEdit = function ({ title }) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>
+        <Grid item alignSelf="flex-end">
           <EditDocSave />
         </Grid>
       </Grid>

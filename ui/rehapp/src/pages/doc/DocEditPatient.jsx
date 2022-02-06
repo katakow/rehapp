@@ -11,25 +11,33 @@ const DocPatients = function ({ title }) {
   return (
     <content>
       <NavBarekDoc />
-      <h1 align="center">{title}</h1>
-      <Grid
-        container
-        direction="row"
-        spacing="50px"
-        alignItems="center"
-        justifyContent="space-around"
-      >
+      <Grid container direction="column" spacing="70px" justifyContent="center">
         <Grid item>
-          <PatientText1 />
+          <h1 align="center">{title}</h1>
         </Grid>
         <Grid item>
-          <PatientText2 />
+          <Grid
+            container
+            direction="row"
+            spacing="50px"
+            alignItems="center"
+            justifyContent="space-around"
+          >
+            <Grid item>
+              <PatientText1 />
+            </Grid>
+            <Grid item>
+              <PatientText2 />
+            </Grid>
+            <Grid item>
+              <PatientText3 />
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item>
-          <PatientText3 />
+        <Grid item alignSelf="flex-end">
+          <EditPatientSave />
         </Grid>
       </Grid>
-      <EditPatientSave />
     </content>
   );
 };

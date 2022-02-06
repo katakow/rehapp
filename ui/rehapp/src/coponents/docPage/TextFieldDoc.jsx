@@ -30,68 +30,66 @@ const TextDoc = function () {
     setValues({ ...values, [prop]: event.target.value });
   };
   return (
-    <div className="myDiv">
-      <Grid>
-        <Grid />
-        <TextField
-          fullWidth
-          id="standard-basic"
-          label="imię"
-          variant="standard"
+    <Grid>
+      <Grid />
+      <TextField
+        fullWidth
+        id="standard-basic"
+        label="imię"
+        variant="standard"
+      />
+      <Grid />
+      <TextField
+        fullWidth
+        id="standard-basic"
+        label="nazwisko"
+        variant="standard"
+      />
+      <Grid />
+      <TextField
+        fullWidth
+        id="standard-basic"
+        label="e-mail"
+        variant="standard"
+      />
+      <Grid />
+      <FormControl fullWidth variant="standard">
+        <InputLabel htmlFor="standard-adornment-password">hasło</InputLabel>
+        <Input
+          type={values.showPassword ? "text" : "password"}
+          value={values.password}
+          onChange={handleChange("password")}
+          endAdornment={
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+              >
+                {values.showPassword ? <VisibilityOff /> : <Visibility />}
+              </IconButton>
+            </InputAdornment>
+          }
         />
-        <Grid />
-        <TextField
-          fullWidth
-          id="standard-basic"
-          label="nazwisko"
-          variant="standard"
-        />
-        <Grid />
-        <TextField
-          fullWidth
-          id="standard-basic"
-          label="e-mail"
-          variant="standard"
-        />
-        <Grid />
-        <FormControl fullWidth variant="standard">
-          <InputLabel htmlFor="standard-adornment-password">hasło</InputLabel>
-          <Input
-            type={values.showPassword ? "text" : "password"}
-            value={values.password}
-            onChange={handleChange("password")}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
-        <Grid />
-        <TextField
-          fullWidth
-          id="standard-basic"
-          label="PESEL"
-          variant="standard"
-        />
-        <Grid />
-        <TextField
-          fullWidth
-          label="numer PWZ"
-          variant="standard"
-          required
-          id="outlined-required"
-        />
-        <Grid />
-        <TextField id="standard-basic" label="płeć" variant="standard" />
-      </Grid>
-    </div>
+      </FormControl>
+      <Grid />
+      <TextField
+        fullWidth
+        id="standard-basic"
+        label="PESEL"
+        variant="standard"
+      />
+      <Grid />
+      <TextField
+        fullWidth
+        label="numer PWZ"
+        variant="standard"
+        required
+        id="outlined-required"
+      />
+      <Grid />
+      <TextField id="standard-basic" label="płeć" variant="standard" />
+    </Grid>
   );
 };
 

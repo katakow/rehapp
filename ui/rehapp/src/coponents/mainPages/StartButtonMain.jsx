@@ -3,7 +3,6 @@ import { Button } from "@mui/material";
 const StartButtonMain = function () {
   return (
     <Button
-      className="button2"
       variant="text"
       sx={{
         width: 480,

@@ -18,7 +18,6 @@ const EditDoc = function () {
       onClick={() => {
         navigate("/doc/edit");
       }}
-      className="editButton"
     >
       EDYTUJ
     </Button>

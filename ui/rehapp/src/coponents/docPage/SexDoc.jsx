@@ -7,7 +7,7 @@ import FormControl from "@mui/material/FormControl";
 
 export default function RadioButtonsGroup() {
   return (
-    <div className="radiodoc">
+    <div>
       <FormControl>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 import BoxDoc from "../../coponents/docPage/BoxDoc";
 import BoxDoc2 from "../../coponents/docPage/BoxDoc2";
@@ -7,14 +7,25 @@ import BoxDoc3 from "../../coponents/docPage/BoxDoc3";
 
 const UserMain = function ({ title }) {
   return (
-    <div>
-      <NavBarekDoc />
-      <h1 className="main" align="center">
-        {title}
-      </h1>
-      <div>
-        <Container align="center">
-          <Grid container direction="row" spacing="390px">
+    <content>
+      <NavBarekDoc />{" "}
+      <Grid
+        container
+        direction="column"
+        spacing="200px"
+        justifyContent="center"
+      >
+        <Grid item>
+          <h1 align="center">{title}</h1>
+        </Grid>{" "}
+        <Grid item>
+          <Grid
+            container
+            direction="row"
+            spacing="50px"
+            justifyContent="space-around"
+            alignContent="center"
+          >
             <Grid item>
               <BoxDoc />
             </Grid>
@@ -25,9 +36,9 @@ const UserMain = function ({ title }) {
               <BoxDoc3 />
             </Grid>
           </Grid>
-        </Container>
-      </div>
-    </div>
+        </Grid>
+      </Grid>
+    </content>
   );
 };
 UserMain.defaultProps = {

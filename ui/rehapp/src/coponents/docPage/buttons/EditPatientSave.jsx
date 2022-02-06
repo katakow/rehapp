@@ -18,7 +18,6 @@ const EditDoc = function () {
       onClick={() => {
         navigate("/doc/patients");
       }}
-      className="editButton"
     >
       ZAPISZ
     </Button>

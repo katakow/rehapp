@@ -10,45 +10,6 @@ body {
   height: 700px;
 }
 
-.bodydoc {
-  font-family: 'Sora';
-  margin: 30px;
-  color: black;
-  margin-top: 100px;
-}
-
-.body2 {
-  font-family: 'Sora';
-  margin: 30px;
-  margin-top: 50px;
-  color: black;
-  margin-bottom: 70px;
-  height: 20px;
-}
-
-.body3 {
-  font-family: 'Sora';
-  margin: 30px;
-  margin-top: 100px;
-  color: black;
-  height: 70px;
-}
-
-.body4 {
-  font-family: 'Sora';
-  color: black;
-  margin-top: -70px;
-}
-
-.bodyLogin{
-  color: black;
-  font-family: 'Sora';
-  margin-top: 100px;
-  font-size: 20px;
-  align-items: stretch;
-}
-
-
 .bodyNav{
   color: black;
   font-family: 'Sora';
@@ -59,7 +20,6 @@ body {
   left: 50px;
 }
 
-
 .box{
   text-align: center;
   font-family: "Sora", sans-serif;
@@ -67,71 +27,11 @@ body {
   font-size: 20px;
 }
 
-.docProf {
-  font-family: 'Sora';
-  font-size: 25px;
-  color: black;
-  position:absolute;
-  left:0;
-  right:0;
-  top:30%;
-}
-
-.userProfile{
-  font-family: 'Sora';
-  font-size: 25px;
-  color: black;
-}
-
-
-.centerEditPatient{
-  position: relative;
-  left: 0;
-  top: 60%;
-}
-
-
-.myDiv{
-  width: 400px;
-  margin-top: 100px;
-}
-
-.headeR {
-  font-family: 'Sora';
-  color: rgba(106, 144, 100, 0.6);
-  font-size: 46px;
-}
 header{
   margin-left: 50px;
   font-size: 64px;
   font-family: 'Sora';
   color: rgba(253, 105, 139, 0.6);
-}
-
-.headerEdit{
-  font-family: 'Sora';
-  position:absolute;
-  top: -60px;
-  left: -30px;
-}
-
-.nexButtonDoc {
-  position: absolute;
-  top: 85%;
-  margin-left: 50%;
-}
-.editButton {
-  position:absolute;
-  left:90%;
-}
-
-.userButton{
-  margin-top: 30px;
-}
-
-
-.radiodoc{
-  margin-left: 65%;
 }
 
 .navbarReg{
@@ -170,14 +70,4 @@ footer{
   left:0;
   bottom:0;
   right:0;
-}
-
-
-
-.base{
-  font-size: large;
-}
-
-.inBase,.base{
-  color: aliceblue;
 }

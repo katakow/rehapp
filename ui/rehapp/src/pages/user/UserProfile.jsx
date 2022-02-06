@@ -13,7 +13,12 @@ const UserProfile = function ({ title }) {
           <h1 align="center">{title}</h1>
         </Grid>
         <Grid item>
-          <Grid container direction="row" justifyContent="space-around">
+          <Grid
+            container
+            direction="row"
+            spacing="30px"
+            justifyContent="space-around"
+          >
             <Grid item>
               <UserData />
             </Grid>

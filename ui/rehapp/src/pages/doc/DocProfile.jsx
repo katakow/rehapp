@@ -61,7 +61,7 @@ const DocProfile = function ({ title }) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>
+        <Grid item alignSelf="flex-end">
           <EditDoc />
         </Grid>
       </Grid>

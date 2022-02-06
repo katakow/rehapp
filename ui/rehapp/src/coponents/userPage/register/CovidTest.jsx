@@ -28,7 +28,7 @@ export default function RadioButtonsGroup() {
           >
             {covidTest.map((d) => (
               <FormControlLabel
-                value="wegetariańska"
+                value={d}
                 control={
                   <Radio
                     sx={{

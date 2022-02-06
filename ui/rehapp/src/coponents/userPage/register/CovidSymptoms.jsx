@@ -8,6 +8,7 @@ import { Container, Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
 
 export default function RadioButtonsGroup() {
+  const covidSymptoms = ["bezobjawowo", "lekko", "średnio", "ciężko"];
   return (
     <Container>
       <FormLabel component="legend" maxWidth>
@@ -26,50 +27,19 @@ export default function RadioButtonsGroup() {
               defaultValue="bezobjawowo"
               name="radio-buttons-group"
             >
-              <FormControlLabel
-                value="bezobjawowo"
-                label="bezobjawowo"
-                control={
-                  <Radio
-                    sx={{
-                      "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-                    }}
-                  />
-                }
-              />
-              <FormControlLabel
-                control={
-                  <Radio
-                    sx={{
-                      "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-                    }}
-                  />
-                }
-                value="lekko"
-                label="lekko"
-              />
-              <FormControlLabel
-                control={
-                  <Radio
-                    sx={{
-                      "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-                    }}
-                  />
-                }
-                value="średno"
-                label="średno"
-              />
-              <FormControlLabel
-                control={
-                  <Radio
-                    sx={{
-                      "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-                    }}
-                  />
-                }
-                value="ciężko"
-                label="ciężko"
-              />
+              {covidSymptoms.map((d) => (
+                <FormControlLabel
+                  value={d}
+                  label={d}
+                  control={
+                    <Radio
+                      sx={{
+                        "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
+                      }}
+                    />
+                  }
+                />
+              ))}
             </RadioGroup>
           </FormControl>
         </Grid>

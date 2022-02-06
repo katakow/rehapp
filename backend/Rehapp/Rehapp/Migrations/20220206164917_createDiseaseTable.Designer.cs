@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rehapp.Database;
 
@@ -10,9 +11,10 @@ using Rehapp.Database;
 namespace Rehapp.Migrations
 {
     [DbContext(typeof(RehappContext))]
-    partial class RehappContextModelSnapshot : ModelSnapshot
+    [Migration("20220206164917_createDiseaseTable")]
+    partial class createDiseaseTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

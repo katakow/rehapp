@@ -12,7 +12,6 @@ public class DoctorsLogic
     {
         _rehappContext = rehappContext;
     }
-
     public async Task<Doctor> AddDoctorAsync(DoctorViewModel doctorViewModel)
     {
         var doctor = new Doctor {Name = doctorViewModel.Name};

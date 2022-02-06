@@ -17,9 +17,7 @@ const Register = function () {
         spacing="100"
       >
         <Grid item>
-          <h1 align="center" className="headeR">
-            Dziękujemy za wypełnienie ankiety!
-          </h1>
+          <h1 align="center">Dziękujemy za wypełnienie ankiety!</h1>
         </Grid>
         <Grid item>
           <h1 align="center">

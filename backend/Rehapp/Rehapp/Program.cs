@@ -11,7 +11,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<RehappContext>();
 builder.Services.AddScoped<DoctorsLogic>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

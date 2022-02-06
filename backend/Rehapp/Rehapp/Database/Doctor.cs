@@ -9,6 +9,6 @@ public class Doctor
     public int Id { get; set; }
 
     public ICollection<Patient> Patients { get; set; }
-
     public string Name { get; set; }
+    
 }

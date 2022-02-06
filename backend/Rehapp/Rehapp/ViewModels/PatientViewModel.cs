@@ -1,10 +1,7 @@
-using System.ComponentModel.DataAnnotations;
+namespace Rehapp.ViewModels;
 
-namespace Rehapp.Database;
-
-public class Patient
+public class PatientViewModel
 {
-    [Key]
     public int Id { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
@@ -12,7 +9,4 @@ public class Patient
     public string Mail { get; set; }
     public double Weight { get; set; }
     public int Height { get; set; }
-
-    public ICollection<Doctor> Doctors { get; set; }
-
 }

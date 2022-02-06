@@ -8,15 +8,15 @@ import FormLabel from "@mui/material/FormLabel";
 import { Grid, Container } from "@mui/material";
 
 export default function RadioButtonsGroup() {
-  const covidTest = ["tak", "nie"];
+  const vName = ["Pfizer", "J&J", "Moderna", "inna"];
   return (
     <Container>
       <FormLabel component="legend">
-        Czy kiedykolwiek miałeś pozytywny wynik testu na COVID-19?
+        Nazwa szczepionki, którą szczepiłaś / szczepiłeś się ostatnim razem
       </FormLabel>
       <Grid
         container
-        direction="column"
+        direction="row"
         justifyContent="center"
         alignItems="center"
       >
@@ -26,9 +26,9 @@ export default function RadioButtonsGroup() {
             defaultValue="brak"
             name="radio-buttons-group"
           >
-            {covidTest.map((d) => (
+            {vName.map((d) => (
               <FormControlLabel
-                value="wegetariańska"
+                value={d}
                 control={
                   <Radio
                     sx={{

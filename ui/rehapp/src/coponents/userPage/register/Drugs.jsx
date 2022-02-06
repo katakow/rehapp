@@ -2,16 +2,20 @@
 import * as React from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-
-import FormLabel from "@mui/material/FormLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { Container, Grid } from "@mui/material";
+import FormLabel from "@mui/material/FormLabel";
 
 export default function CheckboxLabels() {
-  const diseases = ["cukrzyca", "chorby tarczycy", "nadciśnienie", "gówno"];
+  const drugs = [
+    "przeciwgorączkowe",
+    "przeciwzapalne",
+    "na kaszel",
+    "na grypę",
+  ];
   return (
     <Container>
-      <FormLabel component="legend">choroby współistniejące</FormLabel>
+      <FormLabel component="legend">jakie leki zażywałaś /zażywałeś?</FormLabel>
 
       <Grid
         container
@@ -21,7 +25,7 @@ export default function CheckboxLabels() {
       >
         <Grid item>
           <FormGroup>
-            {diseases.map((d) => (
+            {drugs.map((d) => (
               <FormControlLabel
                 control={
                   <Checkbox

@@ -12,7 +12,7 @@ export default function RadioButtonsGroup() {
   return (
     <Container>
       <FormLabel component="legend">
-        Czy kiedykolwiek miałeś pozytywny wynik testu na COVID-19?
+        Czy szczepiłaś / szczepiłeś się na COVID-19?
       </FormLabel>
       <Grid
         container
@@ -23,12 +23,11 @@ export default function RadioButtonsGroup() {
         <FormControl>
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="brak"
             name="radio-buttons-group"
           >
             {covidTest.map((d) => (
               <FormControlLabel
-                value="wegetariańska"
+                value={d}
                 control={
                   <Radio
                     sx={{

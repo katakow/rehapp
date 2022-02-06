@@ -1,101 +1,71 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Container, Grid } from "@mui/material";
-import FormLabel from "@mui/material/FormLabel";
+import { Grid } from "@mui/material";
 import ButtonToR4 from "../../../coponents/userPage/register/buttons/ButtonToR4";
 import NavBar from "../../../coponents/mainPages/NavBar";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
-import Alergies from "../../../coponents/userPage/register/Alergies";
-import Diet from "../../../coponents/userPage/register/Diet";
+import Symptoms from "../../../coponents/userPage/register/Symptoms";
+import CovidSymptoms from "../../../coponents/userPage/register/CovidSymptoms";
+import Drugs from "../../../coponents/userPage/register/Drugs";
+import CovidTest from "../../../coponents/userPage/register/CovidTest";
 
-const Register3 = function () {
+const Register5 = function () {
   return (
-    <div>
-      <content>
-        <NavBar />
-        <div className="bodyNav">REJESTRACJA</div>
-        <h1 className="body" align="center">
-          <p>
-            Prosimy o rzetelność wprowadzanych informacji, abyśmy mogli Ci jak
-            najlepiej pomóc.
-          </p>
-          <p>Dziękujemy!</p>
-        </h1>
-        <Container>
-          <Grid
-            container
-            direction="row"
-            justifyContent="space-around"
-            alignItems="stretch"
-            className="bodyLogin"
-          >
-            <Grid item>
-              <FormLabel component="legend">alergie</FormLabel>
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin2"
-              >
-                <Grid item>
-                  <Alergies />
-                </Grid>
-                <Grid item>
-                  <Alergies />
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid item>
-              <FormLabel component="legend">odbyte szczepienia</FormLabel>
+    <content>
+      <NavBar />
+      <div className="bodyNav">REJESTRACJA</div>
+      <h1 align="center">
+        <p>
+          Prosimy o rzetelność wprowadzanych informacji, abyśmy mogli Ci jak
+          najlepiej pomóc.
+        </p>
+        <p>Dziękujemy!</p>
+      </h1>
 
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin2"
-              >
-                <Grid item>
-                  <Alergies />
-                </Grid>
-                <Grid item>
-                  <Alergies />
-                </Grid>
-              </Grid>
+      <Grid
+        container
+        direction="column"
+        justifyContent="space-around"
+        spacing="60"
+      >
+        <Grid item alignSelf="center">
+          <CovidTest />
+        </Grid>
+        <Grid item alignSelf="center">
+          ODPOWIEDZ TYLKO, JEŚLI POWYŻEJ ZAZNACZYŁAŚ / ZAZNACZYŁEŚ{" "}
+          <strong>TAK</strong>
+        </Grid>
+        <Grid item>
+          <Grid container direction="row" justifyContent="space-around">
+            <Grid item>
+              <Symptoms />
             </Grid>
             <Grid item>
-              <FormLabel component="legend">stosowana dieta</FormLabel>
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="stretch"
-                className="bodyLogin2"
-              >
+              <CovidSymptoms />
+            </Grid>
+            <Grid item>
+              <Drugs />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Grid container direction="row" justifyContent="space-around">
+            <Grid item>Strona 3/4</Grid>
+            <Grid item>
+              <Grid container direction="row" spacing="30px">
                 <Grid item>
-                  <Diet />
+                  <PrevBToR1 />
+                </Grid>
+                <Grid item>
+                  <ButtonToR4 />
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Container>
-        <footer>
-          <div className="nextButton">
-            <Grid container direction="row" spacing="30px">
-              <Grid item>
-                <PrevBToR1 />
-              </Grid>
-              <Grid item>
-                <ButtonToR4 />
-              </Grid>
-            </Grid>
-          </div>
-        </footer>
-      </content>
-      <div className="divek2">Strona 3/6</div>
-    </div>
+        </Grid>
+      </Grid>
+    </content>
   );
 };
 
-export default Register3;
+export default Register5;

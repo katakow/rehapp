@@ -9,9 +9,7 @@ import Register2 from "./pages/user/register/Register2";
 import ErrorPage from "./pages/ErrorPage";
 import Info from "./pages/Info";
 import Register3 from "./pages/user/register/Register3";
-import Register5 from "./pages/user/register/Register5";
 import Register4 from "./pages/user/register/Register4";
-import Register6 from "./pages/user/register/Register6";
 import RegisterEnd from "./pages/user/register/RegisterEnd";
 import DocMain from "./pages/doc/DocMain";
 import DocProfile from "./pages/doc/DocProfile";
@@ -41,8 +39,6 @@ const App = function () {
         <Route path="/register/2" element={<Register2 />} />
         <Route path="/register/3" element={<Register3 />} />
         <Route path="/register/4" element={<Register4 />} />
-        <Route path="/register/5" element={<Register5 />} />
-        <Route path="/register/6" element={<Register6 />} />
         <Route path="/register/end" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />

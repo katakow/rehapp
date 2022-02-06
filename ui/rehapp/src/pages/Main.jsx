@@ -8,40 +8,43 @@ import RegisterButtons from "../coponents/mainPages/RegisterButtons";
 
 const Main = function () {
   return (
-    <body>
+    <content>
       <NavBarLogin />
       <div className="bodyNav">LOGOWANIE</div>
-      <Header />
-      <CoronavirusIcon
-        className="covid"
-        sx={{
-          fontSize: "200px",
-          color: "rgba(253, 105, 139, 0.85)",
-        }}
-      />
-      <div className="container">
-        <Container maxWidth="xl">
-          <Grid
-            container
-            direction="row"
-            justifyContent="space-around"
-            alignItems="stretch"
-            className="bodyLogin"
-            height={500}
-          >
-            <Grid item>
-              <LogInUser />
+      <Grid container direction="column" spacing="200">
+        <Grid item>
+          <Header />
+          <CoronavirusIcon
+            className="covid"
+            sx={{
+              fontSize: "200px",
+              color: "rgba(253, 105, 139, 0.85)",
+            }}
+          />
+        </Grid>
+        <Grid item>
+          <Container maxWidth="xl">
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-around"
+              alignItems="stretch"
+              spacing="10"
+            >
+              <Grid item>
+                <LogInUser />
+              </Grid>
+              <Grid item>
+                <RegisterButtons />
+              </Grid>
+              <Grid item>
+                <LogInDoctor />
+              </Grid>
             </Grid>
-            <Grid item>
-              <RegisterButtons />
-            </Grid>
-            <Grid item>
-              <LogInDoctor />
-            </Grid>
-          </Grid>
-        </Container>
-      </div>
-    </body>
+          </Container>
+        </Grid>
+      </Grid>
+    </content>
   );
 };
 

@@ -2,7 +2,7 @@
 /* eslint-disable func-names */
 /* eslint-disable react/prop-types */
 
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import CoronavirusIcon from "@mui/icons-material/Coronavirus";
 import StartButtonInfo from "../coponents/mainPages/StartButtonInfo";
@@ -12,49 +12,50 @@ import Header from "../coponents/mainPages/Header";
 const MainPage = function ({ title }) {
   const navigate = useNavigate();
   return (
-    <body>
-      <Header />
-      <CoronavirusIcon
-        className="covid"
-        sx={{
-          fontSize: "200px",
-          color: "rgba(253, 105, 139, 0.85)",
-        }}
-      />
-      <div>
-        <Container maxWidth="lg">
-          <Grid
-            container
-            direction="row"
-            justifyContent="space-around"
-            alignItems="stretch"
-            className="bodyLogin"
-          >
-            <Grid item>
-              <h1 className="body" align="center">
-                {title}
-              </h1>
-            </Grid>
-            <Container align="center">
-              <button1
-                onClick={() => {
-                  navigate("/info");
-                }}
-              >
-                <StartButtonInfo />
-              </button1>
-              <button2
-                onClick={() => {
-                  navigate("/main");
-                }}
-              >
-                <StartButtonMain />
-              </button2>
-            </Container>
+    <Grid container direction="column" spacing="150">
+      <Grid item>
+        <Header />
+        <CoronavirusIcon
+          className="covid"
+          sx={{
+            fontSize: "200px",
+            color: "rgba(253, 105, 139, 0.85)",
+          }}
+        />
+      </Grid>
+      <Grid item>
+        <h1 className="body" align="center">
+          {title}
+        </h1>
+      </Grid>
+      <Grid item>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-around"
+          alignItems="center"
+        >
+          <Grid item>
+            <button1
+              onClick={() => {
+                navigate("/info");
+              }}
+            >
+              <StartButtonInfo />
+            </button1>
           </Grid>
-        </Container>
-      </div>
-    </body>
+          <Grid item>
+            <button2
+              onClick={() => {
+                navigate("/main");
+              }}
+            >
+              <StartButtonMain />
+            </button2>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 

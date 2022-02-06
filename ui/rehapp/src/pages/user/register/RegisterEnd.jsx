@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import ButtonToProfile from "../../../coponents/userPage/register/buttons/ButtonToProfile";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
 import NavBar from "../../../coponents/mainPages/NavBar";
@@ -10,25 +10,39 @@ const Register = function () {
     <body>
       <NavBar />
       <div className="bodyNav">REJESTRACJA</div>
-      <Container maxWidth="lg">
-        <h1 align="center" className="headeR">
-          Dziękujemy za wypełnienie ankiety!
-        </h1>
-        <h1 align="center" className="divek">
-          W zakładce “Mój profil” możesz zobaczyć i edytować wszystkie
-          informacje, które wprowadziłaś / wprowadziłeś.
-        </h1>
-      </Container>
-      <div className="nextButton">
-        <Grid container direction="row" spacing="50px">
-          <Grid item>
-            <PrevBToR1 />
-          </Grid>
-          <Grid item>
-            <ButtonToProfile />
+      <Grid
+        container
+        direction="column"
+        justifyContent="space-around"
+        spacing="100"
+      >
+        <Grid item>
+          <h1 align="center" className="headeR">
+            Dziękujemy za wypełnienie ankiety!
+          </h1>
+        </Grid>
+        <Grid item>
+          <h1 align="center">
+            W zakładce “Mój profil” możesz zobaczyć i edytować wszystkie
+            informacje, które wprowadziłaś / wprowadziłeś.
+          </h1>
+        </Grid>
+        <Grid item>
+          <Grid container direction="row" justifyContent="space-around">
+            <Grid item>Strona 2/4</Grid>
+            <Grid item>
+              <Grid container direction="row" spacing="30px">
+                <Grid item>
+                  <PrevBToR1 />
+                </Grid>
+                <Grid item>
+                  <ButtonToProfile />
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
-      </div>
+      </Grid>
     </body>
   );
 };

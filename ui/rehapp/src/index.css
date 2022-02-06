@@ -146,7 +146,6 @@ body {
   font-family: 'Sora';
   color: rgba(106, 144, 100, 0.6);
   font-size: 46px;
-  height: 240px;
 }
 header{
   margin-left: 50px;
@@ -186,9 +185,6 @@ header{
   margin-top: 30px;
 }
 
-.radio{
-  margin-left: 77%;
-}
 
 .radiodoc{
   margin-left: 65%;
@@ -231,6 +227,8 @@ footer{
   bottom:0;
   right:0;
 }
+
+
 
 .base{
   font-size: large;

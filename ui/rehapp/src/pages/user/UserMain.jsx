@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
 import Box from "../../coponents/userPage/Box";
 import Box2 from "../../coponents/userPage/Box2";
@@ -8,14 +8,25 @@ import Box4 from "../../coponents/userPage/Box4";
 
 const UserMain = function ({ title }) {
   return (
-    <body className="userProfile">
+    <content>
       <NavBarek />
-      <h1 className="main" align="center">
-        {title}
-      </h1>
-      <div>
-        <Container maxWidth="xl">
-          <Grid container direction="row" spacing="390px">
+      <Grid
+        container
+        direction="column"
+        spacing="200px"
+        justifyContent="center"
+      >
+        <Grid item>
+          <h1 align="center">{title}</h1>
+        </Grid>
+        <Grid item>
+          <Grid
+            container
+            direction="row"
+            spacing="50px"
+            justifyContent="space-around"
+            alignContent="center"
+          >
             <Grid item>
               <Box />
             </Grid>
@@ -29,9 +40,9 @@ const UserMain = function ({ title }) {
               <Box4 />
             </Grid>
           </Grid>
-        </Container>
-      </div>
-    </body>
+        </Grid>
+      </Grid>
+    </content>
   );
 };
 UserMain.defaultProps = {

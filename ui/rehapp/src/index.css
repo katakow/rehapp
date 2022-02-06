@@ -48,13 +48,6 @@ body {
   align-items: stretch;
 }
 
-.bodyLogin2{
-  color: black;
-  font-family: 'Sora';
-  margin-top: 50px;
-  font-size: 20px;
-  align-items: stretch;
-}
 
 .bodyNav{
   color: black;
@@ -66,26 +59,11 @@ body {
   left: 50px;
 }
 
-.main {
-  font-family: 'Sora';
-  color: black;
-  position: relative;
-  margin-top: 10%;
-  font-size: 32px;
-  width: 70%;
-  left: 15%;
-}
-
-.container
-{
-  margin-top: 200px;
-}
 
 .box{
   text-align: center;
   font-family: "Sora", sans-serif;
   margin: 40px;
-  text-align: center;
   font-size: 20px;
 }
 
@@ -105,11 +83,6 @@ body {
   color: black;
 }
 
-.center{
-  position: relative;
-  left: 35%;
-  top: 150px;
-}
 
 .centerEditPatient{
   position: relative;
@@ -117,25 +90,6 @@ body {
   top: 60%;
 }
 
-
-.divek {
-  font-family: 'Sora';
-  margin: 30px;
-  margin-top: 50px;
-  color: black;
-  margin-bottom: 70px;
-  height: 400px;
-}
-.divek2 {
-  font-family: 'Sora';
-  font-size: 25px;
-  margin: 30px;
-  color: black;
-  position:absolute;
-  left:0;
-  right:0;
-  top:85%;
-}
 
 .myDiv{
   width: 400px;
@@ -161,20 +115,10 @@ header{
   left: -30px;
 }
 
-.nextButton {
-  position:absolute;
-  top: 85%;
-  margin-left: 70%;
-}
-
 .nexButtonDoc {
   position: absolute;
   top: 85%;
   margin-left: 50%;
-}
-.profileNext {
-  position:absolute;
-  top: 85%;
 }
 .editButton {
   position:absolute;

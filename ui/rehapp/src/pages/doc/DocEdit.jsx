@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Container, Grid, TextField } from "@mui/material";
+import { Grid, TextField } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 import EditDocSave from "../../coponents/docPage/buttons/EditDocSave";
@@ -7,25 +7,33 @@ import Specializations from "../../coponents/docPage/Specializations";
 
 const DocEdit = function ({ title }) {
   return (
-    <div>
-      <NavBarekDoc />
-      <h1 className="main" align="center">
-        {title}
-      </h1>
-      <Container maxWidth="xl" className="docProf">
-        <Grid container direction="row" spacing="250px">
-          <Grid item>
-            <Container>
+    <content>
+      <NavBarekDoc />{" "}
+      <Grid
+        container
+        direction="column"
+        spacing="100px"
+        justifyContent="center"
+      >
+        <Grid item>
+          <h1 align="center">{title}</h1>
+        </Grid>
+        <Grid item>
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-around"
+            alignContent="center"
+          >
+            <Grid item>
               <PersonIcon
                 sx={{
                   fontSize: "300px",
                   color: "rgba(106, 144, 100, 0.6)",
                 }}
               />
-            </Container>
-          </Grid>
-          <Grid item>
-            <Container>
+            </Grid>
+            <Grid item>
               <Grid container direction="column" spacing="50px">
                 <Grid item>
                   <TextField
@@ -63,21 +71,17 @@ const DocEdit = function ({ title }) {
                   />
                 </Grid>
               </Grid>
-            </Container>
-          </Grid>
-          <Grid item>
-            <Container>
-              <Grid container direction="column" spacing="100px">
-                <Grid item>
-                  <Specializations />
-                </Grid>
-              </Grid>
-            </Container>
+            </Grid>
+            <Grid item>
+              <Specializations />
+            </Grid>
           </Grid>
         </Grid>
-        <EditDocSave />
-      </Container>
-    </div>
+        <Grid item>
+          <EditDocSave />
+        </Grid>
+      </Grid>
+    </content>
   );
 };
 DocEdit.defaultProps = {

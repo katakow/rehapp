@@ -18,14 +18,12 @@ import DocEdit from "./pages/doc/DocEdit";
 import DocPatients from "./pages/doc/DocPatients";
 import DocEditPatient from "./pages/doc/DocEditPatient";
 import UserProfile from "./pages/user/UserProfile";
-import UserProfile2 from "./pages/user/UserProfile2";
 import UserMain from "./pages/user/UserMain";
 import UserInfo from "./pages/user/UserInfo";
 import UserExam from "./pages/user/UserExam";
 import UserExam2 from "./pages/user/UserExam2";
 import UserRec from "./pages/user/UserRec";
-import UserEdit1 from "./pages/user/UserEdit1";
-import UserEdit2 from "./pages/user/UserEdit2";
+import UserEdit from "./pages/user/UserEdit";
 import RegisterDoc from "./pages/doc/RegisterDoc";
 
 const App = function () {
@@ -36,25 +34,23 @@ const App = function () {
         <Route path="/main" element={<Main />} />
         <Route path="/info" element={<Info />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/register/2" element={<Register2 />} />
-        <Route path="/register/3" element={<Register3 />} />
-        <Route path="/register/4" element={<Register4 />} />
-        <Route path="/register/end" element={<RegisterEnd />} />
+        <Route path="/register2" element={<Register2 />} />
+        <Route path="/register3" element={<Register3 />} />
+        <Route path="/register4" element={<Register4 />} />
+        <Route path="/registerEnd" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />
-        <Route path="/user/profile2" element={<UserProfile2 />} />
-        <Route path="/user/profile/edit" element={<UserEdit1 />} />
-        <Route path="/user/profile2/edit" element={<UserEdit2 />} />
+        <Route path="/user/profileEdit" element={<UserEdit />} />
         <Route path="/user/main" element={<UserMain />} />
         <Route path="/user/info" element={<UserInfo />} />
         <Route path="/user/rec" element={<UserRec />} />
         <Route path="/user/exam" element={<UserExam />} />
-        <Route path="/user/exam/2" element={<UserExam2 />} />
+        <Route path="/user/exam2" element={<UserExam2 />} />
 
         <Route path="/doc/main" element={<DocMain />} />
         <Route path="/doc/profile" element={<DocProfile />} />
         <Route path="/doc/patients" element={<DocPatients />} />
-        <Route path="/doc/patients/edit" element={<DocEditPatient />} />
+        <Route path="/doc/patientsEdit" element={<DocEditPatient />} />
         <Route path="/doc/info" element={<DocInfo />} />
         <Route path="/doc/edit" element={<DocEdit />} />
         <Route path="/register/doc" element={<RegisterDoc />} />

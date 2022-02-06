@@ -28,8 +28,7 @@ const Register = function () {
           </h1>
         </Grid>
         <Grid item>
-          <Grid container direction="row" justifyContent="space-around">
-            <Grid item>Strona 2/4</Grid>
+          <Grid container direction="row" justifyContent="flex-end">
             <Grid item>
               <Grid container direction="row" spacing="30px">
                 <Grid item>

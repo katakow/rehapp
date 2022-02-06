@@ -8,99 +8,28 @@ import EditIcon from "@mui/icons-material/Edit";
 import { useNavigate } from "react-router-dom";
 
 export default function FolderList() {
+  const patients = ["Jan", "Kasia", "Maria", "Przemysław"];
+
   const navigate = useNavigate();
   return (
-    <List sx={{ width: "100%", maxWidth: 500, fontSize: "60px" }}>
-      <ListItem
-        secondaryAction={
-          <IconButton
-            edge="end"
-            aria-label="delete"
-            onClick={() => {
-              navigate("/doc/patients/edit");
-            }}
-          >
-            <EditIcon />
-          </IconButton>
-        }
-      >
-        <ListItemText primary="Jan Kowalski" secondary="9812342332" />
-      </ListItem>
-      <ListItem
-        secondaryAction={
-          <IconButton
-            edge="end"
-            aria-label="edit"
-            onClick={() => {
-              navigate("/doc/patients/edit");
-            }}
-          >
-            <EditIcon />
-          </IconButton>
-        }
-      >
-        <ListItemText primary="Malina Dołek" secondary="71201412345" />
-      </ListItem>
-      <ListItem
-        secondaryAction={
-          <IconButton
-            edge="end"
-            aria-label="edit"
-            onClick={() => {
-              navigate("/doc/patients/edit");
-            }}
-          >
-            <EditIcon />
-          </IconButton>
-        }
-      >
-        <ListItemText primary="Aleksandra Źdźbło" secondary="20201498765" />
-      </ListItem>
-      <ListItem
-        secondaryAction={
-          <IconButton
-            edge="end"
-            aria-label="edit"
-            onClick={() => {
-              navigate("/doc/patients/edit");
-            }}
-          >
-            <EditIcon />
-          </IconButton>
-        }
-      >
-        <ListItemText primary="Witold Słaby" secondary="78654376583" />
-      </ListItem>
-      <ListItem
-        secondaryAction={
-          <IconButton
-            edge="end"
-            aria-label="edit"
-            onClick={() => {
-              navigate("/doc/patients/edit");
-            }}
-          >
-            <EditIcon />
-          </IconButton>
-        }
-      >
-        <ListItemText primary="Ireneusz Mąka" secondary="98071234567" />
-      </ListItem>
-      <ListItem
-        secondaryAction={
-          <IconButton
-            edge="end"
-            aria-label="edit"
-            onClick={() => {
-              navigate("/doc/patients/edit");
-            }}
-          >
-            <EditIcon />
-          </IconButton>
-        }
-      >
-        <ListItemText primary="Urszula Koń" secondary="56431293845" />
-      </ListItem>
+    <List sx={{ maxWidth: 500, fontSize: "60px" }}>
+      {patients.map((d) => (
+        <ListItem
+          secondaryAction={
+            <IconButton
+              edge="end"
+              aria-label="edit"
+              onClick={() => {
+                navigate("/doc/patientsEdit");
+              }}
+            >
+              <EditIcon />
+            </IconButton>
+          }
+        >
+          <ListItemText primary={d} secondary="9812342332" />
+        </ListItem>
+      ))}
     </List>
   );
 }

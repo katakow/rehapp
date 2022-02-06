@@ -1,19 +1,28 @@
 /* eslint-disable react/prop-types */
 
+import { Grid } from "@mui/material";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 import ListOfPatients from "../../coponents/docPage/ListOfPatients";
 
 const DocPatients = function ({ title }) {
   return (
-    <div>
+    <content>
       <NavBarekDoc />
-      <h1 className="main" align="center">
-        {title}
-      </h1>
-      <div className="center">
-        <ListOfPatients />
-      </div>
-    </div>
+      <Grid
+        container
+        direction="column"
+        spacing="100px"
+        justifyContent="center"
+        alignContent="center"
+      >
+        <Grid item>
+          <h1 align="center">{title}</h1>
+        </Grid>
+        <Grid item>
+          <ListOfPatients />
+        </Grid>
+      </Grid>
+    </content>
   );
 };
 DocPatients.defaultProps = {

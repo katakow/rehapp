@@ -17,7 +17,7 @@ const ButtonToR4 = function () {
         borderColor: "rgba(106, 144, 100, 0.37)",
       }}
       onClick={() => {
-        navigate("/register/4");
+        navigate("/register4");
       }}
     >
       NASTĘPNA STRONA

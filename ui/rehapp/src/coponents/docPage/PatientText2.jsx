@@ -7,7 +7,7 @@ const PatientEditText = function () {
       <Container maxWidth="400px">
         <Grid container direction="column" spacing="50px">
           <Grid item>
-            <FormLabel>data przejścia COVID-19</FormLabel>
+            <FormLabel>pozytywny wynik testu na COVID-19</FormLabel>
           </Grid>
           <Grid item>
             <FormLabel>objawy podczas COVID-19</FormLabel>
@@ -19,10 +19,12 @@ const PatientEditText = function () {
             <FormLabel>leki zażywane podczas COVID-19</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel>data szczepienia na COVID-19</FormLabel>
+            <FormLabel>szczepienie na COVID-19</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel>preparat, którym pacjent się szczepił</FormLabel>
+            <FormLabel>
+              nazwa szczepionki, którym pacjent się szczepił
+            </FormLabel>
           </Grid>
         </Grid>
       </Container>

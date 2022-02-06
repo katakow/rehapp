@@ -8,14 +8,6 @@ const EditUserData2 = function () {
       <Grid item>
         <TextField
           id="standard-basic"
-          label="zażywane leki"
-          variant="standard"
-          fullWidth
-        />
-      </Grid>
-      <Grid item>
-        <TextField
-          id="standard-basic"
           label="choroby współistniejące"
           variant="standard"
           fullWidth
@@ -24,23 +16,16 @@ const EditUserData2 = function () {
       <Grid item>
         <TextField
           id="standard-basic"
-          label="przebyte operacje / zabiegi"
+          label="odbyte szczepienia"
           variant="standard"
           fullWidth
         />
       </Grid>
+
       <Grid item>
         <TextField
           id="standard-basic"
           label="alergie"
-          variant="standard"
-          fullWidth
-        />
-      </Grid>
-      <Grid item>
-        <TextField
-          id="standard-basic"
-          label="odbyte szczepienia"
           variant="standard"
           fullWidth
         />

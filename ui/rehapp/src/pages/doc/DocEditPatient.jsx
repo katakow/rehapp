@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 import PatientText1 from "../../coponents/docPage/PatientText1";
 import PatientText2 from "../../coponents/docPage/PatientText2";
@@ -9,33 +9,28 @@ import EditPatientSave from "../../coponents/docPage/buttons/EditPatientSave";
 
 const DocPatients = function ({ title }) {
   return (
-    <div>
+    <content>
       <NavBarekDoc />
-      <h1 className="main" align="center">
-        {title}
-      </h1>
-      <Container className="centerEditPatient">
-        <Grid
-          container
-          direction="row"
-          spacing="50px"
-          alignContent="center"
-          alignItems="center"
-          alignSelf="center"
-        >
-          <Grid item>
-            <PatientText1 />
-          </Grid>
-          <Grid item>
-            <PatientText2 />
-          </Grid>
-          <Grid item>
-            <PatientText3 />
-          </Grid>
+      <h1 align="center">{title}</h1>
+      <Grid
+        container
+        direction="row"
+        spacing="50px"
+        alignItems="center"
+        justifyContent="space-around"
+      >
+        <Grid item>
+          <PatientText1 />
         </Grid>
-        <EditPatientSave />
-      </Container>
-    </div>
+        <Grid item>
+          <PatientText2 />
+        </Grid>
+        <Grid item>
+          <PatientText3 />
+        </Grid>
+      </Grid>
+      <EditPatientSave />
+    </content>
   );
 };
 DocPatients.defaultProps = {

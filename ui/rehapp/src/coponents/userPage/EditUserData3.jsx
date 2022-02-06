@@ -8,7 +8,7 @@ const EditUserData3 = function () {
       <Grid item>
         <TextField
           id="standard-basic"
-          label="data przejścia COVID-19"
+          label="pozytywny wynik testu na covid"
           variant="standard"
           fullWidth
         />
@@ -33,6 +33,22 @@ const EditUserData3 = function () {
         <TextField
           id="standard-basic"
           label="zażywane leki"
+          variant="standard"
+          fullWidth
+        />
+      </Grid>
+      <Grid item>
+        <TextField
+          id="standard-basic"
+          label="szczepienie na COVID-19"
+          variant="standard"
+          fullWidth
+        />
+      </Grid>
+      <Grid item>
+        <TextField
+          id="standard-basic"
+          label="nazwa szczepionki"
           variant="standard"
           fullWidth
         />

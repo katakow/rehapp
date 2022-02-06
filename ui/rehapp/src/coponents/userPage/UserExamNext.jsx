@@ -17,7 +17,7 @@ const UserExamNext = function () {
         borderColor: "rgba(106, 144, 100, 0.37)",
       }}
       onClick={() => {
-        navigate("/user/exam/2");
+        navigate("/user/exam2");
       }}
     >
       NASTĘPNA STRONA

@@ -1,39 +1,29 @@
 /* eslint-disable react/prop-types */
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
 import EditUser from "../../coponents/userPage/EditUser";
-import ProfileNext from "../../coponents/userPage/ProfileNext";
-import UserData1 from "../../coponents/userPage/UserData1";
-import UserData2 from "../../coponents/userPage/UserData2";
+import UserData from "../../coponents/userPage/UserData";
 
 const UserProfile = function ({ title }) {
   return (
-    <body className="userProfile">
+    <content>
       <NavBarek />
-      <h1 className="main" align="center">
-        {title}
-      </h1>
-      <Container>
-        <Grid container direction="row" spacing="200px">
-          <Grid item>
-            <UserData1 />
-          </Grid>
-          <Grid item>
-            <UserData2 />
-          </Grid>
-          <Grid item>
-            <Grid container direction="row" spacing="50px">
-              <Grid item>
-                <ProfileNext />
-              </Grid>
-              <Grid item>
-                <EditUser />
-              </Grid>
+      <Grid container direction="column" spacing="50px">
+        <Grid item>
+          <h1 align="center">{title}</h1>
+        </Grid>
+        <Grid item>
+          <Grid container direction="row" justifyContent="space-around">
+            <Grid item>
+              <UserData />
             </Grid>
           </Grid>
         </Grid>
-      </Container>
-    </body>
+        <Grid item alignSelf="flex-end">
+          <EditUser />
+        </Grid>
+      </Grid>
+    </content>
   );
 };
 UserProfile.defaultProps = {

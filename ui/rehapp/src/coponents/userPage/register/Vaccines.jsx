@@ -16,7 +16,6 @@ export default function CheckboxLabels() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        className="bodyLogin2"
       >
         <FormGroup>
           {vaccines.map((d) => (

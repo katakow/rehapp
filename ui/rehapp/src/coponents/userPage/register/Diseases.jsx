@@ -8,13 +8,13 @@ import Checkbox from "@mui/material/Checkbox";
 import { Container, Grid } from "@mui/material";
 
 export default function CheckboxLabels() {
-  // const diseases = ["cukrzyca", "chorby tarczycy", "nadciśnienie", "gówno"];
+  const diseases = ["cukrzyca", "chorby tarczycy", "nadciśnienie", "gówno"];
   useEffect(() => {
     const fetchDiseases = async () => {
-      const res = await fetch("http://localhost:5000/diseases");
-      const diseases = await res.;
+      const res = await fetch("http://localhost:7080/Diseases");
+      const data = await res.json();
 
-      console.log(diseases);
+      console.log(data);
     };
     fetchDiseases();
   }, []);

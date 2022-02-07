@@ -39,4 +39,18 @@ public class PatientsLogic
         }).ToListAsync();
     }
 
+    public async Task<PatientViewModel> GetPatientAsync(int id)
+    {
+        var patient = await _rehappContext.Patients.FirstOrDefaultAsync(p => p.Id == id);
+        return new PatientViewModel
+        {
+            Id = patient.Id,
+            Name = patient.Name,
+            Surname = patient.Surname,
+            Height = patient.Height,
+            Mail = patient.Mail,
+            Pesel = patient.Pesel,
+            Weight = patient.Weight
+        };
+    }
 }

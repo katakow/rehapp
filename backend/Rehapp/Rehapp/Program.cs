@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<RehappContext>();
 builder.Services.AddScoped<DoctorsLogic>();
 builder.Services.AddScoped<DiseasesLogic>();
+builder.Services.AddScoped<PatientsLogic>();
 
 var app = builder.Build();
 

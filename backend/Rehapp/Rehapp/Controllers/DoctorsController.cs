@@ -5,8 +5,8 @@ using Rehapp.ViewModels;
 namespace Rehapp.Controllers;
 
 [ApiController]
-    [Route("[controller]")]
-public class DoctorsController:ControllerBase
+[Route("[controller]")]
+public class DoctorsController : ControllerBase
 {
     private readonly DoctorsLogic _doctorsLogic;
 
@@ -22,19 +22,18 @@ public class DoctorsController:ControllerBase
         return Ok(doctors);
     }
 
-   // [HttpPost("add")]
-   [HttpPost]
+    // [HttpPost("add")]
+    [HttpPost]
     public async Task<IActionResult> Create(DoctorViewModel doctorViewModel)
     {
         var doctor = await _doctorsLogic.AddDoctorAsync(doctorViewModel);
         return Ok(doctor);
     }
-    
+
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
         var doctor = await _doctorsLogic.GetDoctorAsync(id);
         return Ok(doctor);
     }
-    
 }

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Grid, FormLabel } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
-import UserExamPrev from "../../coponents/userPage/UserExamPrev";
+import UserExamPrev from "../../coponents/userPage/buttons/UserExamPrev";
 
 const UserExam2 = function ({ title }) {
   return (

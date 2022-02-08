@@ -1,10 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Grid } from "@mui/material";
+import Box from "@mui/material/Box";
 import NavBarek from "../../coponents/userPage/NavBarek";
-import Box from "../../coponents/userPage/Box";
-import Box2 from "../../coponents/userPage/Box2";
-import Box3 from "../../coponents/userPage/Box3";
-import Box4 from "../../coponents/userPage/Box4";
 
 const UserMain = function ({ title }) {
   return (
@@ -28,16 +25,81 @@ const UserMain = function ({ title }) {
             alignContent="center"
           >
             <Grid item>
-              <Box />
+              <Grid container direction="row" alignContent="center">
+                <Box
+                  sx={{
+                    width: 320,
+                    height: 250,
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    color: "black",
+                    borderRadius: 15,
+                    bottom: 200,
+                  }}
+                >
+                  <div className="box">
+                    W zakładce Mój profil możesz zobaczyć i edytować wszystkie
+                    dane wprowadzone przez Ciebie przy rejestracji.
+                  </div>
+                </Box>
+              </Grid>
             </Grid>
             <Grid item>
-              <Box2 />
+              <Grid container direction="row" alignContent="center">
+                <Box
+                  sx={{
+                    width: 320,
+                    height: 250,
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    color: "black",
+                    borderRadius: 15,
+                    bottom: 200,
+                  }}
+                >
+                  <div className="box">
+                    W zakładce Zalecenia dowiesz się m.in. jaka dieta będzie dla
+                    Ciebie najepsza lub jaką aktywność fizyczną najlepiej
+                    wykonywać.
+                  </div>
+                </Box>
+              </Grid>
             </Grid>
             <Grid item>
-              <Box3 />
+              <Grid container direction="row" alignContent="center">
+                <Box
+                  sx={{
+                    width: 320,
+                    height: 250,
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    color: "black",
+                    borderRadius: 15,
+                    bottom: 200,
+                  }}
+                >
+                  <div className="box">
+                    W zakładce Badania widoczne są wszystkie badania, o które
+                    warto poprosić lekarza rodzinnego.
+                  </div>
+                </Box>
+              </Grid>
             </Grid>
             <Grid item>
-              <Box4 />
+              <Grid container direction="row" alignContent="center">
+                <Box
+                  sx={{
+                    width: 320,
+                    height: 250,
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    color: "black",
+                    borderRadius: 15,
+                    bottom: 200,
+                  }}
+                >
+                  <div className="box">
+                    W zakładce Informacje znajdziesz aktualne informacje
+                    dotyczące COVID-19.
+                  </div>
+                </Box>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

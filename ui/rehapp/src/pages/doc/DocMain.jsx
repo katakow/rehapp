@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Grid } from "@mui/material";
+import Box from "@mui/material/Box";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
-import BoxDoc from "../../coponents/docPage/BoxDoc";
-import BoxDoc2 from "../../coponents/docPage/BoxDoc2";
-import BoxDoc3 from "../../coponents/docPage/BoxDoc3";
 
 const UserMain = function ({ title }) {
   return (
@@ -27,13 +25,61 @@ const UserMain = function ({ title }) {
             alignContent="center"
           >
             <Grid item>
-              <BoxDoc />
+              <Grid container direction="row" alignContent="center">
+                <Box
+                  sx={{
+                    width: 320,
+                    height: 250,
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    color: "black",
+                    borderRadius: 15,
+                    bottom: 200,
+                  }}
+                >
+                  <div className="box">
+                    W zakładce Mój profil możesz zobaczyć i edytować wszystkie
+                    dane wprowadzone przez Ciebie przy rejestracji.
+                  </div>
+                </Box>
+              </Grid>
             </Grid>
             <Grid item>
-              <BoxDoc2 />
+              <Grid container direction="row" alignContent="center">
+                <Box
+                  sx={{
+                    width: 320,
+                    height: 250,
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    color: "black",
+                    borderRadius: 15,
+                    bottom: 200,
+                  }}
+                >
+                  <div className="box">
+                    W zakładce Pacjenci możesz przejrzeć i edytować dane
+                    wszystkich pacjentów.
+                  </div>
+                </Box>
+              </Grid>
             </Grid>
             <Grid item>
-              <BoxDoc3 />
+              <Grid container direction="row" alignContent="center">
+                <Box
+                  sx={{
+                    width: 320,
+                    height: 250,
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    color: "black",
+                    borderRadius: 15,
+                    bottom: 200,
+                  }}
+                >
+                  <div className="box">
+                    W zakładce Informacje znajdziesz aktualne informacje
+                    dotyczące COVID-19.
+                  </div>
+                </Box>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

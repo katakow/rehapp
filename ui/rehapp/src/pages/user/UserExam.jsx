@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Grid } from "@mui/material";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 import NavBarek from "../../coponents/userPage/NavBarek";
-import UserCheck1 from "../../coponents/userPage/UserCheck1";
-import UserCheck2 from "../../coponents/userPage/UserCheck2";
-import UserCheck3 from "../../coponents/userPage/UserCheck3";
-import UserCheck4 from "../../coponents/userPage/UserCheck4";
-import UserExamNext from "../../coponents/userPage/UserExamNext";
+import UserExamNext from "../../coponents/userPage/buttons/UserExamNext";
 
 const UserExam = function ({ title }) {
   return (
@@ -23,16 +22,308 @@ const UserExam = function ({ title }) {
             justifyContent="center"
           >
             <Grid item>
-              <UserCheck1 />
+              <FormGroup>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="kaszel"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="katar"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="brak smaku"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="brak węchu"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="przymglenie"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="problemy z oddychaniem"
+                />
+              </FormGroup>
             </Grid>
             <Grid item>
-              <UserCheck2 />
+              <FormGroup>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="zmęczenie"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="brak skupienia"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="szybkie bicie serca"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="ból w klatce piersiowej"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="ból kości / stawów"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="ból głowy"
+                />
+              </FormGroup>
             </Grid>
             <Grid item>
-              <UserCheck3 />
+              <FormGroup>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="senność"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="gorączka"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="zaburzenia pamięci"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="biegunka"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="krew w moczu"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="krew w kale"
+                />
+              </FormGroup>
             </Grid>
             <Grid item>
-              <UserCheck4 />
+              <FormGroup>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="wysypka"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="ból gardła"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="zaczerwienione oczy"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="wysokie ciśnienie"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="duszności wysiłkowe"
+                />
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      sx={{
+                        "&.Mui-checked": {
+                          color: "rgba(253, 105, 139, 0.85)",
+                        },
+                      }}
+                    />
+                  }
+                  label="brak"
+                />
+              </FormGroup>
             </Grid>
           </Grid>
         </Grid>

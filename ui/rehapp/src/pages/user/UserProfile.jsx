@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-import { Grid } from "@mui/material";
+import { Grid, FormLabel } from "@mui/material";
 
 import NavBarek from "../../coponents/userPage/NavBarek";
 import EditUser from "../../coponents/userPage/buttons/EditUser";
-import UserData from "../../coponents/userPage/UserData";
 
 const UserProfile = function ({ title }) {
   return (
@@ -21,7 +20,81 @@ const UserProfile = function ({ title }) {
             justifyContent="space-around"
           >
             <Grid item>
-              <UserData />
+              <Grid
+                container
+                direction="row"
+                spacing="200px"
+                justifyContent="space-around"
+              >
+                <Grid item>
+                  <Grid container direction="column" spacing="50px">
+                    <Grid item>
+                      <FormLabel component="legend">imię</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">nazwisko</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">mail</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">pesel</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">waga</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">wzrost</FormLabel>
+                    </Grid>
+                  </Grid>
+                </Grid>
+                <Grid item>
+                  <Grid container direction="column" spacing="50px">
+                    <Grid item>
+                      <FormLabel component="legend">
+                        chorby współistniejące
+                      </FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">
+                        odbyte szczepienia
+                      </FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">alergie</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">dieta</FormLabel>
+                    </Grid>
+                  </Grid>
+                </Grid>
+                <Grid item>
+                  <Grid container direction="column" spacing="50px">
+                    <Grid item>
+                      <FormLabel component="legend">test na covid</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">objawy</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">przejście</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">leki</FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">
+                        szcepionka na covid
+                      </FormLabel>
+                    </Grid>
+                    <Grid item>
+                      <FormLabel component="legend">
+                        nazwa szczepionki
+                      </FormLabel>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

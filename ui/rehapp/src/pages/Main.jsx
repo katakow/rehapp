@@ -1,12 +1,13 @@
-import { Container, Grid } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 import CoronavirusIcon from "@mui/icons-material/Coronavirus";
+import { useNavigate } from "react-router-dom";
 import Header from "../coponents/mainPages/Header";
 import NavBarLogin from "../coponents/mainPages/NavBarLogin";
 import LogInUser from "../coponents/mainPages/LogInUser";
 import LogInDoctor from "../coponents/mainPages/LogInDoctor";
-import RegisterButtons from "../coponents/mainPages/RegisterButtons";
 
 const Main = function () {
+  const navigate = useNavigate();
   return (
     <content>
       <NavBarLogin />
@@ -35,7 +36,50 @@ const Main = function () {
                 <LogInUser />
               </Grid>
               <Grid item>
-                <RegisterButtons />
+                <Container align="center">
+                  <Grid container direction="column" spacing="50px">
+                    <Grid item>Nie masz konta?</Grid>
+
+                    <Grid item>
+                      <Button
+                        item
+                        variant="outlined"
+                        sx={{
+                          width: "255px",
+                          height: "93px",
+                          color: "black",
+                          backgroundColor: "rgba(106, 144, 100, 0.37)",
+                          fontFamily: "Sora",
+                          borderColor: "rgba(106, 144, 100, 0.37)",
+                        }}
+                        onClick={() => {
+                          navigate("/register");
+                        }}
+                      >
+                        ZAREJESTRUJ SIĘ
+                      </Button>
+                    </Grid>
+                    <Grid item>
+                      <Button
+                        item
+                        variant="outlined"
+                        sx={{
+                          width: "255px",
+                          height: "93px",
+                          color: "black",
+                          backgroundColor: "rgba(106, 144, 100, 0.37)",
+                          fontFamily: "Sora",
+                          borderColor: "rgba(106, 144, 100, 0.37)",
+                        }}
+                        onClick={() => {
+                          navigate("/register/doc");
+                        }}
+                      >
+                        ZAREJESTRUJ SIĘ JAKO LEKARZ
+                      </Button>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
               <Grid item>
                 <LogInDoctor />

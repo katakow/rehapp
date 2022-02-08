@@ -36,4 +36,5 @@ public class PatientsController:ControllerBase
         var patient = await _patientsLogic.GetPatientAsync(id);
         return Ok(patient);
     }
+    
 }

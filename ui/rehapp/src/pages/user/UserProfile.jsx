@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Grid } from "@mui/material";
+
 import NavBarek from "../../coponents/userPage/NavBarek";
 import EditUser from "../../coponents/userPage/EditUser";
 import UserData from "../../coponents/userPage/UserData";

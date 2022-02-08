@@ -1,8 +1,9 @@
+/* eslint-disable no-shadow */
 /* eslint-disable react/jsx-no-undef */
 import { Grid, FormLabel } from "@mui/material";
 import * as React from "react";
 
-const UserData1 = function () {
+const UserData = function () {
   return (
     <Grid
       container
@@ -19,13 +20,10 @@ const UserData1 = function () {
             <FormLabel component="legend">nazwisko</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel component="legend">e-mail</FormLabel>
+            <FormLabel component="legend">mail</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel component="legend">hasło</FormLabel>
-          </Grid>
-          <Grid item>
-            <FormLabel component="legend">PESEL</FormLabel>
+            <FormLabel component="legend">pesel</FormLabel>
           </Grid>
           <Grid item>
             <FormLabel component="legend">waga</FormLabel>
@@ -38,7 +36,7 @@ const UserData1 = function () {
       <Grid item>
         <Grid container direction="column" spacing="50px">
           <Grid item>
-            <FormLabel component="legend">choroby współistniejące</FormLabel>
+            <FormLabel component="legend">chorby współistniejące</FormLabel>
           </Grid>
           <Grid item>
             <FormLabel component="legend">odbyte szczepienia</FormLabel>
@@ -47,28 +45,26 @@ const UserData1 = function () {
             <FormLabel component="legend">alergie</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel component="legend">spożywana dieta</FormLabel>
+            <FormLabel component="legend">dieta</FormLabel>
           </Grid>
         </Grid>
       </Grid>
       <Grid item>
         <Grid container direction="column" spacing="50px">
           <Grid item>
-            <FormLabel component="legend">
-              pozytywny wynik testu na COVID-19
-            </FormLabel>
+            <FormLabel component="legend">test na covid</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel component="legend">objawy podczas COVID-19</FormLabel>
+            <FormLabel component="legend">objawy</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel component="legend">przebieg COVID-19</FormLabel>
+            <FormLabel component="legend">przejście</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel component="legend">zażywane leki</FormLabel>
+            <FormLabel component="legend">leki</FormLabel>
           </Grid>
           <Grid item>
-            <FormLabel component="legend">szczepienie na COVID-19</FormLabel>
+            <FormLabel component="legend">szcepionka na covid</FormLabel>
           </Grid>
           <Grid item>
             <FormLabel component="legend">nazwa szczepionki</FormLabel>
@@ -79,4 +75,4 @@ const UserData1 = function () {
   );
 };
 
-export default UserData1;
+export default UserData;

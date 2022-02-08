@@ -1,13 +1,39 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/prop-types */
-import React from "react";
-import { Grid } from "@mui/material";
-import ButtonToR2 from "../../../coponents/userPage/register/buttons/ButtonToR2";
-import NavBar from "../../../coponents/mainPages/NavBar";
-import TextRegL from "../../../coponents/userPage/register/TextRegL";
-import TextRegR from "../../../coponents/userPage/register/TextRegR";
+import { Grid, TextField } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import Input from "@mui/material/Input";
+import InputLabel from "@mui/material/InputLabel";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormControl from "@mui/material/FormControl";
+import { useState, React } from "react";
 import Sex from "../../../coponents/userPage/register/Sex";
+import NavBar from "../../../coponents/mainPages/NavBar";
+import ButtonToR2 from "../../../coponents/userPage/register/buttons/ButtonToR2";
 
 const Register = function () {
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+  const [values, setValues] = useState({
+    amount: "",
+    password: "",
+    weight: "",
+    weightRange: "",
+    showPassword: false,
+  });
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
   return (
     <content>
       <NavBar />
@@ -28,20 +54,82 @@ const Register = function () {
         <Grid item>
           <Grid container direction="row" justifyContent="space-around">
             <Grid item>
-              <TextRegL />
+              <TextField
+                fullWidth
+                id="standard-basic"
+                label="imię"
+                variant="standard"
+                placeholder="name"
+              />
+              <TextField
+                fullWidth
+                id="standard-basic"
+                label="nazwisko"
+                variant="standard"
+              />
+              <TextField
+                fullWidth
+                id="standard-basic"
+                label="e-mail"
+                variant="standard"
+              />
+              <FormControl fullWidth variant="standard">
+                <InputLabel htmlFor="standard-adornment-password">
+                  hasło
+                </InputLabel>
+                <Input
+                  type={values.showPassword ? "text" : "password"}
+                  value={values.password}
+                  onChange={handleChange("password")}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                      >
+                        {values.showPassword ? (
+                          <VisibilityOff />
+                        ) : (
+                          <Visibility />
+                        )}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                />
+              </FormControl>
             </Grid>
             <Grid item>
-              <TextRegR />
-              <Sex />
+              <TextField
+                fullWidth
+                id="standard-basic"
+                label="PESEL"
+                variant="standard"
+              />
+              <TextField
+                fullWidth
+                id="standard-basic"
+                label="wzrost [cm]"
+                variant="standard"
+              />
+              <TextField
+                fullWidth
+                id="standard-basic"
+                label="waga [kg]"
+                variant="standard"
+              />
+
+              <TextField id="standard-basic" label="płeć" variant="standard" />
             </Grid>
+            <Sex />
           </Grid>
         </Grid>
-        <Grid item>
-          <Grid container direction="row" justifyContent="space-around">
-            <Grid item>Strona 1/4</Grid>
-            <Grid item>
-              <ButtonToR2 />
-            </Grid>
+      </Grid>
+      <Grid item>
+        <Grid container direction="row" justifyContent="space-around">
+          <Grid item>Strona 1/4</Grid>
+          <Grid item>
+            <ButtonToR2 />
           </Grid>
         </Grid>
       </Grid>

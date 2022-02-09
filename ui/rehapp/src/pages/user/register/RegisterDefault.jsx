@@ -31,8 +31,8 @@ const RegisterDefault = function () {
     symptoms: "",
     courseOfCovid: "",
     drugs: "",
-    covidVaccine: "",
-    vaccineName: "",
+    // covidVaccine: "",
+    // vaccineName: "",
   });
 
   const ShowForms = function () {

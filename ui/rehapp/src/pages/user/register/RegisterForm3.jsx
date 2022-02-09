@@ -42,198 +42,206 @@ const RegisterForm2 = function (setRootValues) {
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.values });
   };
-  <Grid container direction="column" justifyContent="space-around" spacing="60">
-    <Grid item alignSelf="center">
-      <Container>
-        <FormLabel component="legend">
-          Czy kiedykolwiek miałeś pozytywny wynik testu na COVID-19?
-        </FormLabel>
-        <Grid
-          container
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <FormControl>
-            <RadioGroup
-              aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="brak"
-              name="radio-buttons-group"
-            >
-              {covidTest.map((d) => (
-                <FormControlLabel
-                  value={d}
-                  control={
-                    <Radio
-                      sx={{
-                        "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-                      }}
-                      value={values.covidTest}
-                      onChange={handleChange("covidTest")}
-                    />
-                  }
-                  label={d}
-                />
-              ))}
-            </RadioGroup>
-          </FormControl>
-        </Grid>
-      </Container>
-    </Grid>
-    <Grid item alignSelf="center">
-      ODPOWIEDZ TYLKO, JEŚLI POWYŻEJ ZAZNACZYŁAŚ / ZAZNACZYŁEŚ{" "}
-      <strong>TAK</strong>
-    </Grid>
-    <Grid item>
-      <Grid container direction="row" justifyContent="space-around">
-        <Grid item>
-          <Container>
-            <FormLabel component="legend">
-              jakie miałaś / miałeś objawy?
-            </FormLabel>
+  return (
+    <Grid
+      container
+      direction="column"
+      justifyContent="space-around"
+      spacing="60"
+    >
+      <Grid item alignSelf="center">
+        <Container>
+          <FormLabel component="legend">
+            Czy kiedykolwiek miałeś pozytywny wynik testu na COVID-19?
+          </FormLabel>
+          <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <FormControl>
+              <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                defaultValue="brak"
+                name="radio-buttons-group"
+              >
+                {covidTest.map((d) => (
+                  <FormControlLabel
+                    value={d}
+                    control={
+                      <Radio
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "rgba(253, 105, 139, 0.85)",
+                          },
+                        }}
+                        value={values.covidTest}
+                        onChange={handleChange("covidTest")}
+                      />
+                    }
+                    label={d}
+                  />
+                ))}
+              </RadioGroup>
+            </FormControl>
+          </Grid>
+        </Container>
+      </Grid>
+      <Grid item alignSelf="center">
+        ODPOWIEDZ TYLKO, JEŚLI POWYŻEJ ZAZNACZYŁAŚ / ZAZNACZYŁEŚ{" "}
+        <strong>TAK</strong>
+      </Grid>
+      <Grid item>
+        <Grid container direction="row" justifyContent="space-around">
+          <Grid item>
+            <Container>
+              <FormLabel component="legend">
+                jakie miałaś / miałeś objawy?
+              </FormLabel>
 
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Grid item>
-                <FormGroup>
-                  {symptoms.map((d) => (
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          sx={{
-                            "&.Mui-checked": {
-                              color: "rgba(253, 105, 139, 0.85)",
-                            },
-                          }}
-                          value={values.symptoms}
-                          onChange={handleChange("symptoms")}
-                        />
-                      }
-                      label={d}
-                    />
-                  ))}
-                </FormGroup>
-              </Grid>
-            </Grid>
-          </Container>
-        </Grid>
-        <Grid item>
-          <Container>
-            <FormLabel component="legend" maxWidth>
-              jak przeszłaś / przeszedłeś COVID-19?
-            </FormLabel>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Grid item>
-                <FormControl>
-                  <RadioGroup
-                    aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="bezobjawowo"
-                    name="radio-buttons-group"
-                  >
-                    {covidSymptoms.map((d) => (
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Grid item>
+                  <FormGroup>
+                    {symptoms.map((d) => (
                       <FormControlLabel
-                        value={d}
-                        label={d}
                         control={
-                          <Radio
+                          <Checkbox
                             sx={{
                               "&.Mui-checked": {
                                 color: "rgba(253, 105, 139, 0.85)",
                               },
                             }}
-                            value={values.covidSymptoms}
-                            onChange={handleChange("covidSymptoms")}
+                            value={values.symptoms}
+                            onChange={handleChange("symptoms")}
                           />
                         }
+                        label={d}
                       />
                     ))}
-                  </RadioGroup>
-                </FormControl>
+                  </FormGroup>
+                </Grid>
               </Grid>
-            </Grid>
-          </Container>
-        </Grid>
-        <Grid item>
-          <Container>
-            <FormLabel component="legend">
-              jakie leki zażywałaś /zażywałeś?
-            </FormLabel>
-
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Grid item>
-                <FormGroup>
-                  {drugs.map((d) => (
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          sx={{
-                            "&.Mui-checked": {
-                              color: "rgba(253, 105, 139, 0.85)",
-                            },
-                          }}
-                          value={values.drugs}
-                          onChange={handleChange("drugs")}
+            </Container>
+          </Grid>
+          <Grid item>
+            <Container>
+              <FormLabel component="legend" maxWidth>
+                jak przeszłaś / przeszedłeś COVID-19?
+              </FormLabel>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Grid item>
+                  <FormControl>
+                    <RadioGroup
+                      aria-labelledby="demo-radio-buttons-group-label"
+                      defaultValue="bezobjawowo"
+                      name="radio-buttons-group"
+                    >
+                      {covidSymptoms.map((d) => (
+                        <FormControlLabel
+                          value={d}
+                          label={d}
+                          control={
+                            <Radio
+                              sx={{
+                                "&.Mui-checked": {
+                                  color: "rgba(253, 105, 139, 0.85)",
+                                },
+                              }}
+                              value={values.covidSymptoms}
+                              onChange={handleChange("covidSymptoms")}
+                            />
+                          }
                         />
-                      }
-                      label={d}
-                    />
-                  ))}
-                </FormGroup>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                </Grid>
               </Grid>
-            </Grid>
-          </Container>
+            </Container>
+          </Grid>
+          <Grid item>
+            <Container>
+              <FormLabel component="legend">
+                jakie leki zażywałaś /zażywałeś?
+              </FormLabel>
+
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Grid item>
+                  <FormGroup>
+                    {drugs.map((d) => (
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            sx={{
+                              "&.Mui-checked": {
+                                color: "rgba(253, 105, 139, 0.85)",
+                              },
+                            }}
+                            value={values.drugs}
+                            onChange={handleChange("drugs")}
+                          />
+                        }
+                        label={d}
+                      />
+                    ))}
+                  </FormGroup>
+                </Grid>
+              </Grid>
+            </Container>
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
-    <Grid item>
-      <Grid container direction="row" justifyContent="space-around">
-        <Grid item>Strona 3/4</Grid>
-        <Grid item>
-          <Grid container direction="row" spacing="30px">
-            <Grid item>
-              <PrevBToR1 />
-            </Grid>
-            <Grid item>
-              <Button
-                item
-                variant="outlined"
-                sx={{
-                  width: "160px",
-                  height: "53px",
-                  color: "black",
-                  backgroundColor: "rgba(106, 144, 100, 0.37)",
-                  fontFamily: "Sora",
-                  borderColor: "rgba(106, 144, 100, 0.37)",
-                }}
-                onClick={() => {
-                  navigate("/register/2");
-                }}
-                handleChange={() => {
-                  handleClickSetValues(setRootValues);
-                }}
-              >
-                NASTĘPNA STRONA
-              </Button>
+      <Grid item>
+        <Grid container direction="row" justifyContent="space-around">
+          <Grid item>Strona 3/4</Grid>
+          <Grid item>
+            <Grid container direction="row" spacing="30px">
+              <Grid item>
+                <PrevBToR1 />
+              </Grid>
+              <Grid item>
+                <Button
+                  item
+                  variant="outlined"
+                  sx={{
+                    width: "160px",
+                    height: "53px",
+                    color: "black",
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    fontFamily: "Sora",
+                    borderColor: "rgba(106, 144, 100, 0.37)",
+                  }}
+                  handleChange={() => {
+                    handleClickSetValues(setRootValues);
+                  }}
+                  onClick={() => {
+                    navigate("/all");
+                  }}
+                >
+                  NASTĘPNA STRONA
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
     </Grid>
-  </Grid>;
-  return values;
+  );
 };
 export default RegisterForm2;

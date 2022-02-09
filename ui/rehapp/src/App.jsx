@@ -38,7 +38,7 @@ const App = function () {
         <Route path="/register/1" element={<RegisterForm1 />} />
         <Route path="/register/2" element={<RegisterForm2 />} />
         <Route path="/register/3" element={<RegisterForm3 />} />
-        <Route path="/allData/all" element={<UserAllData />} />
+        <Route path="/all" element={<UserAllData />} />
         <Route path="/register/end" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />

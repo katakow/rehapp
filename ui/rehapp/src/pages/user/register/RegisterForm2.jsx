@@ -12,15 +12,15 @@ import FormControl from "@mui/material/FormControl";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
 
 const RegisterForm2 = function (setRootValues) {
-  const vaccinesss = ["grypa", "tężec", "krztusiec", "różyczka"];
-  const dietsss = [
+  const vaccines = ["grypa", "tężec", "krztusiec", "różyczka"];
+  const diet = [
     "wegetariańska",
     "wegańska",
     "śródziemnomorska",
     "bezglutenowa",
   ];
 
-  const alergiesss = ["gluten", "laktoza", "owoce morza", "orzechy"];
+  const alergies = ["gluten", "laktoza", "owoce morza", "orzechy"];
   const navigate = useNavigate();
   const [values, setValues] = useState({
     diseases: "",
@@ -73,26 +73,58 @@ const RegisterForm2 = function (setRootValues) {
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.values });
   };
-  <Grid
-    container
-    direction="column"
-    justifyContent="space-around"
-    spacing="200"
-  >
-    <Grid item>
-      <Grid container direction="row" justifyContent="space-around">
-        <Grid item>
-          <Container>
-            <FormLabel component="legend">choroby współistniejące</FormLabel>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Grid item>
+  return (
+    <Grid
+      container
+      direction="column"
+      justifyContent="space-around"
+      spacing="200"
+    >
+      <Grid item>
+        <Grid container direction="row" justifyContent="space-around">
+          <Grid item>
+            <Container>
+              <FormLabel component="legend">choroby współistniejące</FormLabel>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Grid item>
+                  <FormGroup>
+                    {diseases.map((d) => (
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            sx={{
+                              "&.Mui-checked": {
+                                color: "rgba(253, 105, 139, 0.85)",
+                              },
+                            }}
+                            value={values.diseases}
+                            onChange={handleChange("diseases")}
+                          />
+                        }
+                        label={d.label}
+                      />
+                    ))}
+                  </FormGroup>
+                </Grid>
+              </Grid>
+            </Container>
+          </Grid>
+          <Grid item>
+            <Container>
+              <FormLabel component="legend">odbyte szczepienia</FormLabel>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
                 <FormGroup>
-                  {diseases.map((d) => (
+                  {vaccines.map((d) => (
                     <FormControlLabel
                       control={
                         <Checkbox
@@ -101,152 +133,121 @@ const RegisterForm2 = function (setRootValues) {
                               color: "rgba(253, 105, 139, 0.85)",
                             },
                           }}
-                          value={values.diseases}
-                          onChange={handleChange("diseases")}
-                        />
-                      }
-                      label={d.label}
-                    />
-                  ))}
-                </FormGroup>
-              </Grid>
-            </Grid>
-          </Container>
-        </Grid>
-        <Grid item>
-          <Container>
-            <FormLabel component="legend">odbyte szczepienia</FormLabel>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <FormGroup>
-                {vaccinesss.map((d) => (
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        sx={{
-                          "&.Mui-checked": {
-                            color: "rgba(253, 105, 139, 0.85)",
-                          },
-                        }}
-                        value={values.vaccines}
-                        onChange={handleChange("vaccines")}
-                      />
-                    }
-                    label={d}
-                  />
-                ))}
-              </FormGroup>
-            </Grid>
-          </Container>
-        </Grid>
-        <Grid item>
-          <Container>
-            <FormLabel component="legend">alergie</FormLabel>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <FormGroup>
-                {alergiesss.map((d) => (
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        sx={{
-                          "&.Mui-checked": {
-                            color: "rgba(253, 105, 139, 0.85)",
-                          },
-                        }}
-                        value={values.alergies}
-                        onChange={handleChange("alergies")}
-                      />
-                    }
-                    label={d}
-                  />
-                ))}
-              </FormGroup>
-            </Grid>
-          </Container>
-        </Grid>
-        <Grid item>
-          <Container>
-            <FormLabel component="legend">stosowana dieta</FormLabel>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <FormControl>
-                <RadioGroup
-                  aria-labelledby="demo-radio-buttons-group-label"
-                  defaultValue="brak"
-                  name="radio-buttons-group"
-                >
-                  {dietsss.map((d) => (
-                    <FormControlLabel
-                      value="wegetariańska"
-                      control={
-                        <Radio
-                          sx={{
-                            "&.Mui-checked": {
-                              color: "rgba(253, 105, 139, 0.85)",
-                            },
-                          }}
-                          value={values.diet}
-                          onChange={handleChange("diet")}
+                          value={values.vaccines}
+                          onChange={handleChange("vaccines")}
                         />
                       }
                       label={d}
                     />
                   ))}
-                </RadioGroup>
-              </FormControl>
-            </Grid>
-          </Container>
+                </FormGroup>
+              </Grid>
+            </Container>
+          </Grid>
+          <Grid item>
+            <Container>
+              <FormLabel component="legend">alergie</FormLabel>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <FormGroup>
+                  {alergies.map((d) => (
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          sx={{
+                            "&.Mui-checked": {
+                              color: "rgba(253, 105, 139, 0.85)",
+                            },
+                          }}
+                          value={values.alergies}
+                          onChange={handleChange("alergies")}
+                        />
+                      }
+                      label={d}
+                    />
+                  ))}
+                </FormGroup>
+              </Grid>
+            </Container>
+          </Grid>
+          <Grid item>
+            <Container>
+              <FormLabel component="legend">stosowana dieta</FormLabel>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="brak"
+                    name="radio-buttons-group"
+                  >
+                    {diet.map((d) => (
+                      <FormControlLabel
+                        value="wegetariańska"
+                        control={
+                          <Radio
+                            sx={{
+                              "&.Mui-checked": {
+                                color: "rgba(253, 105, 139, 0.85)",
+                              },
+                            }}
+                            value={values.diet}
+                            onChange={handleChange("diet")}
+                          />
+                        }
+                        label={d}
+                      />
+                    ))}
+                  </RadioGroup>
+                </FormControl>
+              </Grid>
+            </Container>
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
-    <Grid item>
-      <Grid container direction="row" justifyContent="space-around">
-        <Grid item>Strona 2/4</Grid>
-        <Grid item>
-          <Grid container direction="row" spacing="30px">
-            <Grid item>
-              <PrevBToR1 />
-            </Grid>
-            <Grid item>
-              <Button
-                item
-                variant="outlined"
-                sx={{
-                  width: "160px",
-                  height: "53px",
-                  color: "black",
-                  backgroundColor: "rgba(106, 144, 100, 0.37)",
-                  fontFamily: "Sora",
-                  borderColor: "rgba(106, 144, 100, 0.37)",
-                }}
-                onClick={() => {
-                  navigate("/register/3");
-                }}
-                handleChange={() => {
-                  handleClickSetValues(setRootValues);
-                }}
-              >
-                NASTĘPNA STRONA
-              </Button>
+      <Grid item>
+        <Grid container direction="row" justifyContent="space-around">
+          <Grid item>Strona 2/4</Grid>
+          <Grid item>
+            <Grid container direction="row" spacing="30px">
+              <Grid item>
+                <PrevBToR1 />
+              </Grid>
+              <Grid item>
+                <Button
+                  item
+                  variant="outlined"
+                  sx={{
+                    width: "160px",
+                    height: "53px",
+                    color: "black",
+                    backgroundColor: "rgba(106, 144, 100, 0.37)",
+                    fontFamily: "Sora",
+                    borderColor: "rgba(106, 144, 100, 0.37)",
+                  }}
+                  handleChange={() => {
+                    handleClickSetValues(setRootValues);
+                  }}
+                  onClick={() => {
+                    navigate("/register/3");
+                  }}
+                >
+                  NASTĘPNA STRONA
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
     </Grid>
-  </Grid>;
-  return values;
+  );
 };
 export default RegisterForm2;

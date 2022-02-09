@@ -2,34 +2,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const userSlice = createSlice({
-  name: "user",
-  initialState: {
-    value: {
-      name: "",
-      surname: "",
-      email: "",
-      pesel: "",
-      height: 0,
-      weight: 0,
-      gender: "",
-      diseases: "",
-      vaccines: "",
-      alergies: "",
-      diet: "",
-      covidTest: false,
-      symtopms: "",
-      covid: "",
-      drugs: "",
-      covidVaccine: true,
-      vaccineName: "",
-    },
-  },
+  name: "vaccineDate",
+  initialState: { value: { covidVaccine: "", vaccineName: "" } },
   reducers: {
-    register: (state, action) => {
+    vaccine: (state, action) => {
       state.value = action.payload;
     },
   },
 });
 
-export const { login } = userSlice.actions;
+export const { vaccine } = userSlice.actions;
 export default userSlice.reducer;

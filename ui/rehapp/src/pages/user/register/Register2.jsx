@@ -4,8 +4,8 @@ import { Grid } from "@mui/material";
 import ButtonToR3 from "../../../coponents/userPage/register/buttons/ButtonToR3";
 import NavBar from "../../../coponents/mainPages/NavBar";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
-import Diseases from "../../../coponents/userPage/register/Diseases";
 import Vaccines from "../../../coponents/userPage/register/Vaccines";
+import Diseases from "../../../coponents/userPage/register/Diseases";
 import Alergies from "../../../coponents/userPage/register/Alergies";
 import Diet from "../../../coponents/userPage/register/Diet";
 

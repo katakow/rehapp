@@ -6,11 +6,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import userReducer from "./features/user";
+import vaccineDataReducer from "./features/user";
 
 const store = configureStore({
   reducer: {
-    user: userReducer,
+    vaccine: vaccineDataReducer,
   },
 });
 

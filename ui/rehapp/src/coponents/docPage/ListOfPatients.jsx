@@ -6,7 +6,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -44,41 +43,22 @@ export default function FolderList() {
     return <div>Loading...</div>;
   }
 
-  const deletePatient = async (id) => {
-    fetch(`https://localhost:7080/Paitents/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        setPatients(result);
-      });
-  };
-
   return (
     <List sx={{ maxWidth: 500, fontSize: "60px" }}>
       {patients.map((d) => (
         <ListItem
           secondaryAction={
             <IconButton
-              edge="end"
-              aria-label="delete"
+              edge="start"
+              aria-label="edit"
               onClick={() => {
-                deletePatient(d.id);
+                navigate("/doc/patientsEdit");
               }}
             >
-              <DeleteIcon />
+              <EditIcon />
             </IconButton>
           }
         >
-          <IconButton
-            edge="start"
-            aria-label="edit"
-            onClick={() => {
-              navigate("/doc/patientsEdit");
-            }}
-          >
-            <EditIcon />
-          </IconButton>
           <ListItemText primary={d.surname} secondary={d.name} />
         </ListItem>
       ))}

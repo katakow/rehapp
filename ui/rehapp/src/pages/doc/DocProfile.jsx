@@ -34,7 +34,7 @@ const DocProfile = function ({ title }) {
               />
             </Grid>
             <Grid item>
-              <Grid container direction="column" spacing="100px">
+              <Grid container direction="column" spacing="70px">
                 <Grid item>
                   <FormLabel component="legend">imię</FormLabel>
                 </Grid>
@@ -47,7 +47,7 @@ const DocProfile = function ({ title }) {
               </Grid>
             </Grid>
             <Grid item>
-              <Grid container direction="column" spacing="100px">
+              <Grid container direction="column" spacing="70px">
                 <Grid item>
                   <FormLabel component="legend">PESEL</FormLabel>
                 </Grid>

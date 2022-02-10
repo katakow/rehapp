@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-shadow */
 import { useState, React, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +12,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
 
-const RegisterForm2 = function (setRootValues) {
+const RegisterForm2 = function (rootValues, setRootValues) {
   const vaccines = ["grypa", "tężec", "krztusiec", "różyczka"];
   const diet = [
     "wegetariańska",
@@ -22,7 +23,7 @@ const RegisterForm2 = function (setRootValues) {
 
   const alergies = ["gluten", "laktoza", "owoce morza", "orzechy"];
   const navigate = useNavigate();
-  const [values, setValues] = useState({
+  const [newValues, setNewValues] = useState({
     diseases: "",
     vaccines: "",
     alergies: "",
@@ -63,15 +64,16 @@ const RegisterForm2 = function (setRootValues) {
 
   const handleClickSetValues = () => {
     setRootValues({
-      diseases: values.diseases,
-      vaccines: values.vaccines,
-      alergies: values.alergies,
-      diet: values.diet,
+      ...rootValues,
+      diseases: newValues.diseases,
+      vaccines: newValues.vaccines,
+      alergies: newValues.alergies,
+      diet: newValues.diet,
     });
   };
 
   const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.values });
+    setNewValues({ ...value, [prop]: event.target.newValue });
   };
   return (
     <Grid
@@ -102,7 +104,7 @@ const RegisterForm2 = function (setRootValues) {
                                 color: "rgba(253, 105, 139, 0.85)",
                               },
                             }}
-                            value={values.diseases}
+                            value={newValues.diseases}
                             onChange={handleChange("diseases")}
                           />
                         }
@@ -133,7 +135,7 @@ const RegisterForm2 = function (setRootValues) {
                               color: "rgba(253, 105, 139, 0.85)",
                             },
                           }}
-                          value={values.vaccines}
+                          value={newValues.vaccines}
                           onChange={handleChange("vaccines")}
                         />
                       }
@@ -163,7 +165,7 @@ const RegisterForm2 = function (setRootValues) {
                               color: "rgba(253, 105, 139, 0.85)",
                             },
                           }}
-                          value={values.alergies}
+                          value={newValues.alergies}
                           onChange={handleChange("alergies")}
                         />
                       }
@@ -199,7 +201,7 @@ const RegisterForm2 = function (setRootValues) {
                                 color: "rgba(253, 105, 139, 0.85)",
                               },
                             }}
-                            value={values.diet}
+                            value={newValues.diet}
                             onChange={handleChange("diet")}
                           />
                         }

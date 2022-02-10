@@ -5,9 +5,9 @@ import { useState, React } from "react";
 import { useNavigate } from "react-router-dom";
 import Sex from "../../../coponents/userPage/register/Sex";
 
-const RegisterForm1 = function (setRootValues) {
+const RegisterForm1 = function (rootValues, setRootValues) {
   const navigate = useNavigate();
-  const [values, setValues] = useState({
+  const [newValues, setNewValues] = useState({
     name: "",
     surname: "",
     email: "",
@@ -17,22 +17,21 @@ const RegisterForm1 = function (setRootValues) {
     weight: "",
     gender: "",
   });
-
   const handleClickSetValues = () => {
     setRootValues({
-      name: values.name,
-      surname: values.surname,
-      email: values.email,
-      password: values.password,
-      pesel: values.pesel,
-      height: values.height,
-      weight: values.weight,
-      gender: values.gender,
+      ...rootValues,
+      name: newValues.name,
+      surname: newValues.surname,
+      email: newValues.email,
+      password: newValues.password,
+      pesel: newValues.pesel,
+      height: newValues.height,
+      weight: newValues.weight,
+      gender: newValues.gender,
     });
   };
-
   const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.values });
+    setNewValues({ ...value, [prop]: event.target.alue });
   };
   return (
     <Grid
@@ -51,8 +50,8 @@ const RegisterForm1 = function (setRootValues) {
                   id="standard-basic"
                   label="imię"
                   variant="standard"
-                  value={values.name}
-                  onChange={handleChange("name")}
+                  value={newValues.name}
+                  onChange={handleChange() => {valu}}
                 />
               </Grid>
               <Grid item>
@@ -61,7 +60,7 @@ const RegisterForm1 = function (setRootValues) {
                   id="standard-basic"
                   label="nazwisko"
                   variant="standard"
-                  value={values.surname}
+                  value={newValues.surname}
                   onChange={handleChange("surname")}
                 />
               </Grid>
@@ -71,7 +70,7 @@ const RegisterForm1 = function (setRootValues) {
                   id="standard-basic"
                   label="e-mail"
                   variant="standard"
-                  value={values.email}
+                  value={newValues.email}
                   onChange={handleChange("email")}
                 />
               </Grid>
@@ -81,8 +80,8 @@ const RegisterForm1 = function (setRootValues) {
                     hasło
                   </InputLabel>
                   <Input
-                    type={values.showPassword ? "text" : "password"}
-                    value={values.password}
+                    type={newValues.showPassword ? "text" : "password"}
+                    value={newValues.password}
                     onChange={handleChange("password")}
                   />
                 </FormControl>
@@ -97,7 +96,7 @@ const RegisterForm1 = function (setRootValues) {
                   id="standard-basic"
                   label="PESEL"
                   variant="standard"
-                  value={values.pesel}
+                  value={newValues.pesel}
                   onChange={handleChange("pesel")}
                 />
               </Grid>
@@ -107,7 +106,7 @@ const RegisterForm1 = function (setRootValues) {
                   id="standard-basic"
                   label="wzrost [cm]"
                   variant="standard"
-                  value={values.height}
+                  value={newValues.height}
                   onChange={handleChange("height")}
                 />
               </Grid>
@@ -117,7 +116,7 @@ const RegisterForm1 = function (setRootValues) {
                   id="standard-basic"
                   label="waga [kg]"
                   variant="standard"
-                  value={values.weight}
+                  value={newValues.weight}
                   onChange={handleChange("weight")}
                 />
               </Grid>
@@ -126,7 +125,7 @@ const RegisterForm1 = function (setRootValues) {
                   id="standard-basic"
                   label="płeć"
                   variant="standard"
-                  value={values.gender}
+                  value={newValues.gender}
                   onChange={handleChange("gender")}
                 />
               </Grid>
@@ -154,7 +153,7 @@ const RegisterForm1 = function (setRootValues) {
                 handleClickSetValues(setRootValues);
               }}
               onClick={() => {
-                navigate("/register/2");
+                navigate("/register/id=2");
               }}
             >
               NASTĘPNA STRONA

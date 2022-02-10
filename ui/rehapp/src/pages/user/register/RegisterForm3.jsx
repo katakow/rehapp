@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable consistent-return */
 /* eslint-disable no-unused-expressions */
 import { useState, React } from "react";
@@ -12,7 +13,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
 
-const RegisterForm2 = function (setRootValues) {
+const RegisterForm2 = function (rootValues, setRootValues) {
   const symptoms = ["brak smaku", "brak węchu", "duszności", "zmęczenie"];
   const covidSymptoms = ["bezobjawowo", "lekko", "średnio", "ciężko"];
   const drugs = [
@@ -23,7 +24,7 @@ const RegisterForm2 = function (setRootValues) {
   ];
   const covidTest = ["tak", "nie"];
   const navigate = useNavigate();
-  const [values, setValues] = useState({
+  const [newValues, setNewValues] = useState({
     covidTest: "",
     symptoms: "",
     covidSymptoms: "",
@@ -32,15 +33,16 @@ const RegisterForm2 = function (setRootValues) {
 
   const handleClickSetValues = () => {
     setRootValues({
-      covidTest: values.covidTest,
-      symptoms: values.symptoms,
-      covidSymptoms: values.covidSymptoms,
-      drugs: values.drugs,
+      ...rootValues,
+      covidTest: newValues.covidTest,
+      symptoms: newValues.symptoms,
+      covidSymptoms: newValues.covidSymptoms,
+      drugs: newValues.drugs,
     });
   };
 
   const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.values });
+    setNewValues({ ...value, [prop]: event.target.newValue });
   };
   return (
     <Grid
@@ -76,7 +78,7 @@ const RegisterForm2 = function (setRootValues) {
                             color: "rgba(253, 105, 139, 0.85)",
                           },
                         }}
-                        value={values.covidTest}
+                        value={newValues.covidTest}
                         onChange={handleChange("covidTest")}
                       />
                     }
@@ -117,7 +119,7 @@ const RegisterForm2 = function (setRootValues) {
                                 color: "rgba(253, 105, 139, 0.85)",
                               },
                             }}
-                            value={values.symptoms}
+                            value={newValues.symptoms}
                             onChange={handleChange("symptoms")}
                           />
                         }
@@ -158,7 +160,7 @@ const RegisterForm2 = function (setRootValues) {
                                   color: "rgba(253, 105, 139, 0.85)",
                                 },
                               }}
-                              value={values.covidSymptoms}
+                              value={newValues.covidSymptoms}
                               onChange={handleChange("covidSymptoms")}
                             />
                           }
@@ -193,7 +195,7 @@ const RegisterForm2 = function (setRootValues) {
                                 color: "rgba(253, 105, 139, 0.85)",
                               },
                             }}
-                            value={values.drugs}
+                            value={newValues.drugs}
                             onChange={handleChange("drugs")}
                           />
                         }

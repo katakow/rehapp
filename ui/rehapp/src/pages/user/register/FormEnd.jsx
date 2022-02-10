@@ -3,7 +3,7 @@
 import { Grid, FormLabel, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const SumUpForms = function (values) {
+const SumUpForms = function (valuesend) {
   const navigate = useNavigate();
   return (
     <Grid container direction="column" spacing="50px">
@@ -24,65 +24,77 @@ const SumUpForms = function (values) {
               <Grid item>
                 <Grid container direction="column" spacing="50px">
                   <Grid item>
-                    <FormLabel component="legend" values={values.name} />
+                    <FormLabel component="legend">{valuesend.name} </FormLabel>
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">{values.surname}</FormLabel>
+                    <FormLabel component="legend">
+                      {valuesend.surname}
+                    </FormLabel>
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">{values.email}</FormLabel>
+                    <FormLabel component="legend">{valuesend.email}</FormLabel>
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">{values.pesel}</FormLabel>
+                    <FormLabel component="legend">{valuesend.pesel}</FormLabel>
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">{values.weight}</FormLabel>
+                    <FormLabel component="legend">{valuesend.weight}</FormLabel>
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">{values.height}</FormLabel>
+                    <FormLabel component="legend">{valuesend.height}</FormLabel>
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container direction="column" spacing="50px">
                   <Grid item>
-                    <FormLabel component="legend">{values.diseases}</FormLabel>
+                    <FormLabel component="legend">
+                      {valuesend.diseases}
+                    </FormLabel>
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">{values.vaccines}</FormLabel>
+                    <FormLabel component="legend">
+                      {valuesend.vaccines}
+                    </FormLabel>
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">{values.alergies}</FormLabel>
+                    <FormLabel component="legend">
+                      {valuesend.alergies}
+                    </FormLabel>
                   </Grid>
                   <Grid item>
-                    <FormLabel component="legend">{values.diet}</FormLabel>
+                    <FormLabel component="legend">{valuesend.diet}</FormLabel>
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container direction="column" spacing="50px">
                   <Grid item>
-                    <FormLabel component="legend">{values.covidTest}</FormLabel>
-                  </Grid>
-                  <Grid item>
-                    <FormLabel component="legend">{values.symptoms}</FormLabel>
-                  </Grid>
-                  <Grid item>
                     <FormLabel component="legend">
-                      {values.courseOfCovid}
-                    </FormLabel>
-                  </Grid>
-                  <Grid item>
-                    <FormLabel component="legend">{values.drugs}</FormLabel>
-                  </Grid>
-                  <Grid item>
-                    <FormLabel component="legend">
-                      {values.covidVaccine}
+                      {valuesend.covidTest}
                     </FormLabel>
                   </Grid>
                   <Grid item>
                     <FormLabel component="legend">
-                      {values.vaccineName}
+                      {valuesend.symptoms}
+                    </FormLabel>
+                  </Grid>
+                  <Grid item>
+                    <FormLabel component="legend">
+                      {valuesend.courseOfCovid}
+                    </FormLabel>
+                  </Grid>
+                  <Grid item>
+                    <FormLabel component="legend">{valuesend.drugs}</FormLabel>
+                  </Grid>
+                  <Grid item>
+                    <FormLabel component="legend">
+                      {valuesend.covidVaccine}
+                    </FormLabel>
+                  </Grid>
+                  <Grid item>
+                    <FormLabel component="legend">
+                      {valuesend.vaccineName}
                     </FormLabel>
                   </Grid>
                 </Grid>

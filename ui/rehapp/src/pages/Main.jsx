@@ -53,7 +53,7 @@ const Main = function () {
                           borderColor: "rgba(106, 144, 100, 0.37)",
                         }}
                         onClick={() => {
-                          navigate("/register/1");
+                          navigate("/register");
                         }}
                       >
                         ZAREJESTRUJ SIĘ

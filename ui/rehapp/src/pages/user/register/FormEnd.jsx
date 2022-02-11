@@ -116,7 +116,7 @@ const SumUpForms = function (valuesend) {
             borderColor: "rgba(106, 144, 100, 0.37)",
           }}
           onClick={() => {
-            navigate("/registerEnd");
+            navigate("/register/end");
           }}
         >
           NASTĘPNA STRONA

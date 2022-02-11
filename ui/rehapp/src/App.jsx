@@ -26,6 +26,7 @@ import UserRec from "./pages/user/UserRec";
 import UserEdit from "./pages/user/UserEdit";
 import RegisterDoc from "./pages/doc/RegisterDoc";
 import RegisterDefault from "./pages/user/register/RegisterDefault";
+import RegisterForm4 from "./pages/user/register/RegisterForm4";
 
 const App = function () {
   return (
@@ -38,7 +39,8 @@ const App = function () {
         <Route path="/register?id=1" element={<RegisterForm1 />} />
         <Route path="/register?id=2" element={<RegisterForm2 />} />
         <Route path="/register?id=3" element={<RegisterForm3 />} />
-        <Route path="/register?id=4" element={<UserAllData />} />
+        <Route path="/register?id=4" element={<RegisterForm4 />} />
+        <Route path="/register?id=5" element={<UserAllData />} />
         <Route path="/register/end" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />

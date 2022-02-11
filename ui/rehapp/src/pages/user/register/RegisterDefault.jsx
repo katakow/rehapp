@@ -6,6 +6,7 @@ import RegisterForm1 from "./RegisterForm1";
 import RegisterForm2 from "./RegisterForm2";
 import RegisterForm3 from "./RegisterForm3";
 import SumUpForms from "./FormEnd";
+import RegisterForm4 from "./RegisterForm4";
 
 const RegisterDefault = function (koncowe) {
   console.log(koncowe);
@@ -29,6 +30,8 @@ const RegisterDefault = function (koncowe) {
     symptoms: "none",
     courseOfCovid: "none",
     drugs: "none",
+    covidVaccine: "none",
+    vaccineName: "none",
   });
 
   const setRootValues = (newValues) => {
@@ -46,6 +49,8 @@ const RegisterDefault = function (koncowe) {
       case 3:
         return <> {RegisterForm3(setRootValues)}</>;
       case 4:
+        return <> {RegisterForm4(setRootValues)}</>;
+      case 5:
         return <> {SumUpForms(values)}</>;
       default:
         return <>{RegisterForm3(setRootValues)}</>;

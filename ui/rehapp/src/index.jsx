@@ -2,24 +2,13 @@ import ReactDOM from "react-dom";
 import React from "react";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import { configureStore } from "@reduxjs/toolkit";
-import { Provider } from "react-redux";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import vaccineDataReducer from "./features/user";
-
-const store = configureStore({
-  reducer: {
-    vaccine: vaccineDataReducer,
-  },
-});
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

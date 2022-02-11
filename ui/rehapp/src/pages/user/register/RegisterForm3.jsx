@@ -12,9 +12,9 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
 
-const RegisterForm2 = function (rootValues, setRootValues) {
+const RegisterForm3 = function (rootValues, setRootValues) {
   const symptoms = ["brak smaku", "brak węchu", "duszności", "zmęczenie"];
-  const covidSymptoms = ["bezobjawowo", "lekko", "średnio", "ciężko"];
+  const courseOfCovid = ["bezobjawowo", "lekko", "średnio", "ciężko"];
   const drugs = [
     "przeciwgorączkowe",
     "przeciwzapalne",
@@ -26,7 +26,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
   const [newValues, setNewValues] = useState({
     covidTest: "",
     symptoms: "",
-    covidSymptoms: "",
+    courseOfCovid: "",
     drugs: "",
   });
 
@@ -35,7 +35,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
       ...rootValues,
       covidTest: newValues.covidTest,
       symptoms: newValues.symptoms,
-      covidSymptoms: newValues.covidSymptoms,
+      courseOfCovid: newValues.courseOfCovid,
       drugs: newValues.drugs,
     });
   };
@@ -148,7 +148,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
                       defaultValue="bezobjawowo"
                       name="radio-buttons-group"
                     >
-                      {covidSymptoms.map((d) => (
+                      {courseOfCovid.map((d) => (
                         <FormControlLabel
                           value={d}
                           label={d}
@@ -159,8 +159,8 @@ const RegisterForm2 = function (rootValues, setRootValues) {
                                   color: "rgba(253, 105, 139, 0.85)",
                                 },
                               }}
-                              value={newValues.covidSymptoms}
-                              onChange={handleChange("covidSymptoms")}
+                              value={newValues.courseOfCovid}
+                              onChange={handleChange("courseOfCovid")}
                             />
                           }
                         />
@@ -245,4 +245,4 @@ const RegisterForm2 = function (rootValues, setRootValues) {
     </Grid>
   );
 };
-export default RegisterForm2;
+export default RegisterForm3;

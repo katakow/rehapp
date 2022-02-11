@@ -1,66 +1,51 @@
-import React from "react";
-import People from "@mui/icons-material/People";
-import PermMedia from "@mui/icons-material/PermMedia";
-import Dns from "@mui/icons-material/Dns";
-import Public from "@mui/icons-material/Public";
-import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+/* eslint-disable react/prop-types */
 
-const data = [
-  { icon: <People />, label: "Authentication" },
-  { icon: <Dns />, label: "Database" },
-  { icon: <PermMedia />, label: "Storage" },
-  { icon: <Public />, label: "Hosting" },
-];
-const Info = function () {
-  const [open, setOpen] = React.useState(true);
+import { Grid } from "@mui/material";
+import InfoPrevent from "../coponents/infoPage/InfoPrevent";
+import InfoSymptoms from "../coponents/infoPage/InfoSymptoms";
+import InfoTreatment from "../coponents/infoPage/InfoTreatment";
+import NavBarLogin from "../coponents/mainPages/NavBarLogin";
+
+const Info = function ({ title }) {
   return (
-    <div>
-      <ListItemButton
-        alignItems="flex-start"
-        onClick={() => setOpen(!open)}
-        sx={{
-          px: 3,
-          pt: 2.5,
-          pb: open ? 0 : 2.5,
-          "&:hover, &:focus": { "& svg": { opacity: open ? 1 : 0 } },
-        }}
+    <content>
+      <NavBarLogin />
+      <Grid
+        container
+        direction="column"
+        spacing="100px"
+        justifyContent="center"
       >
-        <ListItemText
-          primary="ZAPOBIEGANIE"
-          primaryTypographyProps={{
-            fontSize: 15,
-            fontWeight: "medium",
-            lineHeight: "20px",
-            mb: "2px",
-          }}
-        />
-        <KeyboardArrowDown
-          sx={{
-            mr: -1,
-            opacity: 0,
-            transform: open ? "rotate(-180deg)" : "rotate(0)",
-            transition: "0.2s",
-          }}
-        />
-      </ListItemButton>
-      {open &&
-        data.map((item) => (
-          <ListItemButton
-            key={item.label}
-            sx={{ py: 0, minHeight: 32, color: "rgba(0,0,0,.8)" }}
+        <Grid item>
+          <h1 align="center">{title}</h1>
+        </Grid>
+        <Grid item>
+          <Grid
+            container
+            direction="row"
+            spacing="30px"
+            justifyContent="space-around"
           >
-            <ListItemIcon sx={{ color: "inherit" }}>{item.icon}</ListItemIcon>
-            <ListItemText
-              primary={item.label}
-              primaryTypographyProps={{ fontSize: 14, fontWeight: "medium" }}
-            />
-          </ListItemButton>
-        ))}
-    </div>
+            <Grid item>
+              <InfoPrevent />
+            </Grid>
+            <Grid item>
+              <InfoSymptoms />
+            </Grid>
+            <Grid item>
+              <InfoTreatment />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item alignSelf="flex-end">
+          Przydatne linki:
+        </Grid>
+      </Grid>
+    </content>
   );
 };
-
+Info.defaultProps = {
+  title:
+    "COVID-19 (ang. coronavirus disease 2019) - jest to ostra choroba zakaźna układu oddechowego wywołana zakażeniem wirusem SARS-CoV-2.",
+};
 export default Info;

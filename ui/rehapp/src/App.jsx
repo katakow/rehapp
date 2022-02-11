@@ -35,10 +35,10 @@ const App = function () {
         <Route path="/main" element={<Main />} />
         <Route path="/info" element={<Info />} />
         <Route path="/register" element={<RegisterDefault />} />
-        <Route path="/register/id=1" element={<RegisterForm1 />} />
-        <Route path="/register/id=2" element={<RegisterForm2 />} />
-        <Route path="/register/id=3" element={<RegisterForm3 />} />
-        <Route path="/register/id=4" element={<UserAllData />} />
+        <Route path="/register?id=1" element={<RegisterForm1 />} />
+        <Route path="/register?id=2" element={<RegisterForm2 />} />
+        <Route path="/register?id=3" element={<RegisterForm3 />} />
+        <Route path="/register?id=4" element={<UserAllData />} />
         <Route path="/register/end" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />

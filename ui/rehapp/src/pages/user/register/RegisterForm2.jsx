@@ -73,7 +73,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
   };
 
   const handleChange = (prop) => (event) => {
-    setNewValues({ ...value, [prop]: event.target.newValue });
+    setNewValues({ ...newValues, [prop]: event.target.newValue });
   };
   return (
     <Grid
@@ -239,7 +239,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
                     handleClickSetValues(setRootValues);
                   }}
                   onClick={() => {
-                    navigate("/register/3");
+                    navigate("/register?id=3");
                   }}
                 >
                   NASTĘPNA STRONA

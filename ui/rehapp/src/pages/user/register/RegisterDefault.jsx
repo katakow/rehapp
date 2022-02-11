@@ -63,7 +63,7 @@ const RegisterDefault = function (koncowe) {
         </p>
         <p>Dziękujemy!</p>
       </h1>
-      {ShowForms}
+      <p>{ShowForms}</p>
     </div>
   );
 };

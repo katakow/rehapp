@@ -39,7 +39,7 @@ const Register = function () {
     setValues({ ...values, [prop]: event.target.value });
   };
   return (
-    <content>
+    <div>
       <NavBar />
       <div className="bodyNav">REJESTRACJA</div>
       <h1 align="center">
@@ -161,7 +161,7 @@ const Register = function () {
           </Grid>
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 

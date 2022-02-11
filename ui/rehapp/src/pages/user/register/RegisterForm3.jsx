@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /* eslint-disable consistent-return */
 /* eslint-disable no-unused-expressions */
 import { useState, React } from "react";
@@ -42,7 +41,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
   };
 
   const handleChange = (prop) => (event) => {
-    setNewValues({ ...value, [prop]: event.target.newValue });
+    setNewValues({ ...newValues, [prop]: event.target.newValue });
   };
   return (
     <Grid
@@ -233,7 +232,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
                     handleClickSetValues(setRootValues);
                   }}
                   onClick={() => {
-                    navigate("/all");
+                    navigate("/register?id=4");
                   }}
                 >
                   NASTĘPNA STRONA

@@ -13,6 +13,9 @@ builder.Services.AddScoped<RehappContext>();
 builder.Services.AddScoped<DoctorsLogic>();
 builder.Services.AddScoped<DiseasesLogic>();
 builder.Services.AddScoped<PatientsLogic>();
+builder.Services.AddScoped<AllergiesLogic>();
+builder.Services.AddScoped<VaccinesLogic>();
+
 
 var app = builder.Build();
 

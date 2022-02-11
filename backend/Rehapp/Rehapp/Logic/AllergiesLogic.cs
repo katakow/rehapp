@@ -13,7 +13,7 @@ public class AllergiesLogic
         _rehappContext = rehappContext;
     }
 
-    public async Task<Allergie> AddAllerieAsync(AllergiesViewModel allergiesViewModel)
+    public async Task<Allergie> AddAllergieAsync(AllergiesViewModel allergiesViewModel)
     {
         var allergie = new Allergie {Label = allergiesViewModel.Label};
         _rehappContext.Allergies.Add(allergie);

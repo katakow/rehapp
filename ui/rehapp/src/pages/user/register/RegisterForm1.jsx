@@ -51,7 +51,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
                   label="imię"
                   variant="standard"
                   value={newValues.name}
-                  onChange={handleChange() => {valu}}
+                  onChange={handleChange("name")}
                 />
               </Grid>
               <Grid item>

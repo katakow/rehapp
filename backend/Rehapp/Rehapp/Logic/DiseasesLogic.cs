@@ -12,6 +12,7 @@ public class DiseasesLogic
     {
         _rehappContext = rehappContext;
     }
+    
     public async Task<Disease> AddDiseaseAsync(DiseaseViewModel diseaseViewModel)
     {
         var disease = new Disease {Label = diseaseViewModel.Label};

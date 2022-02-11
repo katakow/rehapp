@@ -37,6 +37,108 @@ namespace Rehapp.Migrations
                     b.ToTable("DoctorPatient");
                 });
 
+            modelBuilder.Entity("Rehapp.Database.Allergie", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Allergies");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.CovidCourse", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CovidCourses");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.CovidDrug", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CovidDrugs");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.CovidSymptom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CovidSymptoms");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.CovidVaccine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CovidVaccines");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.Diet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Diets");
+                });
+
             modelBuilder.Entity("Rehapp.Database.Disease", b =>
                 {
                     b.Property<int>("Id")
@@ -79,6 +181,24 @@ namespace Rehapp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int?>("AllergieId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CovidCourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CovidDrugId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CovidSymptomId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CovidVaccineId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("DietId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("DiseaseId")
                         .HasColumnType("int");
 
@@ -101,14 +221,48 @@ namespace Rehapp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("VaccineId")
+                        .HasColumnType("int");
+
                     b.Property<double>("Weight")
                         .HasColumnType("float");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AllergieId");
+
+                    b.HasIndex("CovidCourseId");
+
+                    b.HasIndex("CovidDrugId");
+
+                    b.HasIndex("CovidSymptomId");
+
+                    b.HasIndex("CovidVaccineId");
+
+                    b.HasIndex("DietId");
+
                     b.HasIndex("DiseaseId");
 
+                    b.HasIndex("VaccineId");
+
                     b.ToTable("Patients");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.Vaccine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vaccines");
                 });
 
             modelBuilder.Entity("DoctorPatient", b =>
@@ -128,12 +282,75 @@ namespace Rehapp.Migrations
 
             modelBuilder.Entity("Rehapp.Database.Patient", b =>
                 {
+                    b.HasOne("Rehapp.Database.Allergie", null)
+                        .WithMany("Patients")
+                        .HasForeignKey("AllergieId");
+
+                    b.HasOne("Rehapp.Database.CovidCourse", null)
+                        .WithMany("Patients")
+                        .HasForeignKey("CovidCourseId");
+
+                    b.HasOne("Rehapp.Database.CovidDrug", null)
+                        .WithMany("Patients")
+                        .HasForeignKey("CovidDrugId");
+
+                    b.HasOne("Rehapp.Database.CovidSymptom", null)
+                        .WithMany("Patients")
+                        .HasForeignKey("CovidSymptomId");
+
+                    b.HasOne("Rehapp.Database.CovidVaccine", null)
+                        .WithMany("Patients")
+                        .HasForeignKey("CovidVaccineId");
+
+                    b.HasOne("Rehapp.Database.Diet", null)
+                        .WithMany("Patients")
+                        .HasForeignKey("DietId");
+
                     b.HasOne("Rehapp.Database.Disease", null)
                         .WithMany("Patients")
                         .HasForeignKey("DiseaseId");
+
+                    b.HasOne("Rehapp.Database.Vaccine", null)
+                        .WithMany("Patients")
+                        .HasForeignKey("VaccineId");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.Allergie", b =>
+                {
+                    b.Navigation("Patients");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.CovidCourse", b =>
+                {
+                    b.Navigation("Patients");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.CovidDrug", b =>
+                {
+                    b.Navigation("Patients");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.CovidSymptom", b =>
+                {
+                    b.Navigation("Patients");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.CovidVaccine", b =>
+                {
+                    b.Navigation("Patients");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.Diet", b =>
+                {
+                    b.Navigation("Patients");
                 });
 
             modelBuilder.Entity("Rehapp.Database.Disease", b =>
+                {
+                    b.Navigation("Patients");
+                });
+
+            modelBuilder.Entity("Rehapp.Database.Vaccine", b =>
                 {
                     b.Navigation("Patients");
                 });

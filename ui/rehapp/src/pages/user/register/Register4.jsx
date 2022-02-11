@@ -11,7 +11,7 @@ import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
 import NavBar from "../../../coponents/mainPages/NavBar";
 
 const Register4 = function () {
-  const covidTest = ["tak", "nie"];
+  const covidVaccine = ["tak", "nie"];
   const vName = ["Pfizer", "J&J", "Moderna", "inna"];
   const navigate = useNavigate();
   return (
@@ -49,7 +49,7 @@ const Register4 = function () {
                       aria-labelledby="demo-radio-buttons-group-label"
                       name="radio-buttons-group"
                     >
-                      {covidTest.map((d) => (
+                      {covidVaccine.map((d) => (
                         <FormControlLabel
                           value={d}
                           control={

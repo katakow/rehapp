@@ -2,7 +2,7 @@
 import * as React from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./coponents/Footer";
-import Start from "./pages/Start";
+// import Start from "./pages/Start";
 import Main from "./pages/Main";
 import RegisterForm1 from "./pages/user/register/RegisterForm1";
 import RegisterForm2 from "./pages/user/register/RegisterForm2";
@@ -27,12 +27,13 @@ import UserEdit from "./pages/user/UserEdit";
 import RegisterDoc from "./pages/doc/RegisterDoc";
 import RegisterDefault from "./pages/user/register/RegisterDefault";
 import RegisterForm4 from "./pages/user/register/RegisterForm4";
+import Test from "./pages/Test";
 
 const App = function () {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Start />} />
+        <Route path="/" element={<Test />} />
         <Route path="/main" element={<Main />} />
         <Route path="/info" element={<Info />} />
         <Route path="/register" element={<RegisterDefault />} />

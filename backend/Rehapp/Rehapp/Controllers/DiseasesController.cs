@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Rehapp.Logic;
 using Rehapp.ViewModels;
@@ -5,6 +6,7 @@ using Rehapp.ViewModels;
 namespace Rehapp.Controllers;
 
 [ApiController]
+[EnableCors("AllowAllHeaders")]
 [Route("[controller]")]
 public class DiseasesController : ControllerBase
 {

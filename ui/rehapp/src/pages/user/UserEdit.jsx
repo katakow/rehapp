@@ -5,7 +5,7 @@ import EditUserSave from "../../coponents/userPage/buttons/EditUserSave";
 
 const UserEdit1 = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarek />
       <Grid container direction="column" spacing="20px">
         <Grid item>
@@ -173,7 +173,7 @@ const UserEdit1 = function ({ title }) {
           <EditUserSave />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 UserEdit1.defaultProps = {

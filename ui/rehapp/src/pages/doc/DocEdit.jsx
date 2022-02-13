@@ -7,7 +7,7 @@ import Specializations from "../../coponents/docPage/Specializations";
 
 const DocEdit = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarekDoc />{" "}
       <Grid
         container
@@ -81,7 +81,7 @@ const DocEdit = function ({ title }) {
           <EditDocSave />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 DocEdit.defaultProps = {

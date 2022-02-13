@@ -2,27 +2,27 @@
 import { Button, TextField } from "@mui/material";
 import Axios from "axios";
 import { useEffect, useState } from "react";
+import addDiseases from "../apiService";
 
 const Test = function () {
+  // const [error, setError] = useState(null);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [diseases, setDiseases] = useState([]);
+  // const config = {
+  //   mode: "cors",
+  //   headers: {
+  //     accept: "*/*",
+  //     "Content-Type": "application/json",
+  //   },
+  // };
+
   const getDiseases = () => {
-    Axios.get("https://localhost:7080/Diseases").then((response) => {
+    Axios.get("http://localhost:5080/Diseases").then((response) => {
       setDiseases(response.data);
       console.log(response);
     });
   };
 
-  const addDiseases = () => {
-    Axios.post("https://localhost:7080/Diseases", {
-      label: "nowotwór",
-    })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
   return (
     <div>
       <h1 align="center">Hello</h1>
@@ -37,13 +37,3 @@ const Test = function () {
 };
 
 export default Test;
-
-// console.log("hello");
-// fetch("https://localhost:7080/Diseases", {
-//   method: "GET",
-// })
-//   .then((res) => {
-//     res.json();
-//   })
-//   .then((data) => console.log(data))
-//   .catch((error) => console.log("ERROR"));

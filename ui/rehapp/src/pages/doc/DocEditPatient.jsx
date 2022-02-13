@@ -7,7 +7,7 @@ import EditPatientSave from "../../coponents/docPage/buttons/EditPatientSave";
 
 const DocPatients = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarekDoc />
       <Grid container direction="column" spacing="70px" justifyContent="center">
         <Grid item>
@@ -170,7 +170,7 @@ const DocPatients = function ({ title }) {
           <EditPatientSave />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 DocPatients.defaultProps = {

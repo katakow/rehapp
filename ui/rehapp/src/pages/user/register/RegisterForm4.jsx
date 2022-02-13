@@ -128,7 +128,6 @@ const RegisterForm4 = function (rootValues, setRootValues) {
               </Grid>
               <Grid item>
                 <Button
-                  item
                   variant="outlined"
                   sx={{
                     width: "160px",

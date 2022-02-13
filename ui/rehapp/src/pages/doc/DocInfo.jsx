@@ -8,7 +8,7 @@ import InfoTreatment from "../../coponents/infoPage/InfoTreatment";
 
 const DocInfo = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarekDoc />
       <Grid
         container
@@ -41,7 +41,7 @@ const DocInfo = function ({ title }) {
           Przydatne linki:
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 DocInfo.defaultProps = {

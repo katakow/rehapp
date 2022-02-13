@@ -13,7 +13,6 @@ import FormControl from "@mui/material/FormControl";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
 
 const RegisterForm3 = function (rootValues, setRootValues) {
-  const symptoms = ["brak smaku", "brak węchu", "duszności", "zmęczenie"];
   const courseOfCovid = ["bezobjawowo", "lekko", "średnio", "ciężko"];
   const drugs = [
     "przeciwgorączkowe",
@@ -95,41 +94,7 @@ const RegisterForm3 = function (rootValues, setRootValues) {
       </Grid>
       <Grid item>
         <Grid container direction="row" justifyContent="space-around">
-          <Grid item>
-            <Container>
-              <FormLabel component="legend">
-                jakie miałaś / miałeś objawy?
-              </FormLabel>
-
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Grid item>
-                  <FormGroup>
-                    {symptoms.map((d) => (
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            sx={{
-                              "&.Mui-checked": {
-                                color: "rgba(253, 105, 139, 0.85)",
-                              },
-                            }}
-                            value={newValues.symptoms}
-                            onChange={handleChange("symptoms")}
-                          />
-                        }
-                        label={d}
-                      />
-                    ))}
-                  </FormGroup>
-                </Grid>
-              </Grid>
-            </Container>
-          </Grid>
+          <Grid item />
           <Grid item>
             <Container>
               <FormLabel component="legend" maxWidth>
@@ -218,7 +183,6 @@ const RegisterForm3 = function (rootValues, setRootValues) {
               </Grid>
               <Grid item>
                 <Button
-                  item
                   variant="outlined"
                   sx={{
                     width: "160px",

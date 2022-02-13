@@ -6,7 +6,7 @@ import ListOfPatients from "../../coponents/docPage/ListOfPatients";
 
 const DocPatients = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarekDoc />
       <Grid
         container
@@ -22,7 +22,7 @@ const DocPatients = function ({ title }) {
           <ListOfPatients />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 DocPatients.defaultProps = {

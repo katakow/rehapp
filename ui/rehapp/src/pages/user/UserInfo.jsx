@@ -8,7 +8,7 @@ import InfoTreatment from "../../coponents/infoPage/InfoTreatment";
 
 const UserInfo = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarek />
       <Grid
         container
@@ -41,7 +41,7 @@ const UserInfo = function ({ title }) {
           Przydatne linki:
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 UserInfo.defaultProps = {

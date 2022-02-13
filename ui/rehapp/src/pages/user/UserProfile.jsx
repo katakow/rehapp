@@ -12,7 +12,7 @@ const UserProfile = function ({ title }) {
   const [patientID, setPatientID] = useState(1);
 
   const getPatient = useCallback(() => {
-    Axios.get(`https://localhost:7080/Patients/${patientID}`).then(
+    Axios.get(`http://localhost:5080/Patients/${patientID}`).then(
       (response) => {
         setPatient(response.data);
         console.log(response);
@@ -56,28 +56,55 @@ const UserProfile = function ({ title }) {
                       <FormLabel component="legend">imię</FormLabel>
 
                       <FormLabel component="legend">
-                        {!!patient && <strong>{patient.name} </strong>}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.name} </strong>
+                        )}
                       </FormLabel>
                     </Grid>
                     <Grid item>
                       <FormLabel component="legend">nazwisko</FormLabel>
-                      <FormLabel component="legend" />
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.surname} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                     <Grid item>
                       <FormLabel component="legend">mail</FormLabel>
-                      <FormLabel component="legend" />
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.mail} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                     <Grid item>
                       <FormLabel component="legend">pesel</FormLabel>
-                      <FormLabel component="legend" />
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.pesel} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                     <Grid item>
                       <FormLabel component="legend">waga</FormLabel>
-                      <FormLabel component="legend" />
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.weight} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                     <Grid item>
                       <FormLabel component="legend">wzrost</FormLabel>
-                      <FormLabel component="legend" />
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.height} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                   </Grid>
                 </Grid>

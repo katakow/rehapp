@@ -5,7 +5,7 @@ import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 
 const UserMain = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarekDoc />{" "}
       <Grid
         container
@@ -84,7 +84,7 @@ const UserMain = function ({ title }) {
           </Grid>
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 UserMain.defaultProps = {

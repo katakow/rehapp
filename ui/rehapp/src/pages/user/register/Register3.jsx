@@ -4,14 +4,13 @@ import { Grid } from "@mui/material";
 import ButtonToR4 from "../../../coponents/userPage/register/buttons/ButtonToR4";
 import NavBar from "../../../coponents/mainPages/NavBar";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
-import Symptoms from "../../../coponents/userPage/register/Symptoms";
 import CovidSymptoms from "../../../coponents/userPage/register/CovidSymptoms";
 import Drugs from "../../../coponents/userPage/register/Drugs";
 import CovidTest from "../../../coponents/userPage/register/CovidTest";
 
 const Register5 = function () {
   return (
-    <content>
+    <div>
       <NavBar />
       <div className="bodyNav">REJESTRACJA</div>
       <h1 align="center">
@@ -38,9 +37,6 @@ const Register5 = function () {
         <Grid item>
           <Grid container direction="row" justifyContent="space-around">
             <Grid item>
-              <Symptoms />
-            </Grid>
-            <Grid item>
               <CovidSymptoms />
             </Grid>
             <Grid item>
@@ -64,7 +60,7 @@ const Register5 = function () {
           </Grid>
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 

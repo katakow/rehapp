@@ -2,13 +2,13 @@
 import { Grid, FormLabel } from "@mui/material";
 import NavBarek from "../../coponents/userPage/NavBarek";
 
-const UserMain = function ({ title }) {
+const UserRec = function ({ title }) {
   return (
     <div>
       <h1>
         <NavBarek />
       </h1>{" "}
-      <content>
+      <div>
         <Grid container direction="column" spacing="80px">
           <Grid item>
             <h1 align="center">{title}</h1>
@@ -38,14 +38,14 @@ const UserMain = function ({ title }) {
             </Grid>
           </Grid>
         </Grid>
-      </content>
+      </div>
     </div>
   );
 };
-UserMain.defaultProps = {
+UserRec.defaultProps = {
   title:
     "Pragniemy zaznaczyć, że wszystkie porady, które są widoczne na tej stronie nie są równoznaczne z wizytą u specjalisty. " +
     "Gdyby wystąpiły jakiekolwiek objawy niepokojące, należy niezwłocznie udać się do lekarza pierwszego kontaktu, " +
     "lub zadzwonić pod numer 999/112.",
 };
-export default UserMain;
+export default UserRec;

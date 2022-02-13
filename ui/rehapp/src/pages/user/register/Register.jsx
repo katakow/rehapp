@@ -124,22 +124,7 @@ const Register = function () {
                     variant="standard"
                   />
                 </Grid>
-                <Grid item>
-                  <TextField
-                    fullWidth
-                    id="standard-basic"
-                    label="wzrost [cm]"
-                    variant="standard"
-                  />
-                </Grid>
-                <Grid item>
-                  <TextField
-                    fullWidth
-                    id="standard-basic"
-                    label="waga [kg]"
-                    variant="standard"
-                  />
-                </Grid>
+
                 <Grid item>
                   <TextField
                     id="standard-basic"

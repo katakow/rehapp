@@ -8,7 +8,7 @@ import UserExamNext from "../../coponents/userPage/buttons/UserExamNext";
 
 const UserExam = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarek />
       <Grid container direction="column" spacing="90px">
         <Grid item>
@@ -331,7 +331,7 @@ const UserExam = function ({ title }) {
           <UserExamNext />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 UserExam.defaultProps = {

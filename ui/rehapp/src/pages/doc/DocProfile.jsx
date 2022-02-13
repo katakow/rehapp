@@ -7,7 +7,7 @@ import EditDoc from "../../coponents/docPage/buttons/EditDoc";
 
 const DocProfile = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarekDoc />
       <Grid
         container
@@ -65,7 +65,7 @@ const DocProfile = function ({ title }) {
           <EditDoc />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 DocProfile.defaultProps = {

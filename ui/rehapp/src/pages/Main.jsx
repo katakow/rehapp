@@ -9,7 +9,7 @@ import LogInDoctor from "../coponents/mainPages/LogInDoctor";
 const Main = function () {
   const navigate = useNavigate();
   return (
-    <content>
+    <div>
       <NavBarLogin />
       <div className="bodyNav">LOGOWANIE</div>
       <Grid container direction="column" spacing="200">
@@ -42,7 +42,6 @@ const Main = function () {
 
                     <Grid item>
                       <Button
-                        item
                         variant="outlined"
                         sx={{
                           width: "255px",
@@ -61,7 +60,6 @@ const Main = function () {
                     </Grid>
                     <Grid item>
                       <Button
-                        item
                         variant="outlined"
                         sx={{
                           width: "255px",
@@ -88,7 +86,7 @@ const Main = function () {
           </Container>
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 

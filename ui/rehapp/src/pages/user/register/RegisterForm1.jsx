@@ -100,26 +100,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
                   onChange={handleChange("pesel")}
                 />
               </Grid>
-              <Grid item>
-                <TextField
-                  fullWidth
-                  id="standard-basic"
-                  label="wzrost [cm]"
-                  variant="standard"
-                  value={newValues.height}
-                  onChange={handleChange("height")}
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  fullWidth
-                  id="standard-basic"
-                  label="waga [kg]"
-                  variant="standard"
-                  value={newValues.weight}
-                  onChange={handleChange("weight")}
-                />
-              </Grid>
+
               <Grid item>
                 <TextField
                   id="standard-basic"
@@ -139,7 +120,6 @@ const RegisterForm1 = function (rootValues, setRootValues) {
           <Grid item>Strona 1/4</Grid>
           <Grid item>
             <Button
-              item
               variant="outlined"
               sx={{
                 width: "160px",
@@ -153,7 +133,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
                 handleClickSetValues(setRootValues);
               }}
               onClick={() => {
-                navigate("/register?id=2");
+                navigate("", { id: 2 });
               }}
             >
               NASTĘPNA STRONA

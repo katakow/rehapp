@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unstable-nested-components */
-import { useState, React } from "react";
+import { useState, React, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "../../../coponents/mainPages/NavBar";
 import RegisterForm1 from "./RegisterForm1";
@@ -34,13 +34,13 @@ const RegisterDefault = function (koncowe) {
     vaccineName: "none",
   });
 
-  const setRootValues = (newValues) => {
-    console.log("new values", newValues);
-    setValues(newValues);
-    console.log("Values: ", values);
-  };
-
-  const ShowForms = function () {
+  const ShowForms = useCallback(() => {
+    const setRootValues = (newValues) => {
+      console.log("new values", newValues);
+      setValues(newValues);
+      console.log("Values: ", values);
+    };
+    console.log(id);
     switch (id) {
       case 1:
         return <>{RegisterForm1(setRootValues)}</>;
@@ -53,9 +53,9 @@ const RegisterDefault = function (koncowe) {
       case 5:
         return <> {SumUpForms(values)}</>;
       default:
-        return <>{RegisterForm3(setRootValues)}</>;
+        return <>{RegisterForm1(setRootValues)}</>;
     }
-  };
+  }, [id, values]);
 
   return (
     <div>
@@ -68,7 +68,7 @@ const RegisterDefault = function (koncowe) {
         </p>
         <p>Dziękujemy!</p>
       </h1>
-      <p>{ShowForms}</p>
+      {ShowForms()}
     </div>
   );
 };

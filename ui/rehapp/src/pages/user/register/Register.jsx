@@ -16,7 +16,7 @@ import NavBar from "../../../coponents/mainPages/NavBar";
 import ButtonToR2 from "../../../coponents/userPage/register/buttons/ButtonToR2";
 
 const Register = function () {
-  const { id } = useParams();
+  // const { id } = useParams();
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
@@ -75,7 +75,6 @@ const Register = function () {
                     label="nazwisko"
                     variant="standard"
                   />
-                  <TextField placeholder={id} />
                 </Grid>
                 <Grid item>
                   <TextField

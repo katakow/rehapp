@@ -4,11 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./coponents/Footer";
 // import Start from "./pages/Start";
 import Main from "./pages/Main";
-import RegisterForm1 from "./pages/user/register/RegisterForm1";
-import RegisterForm2 from "./pages/user/register/RegisterForm2";
+import Register from "./pages/user/register/Register";
+import Register2 from "./pages/user/register/Register2";
 import ErrorPage from "./pages/ErrorPage";
 import Info from "./pages/Info";
-import RegisterForm3 from "./pages/user/register/RegisterForm3";
+import Register3 from "./pages/user/register/Register3";
 import RegisterEnd from "./pages/user/register/RegisterEnd";
 import DocMain from "./pages/doc/DocMain";
 import DocProfile from "./pages/doc/DocProfile";
@@ -25,8 +25,7 @@ import UserExam2 from "./pages/user/UserExam2";
 import UserRec from "./pages/user/UserRec";
 import UserEdit from "./pages/user/UserEdit";
 import RegisterDoc from "./pages/doc/RegisterDoc";
-import RegisterDefault from "./pages/user/register/RegisterDefault";
-import RegisterForm4 from "./pages/user/register/RegisterForm4";
+// import RegisterDefault from "./pages/user/register/RegisterDefault";
 import Test from "./pages/Test";
 
 const App = function () {
@@ -36,12 +35,11 @@ const App = function () {
         <Route path="/" element={<Test />} />
         <Route path="/main" element={<Main />} />
         <Route path="/info" element={<Info />} />
-        <Route path="/register" element={<RegisterDefault />} />
-        <Route path="/register?id=1" element={<RegisterForm1 />} />
-        <Route path="/register?id=2" element={<RegisterForm2 />} />
-        <Route path="/register?id=3" element={<RegisterForm3 />} />
-        <Route path="/register?id=4" element={<RegisterForm4 />} />
-        <Route path="/register?id=5" element={<UserAllData />} />
+        {/* <Route path="/register" element={<RegisterDefault />} /> */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/register/2" element={<Register2 />} />
+        <Route path="/register/3" element={<Register3 />} />
+        <Route path="/register/5" element={<UserAllData />} />
         <Route path="/register/end" element={<RegisterEnd />} />
 
         <Route path="/user/profile" element={<UserProfile />} />

@@ -57,7 +57,7 @@ const UserProfile = function ({ title }) {
 
                       <FormLabel component="legend">
                         {!!patient && (
-                          <strong key={patient.id}>{patient.name} </strong>
+                          <strong key={patient.id}>{patient.firstName} </strong>
                         )}
                       </FormLabel>
                     </Grid>
@@ -88,24 +88,6 @@ const UserProfile = function ({ title }) {
                         )}
                       </FormLabel>
                     </Grid>
-                    <Grid item>
-                      <FormLabel component="legend">waga</FormLabel>
-                      <FormLabel component="legend">
-                        {" "}
-                        {!!patient && (
-                          <strong key={patient.id}>{patient.weight} </strong>
-                        )}
-                      </FormLabel>
-                    </Grid>
-                    <Grid item>
-                      <FormLabel component="legend">wzrost</FormLabel>
-                      <FormLabel component="legend">
-                        {" "}
-                        {!!patient && (
-                          <strong key={patient.id}>{patient.height} </strong>
-                        )}
-                      </FormLabel>
-                    </Grid>
                   </Grid>
                 </Grid>
                 <Grid item>
@@ -113,11 +95,6 @@ const UserProfile = function ({ title }) {
                     <Grid item>
                       <FormLabel component="legend">
                         chorby współistniejące
-                      </FormLabel>
-                    </Grid>
-                    <Grid item>
-                      <FormLabel component="legend">
-                        odbyte szczepienia
                       </FormLabel>
                     </Grid>
                     <Grid item>
@@ -134,23 +111,7 @@ const UserProfile = function ({ title }) {
                       <FormLabel component="legend">test na covid</FormLabel>
                     </Grid>
                     <Grid item>
-                      <FormLabel component="legend">objawy</FormLabel>
-                    </Grid>
-                    <Grid item>
                       <FormLabel component="legend">przejście</FormLabel>
-                    </Grid>
-                    <Grid item>
-                      <FormLabel component="legend">leki</FormLabel>
-                    </Grid>
-                    <Grid item>
-                      <FormLabel component="legend">
-                        szcepionka na covid
-                      </FormLabel>
-                    </Grid>
-                    <Grid item>
-                      <FormLabel component="legend">
-                        nazwa szczepionki
-                      </FormLabel>
                     </Grid>
                   </Grid>
                 </Grid>

@@ -17,8 +17,8 @@ public class PatientsLogic
     {
         var patient = new Patient
         {
-            Name = patientViewModel.Name, Surname = patientViewModel.Surname, Weight = patientViewModel.Weight,
-            Height = patientViewModel.Height, Pesel = patientViewModel.Pesel, Mail = patientViewModel.Mail
+            FirstName = patientViewModel.firstName, LastName = patientViewModel.lastName, 
+            Pesel = patientViewModel.pesel, Mail = patientViewModel.mail
         };
         _rehappContext.Patients.Add(patient);
         await _rehappContext.SaveChangesAsync();
@@ -29,13 +29,11 @@ public class PatientsLogic
     {
         return await _rehappContext.Patients.Select(patient => new PatientViewModel
         {
-            Name = patient.Name,
-            Id = patient.Id,
-            Surname = patient.Surname,
-            Height = patient.Height,
-            Mail = patient.Mail,
-            Pesel = patient.Pesel,
-            Weight = patient.Weight
+            firstName = patient.FirstName,
+            id = patient.Id,
+            lastName = patient.LastName,
+            mail = patient.Mail,
+            pesel = patient.Pesel,
         }).ToListAsync();
     }
 
@@ -44,13 +42,11 @@ public class PatientsLogic
         var patient = await _rehappContext.Patients.FirstOrDefaultAsync(p => p.Id == id);
         return new PatientViewModel
         {
-            Id = patient.Id,
-            Name = patient.Name,
-            Surname = patient.Surname,
-            Height = patient.Height,
-            Mail = patient.Mail,
-            Pesel = patient.Pesel,
-            Weight = patient.Weight
+            id = patient.Id,
+            firstName = patient.FirstName,
+            lastName = patient.LastName,
+            mail = patient.Mail,
+            pesel = patient.Pesel,
         };
     }
 }

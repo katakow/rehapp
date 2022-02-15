@@ -1,4 +1,4 @@
-import { Grid, TextField, FormControl, Button } from "@mui/material";
+import { Grid, TextField, FormControl, Button, FormLabel } from "@mui/material";
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
 import { useState, React } from "react";
@@ -91,24 +91,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
           <Grid item>
             <Grid container direction="column" justifyContent="space-around">
               <Grid item>
-                <TextField
-                  fullWidth
-                  id="standard-basic"
-                  label="PESEL"
-                  variant="standard"
-                  value={newValues.pesel}
-                  // onChange={handleChange("pesel")}
-                />
-              </Grid>
-
-              <Grid item>
-                <TextField
-                  id="standard-basic"
-                  label="płeć"
-                  variant="standard"
-                  value={newValues.gender}
-                  // onChange={handleChange("gender")}
-                />
+                <FormLabel component="legend"> Płeć</FormLabel>
               </Grid>
             </Grid>
             <Sex />
@@ -133,7 +116,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
                 handleClickSetValues(setRootValues);
               }}
               onClick={() => {
-                navigate("/register?i=2");
+                navigate("/register/2");
               }}
             >
               NASTĘPNA STRONA

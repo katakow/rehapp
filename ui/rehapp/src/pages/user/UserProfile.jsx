@@ -9,7 +9,7 @@ import EditUser from "../../coponents/userPage/buttons/EditUser";
 
 const UserProfile = function ({ title }) {
   const [patient, setPatient] = useState(null);
-  const [patientID, setPatientID] = useState(1);
+  const [patientID, setPatientID] = useState(7);
 
   const getPatient = useCallback(() => {
     Axios.get(`http://localhost:5080/Patients/${patientID}`).then(
@@ -25,7 +25,7 @@ const UserProfile = function ({ title }) {
   }, [getPatient]);
 
   useEffect(() => {
-    setPatientID(1);
+    setPatientID(7);
   }, [setPatientID]);
 
   return (
@@ -66,7 +66,7 @@ const UserProfile = function ({ title }) {
                       <FormLabel component="legend">
                         {" "}
                         {!!patient && (
-                          <strong key={patient.id}>{patient.surname} </strong>
+                          <strong key={patient.id}>{patient.lastName} </strong>
                         )}
                       </FormLabel>
                     </Grid>
@@ -96,12 +96,30 @@ const UserProfile = function ({ title }) {
                       <FormLabel component="legend">
                         chorby współistniejące
                       </FormLabel>
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.disease} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                     <Grid item>
                       <FormLabel component="legend">alergie</FormLabel>
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.allergie} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                     <Grid item>
                       <FormLabel component="legend">dieta</FormLabel>
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.diet} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -109,9 +127,23 @@ const UserProfile = function ({ title }) {
                   <Grid container direction="column" spacing="50px">
                     <Grid item>
                       <FormLabel component="legend">test na covid</FormLabel>
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>{patient.covidTest} </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                     <Grid item>
                       <FormLabel component="legend">przejście</FormLabel>
+                      <FormLabel component="legend">
+                        {" "}
+                        {!!patient && (
+                          <strong key={patient.id}>
+                            {patient.covidCourse}{" "}
+                          </strong>
+                        )}
+                      </FormLabel>
                     </Grid>
                   </Grid>
                 </Grid>

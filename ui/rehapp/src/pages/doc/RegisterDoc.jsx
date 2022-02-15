@@ -1,41 +1,90 @@
 /* eslint-disable react/prop-types */
 
 import * as React from "react";
-import { Grid, TextField } from "@mui/material";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { Grid, TextField, Button } from "@mui/material";
+// import Visibility from "@mui/icons-material/Visibility";
+// import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import Specializations from "../../coponents/docPage/Specializations";
+// import Axios from "axios";
+import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import NavBar from "../../coponents/mainPages/NavBar";
-import ButtonToProfile from "../../coponents/docPage/buttons/ButtonToProfile";
 
 const Register = function () {
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
+  // const navigate = useNavigate();
+  // const handleMouseDownPassword = (event) => {
+  //   event.preventDefault();
+  // };
+
+  // const [values, setValues] = useState({
+  //   amount: "",
+  //   Password: "",
+  //   weight: "",
+  //   weightRange: "",
+  //   showPassword: false,
+  // });
+  // const handleClickShowPassword = () => {
+  //   setValues({
+  //     ...values,
+  //     showPassword: !values.showPassword,
+  //   });
+  // };
+  // const handleChange = (prop) => (event) => {
+  //   setValues({ ...values, [prop]: event.target.value });
+  // };
+  // const setNewDoctorData = () => {
+  //   setDoctorData({
+  //     ...doctorData,
+  //     FirstName: !doctorData.firstName,
+  //     LastName: !doctorData.lastName,
+  //     Mail: !doctorData.mail,
+  //     Password: !doctorData.password,
+  //     Pwz: !doctorData.pwz,
+  //     Sex: !doctorData.sex,
+  //   });
+  // };
+  const [doctorData, setDoctorData] = useState({
+    FirstName: "",
+    LastName: "",
+    Mail: "",
+    Password: "",
+    Pwz: "",
+    Id: "",
+  });
+
+  const addDoctor = async () => {
+    const response = await fetch("https://localhost:7080/Doctors/register", {
+      mode: "cors",
+      headers: { accept: "*/*", "Content-Type": "application/json" },
+      method: "POST",
+
+      body: JSON.stringify({ doctorData }),
+    });
+    return response.json();
   };
 
-  const [values, setValues] = React.useState({
-    amount: "",
-    password: "",
-    weight: "",
-    weightRange: "",
-    showPassword: false,
-  });
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
+  const handleDataChange = async () => {
+    // setDoctorData({ ...doctorData, [prop]: event.target.data });
+    setDoctorData();
+    console.log(doctorData);
+    doctorData.FirstName = document.getElementById("imie").value;
+    doctorData.LastName = document.getElementById("nazwisko").value;
+    doctorData.Mail = document.getElementById("mail").value;
+    doctorData.Password = document.getElementById("haslo").value;
+    doctorData.Pwz = document.getElementById("pwz").value;
+    doctorData.Id = "2436";
+
+    console.log(doctorData);
+    try {
+      const response = await addDoctor();
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <div>
@@ -53,117 +102,84 @@ const Register = function () {
         spacing="30"
       >
         <Grid item>
-          <Specializations />
-        </Grid>
-        <Grid item>
           <Grid>
-            <Grid />
             <TextField
               fullWidth
-              id="standard-basic"
+              id="imie"
               label="imię"
               variant="standard"
+              // data={doctorData.FirstName}
             />
-            <Grid />
+
             <TextField
               fullWidth
-              id="standard-basic"
+              id="nazwisko"
               label="nazwisko"
               variant="standard"
+              // data={doctorData.lastName}
             />
-            <Grid />
+
             <TextField
               fullWidth
-              id="standard-basic"
-              label="e-mail"
+              id="mail"
+              label="mail"
               variant="standard"
+              // data={doctorData.mail}
             />
-            <Grid />
+
             <FormControl fullWidth variant="standard">
               <InputLabel htmlFor="standard-adornment-password">
                 hasło
               </InputLabel>
               <Input
-                type={values.showPassword ? "text" : "password"}
-                value={values.password}
-                onChange={handleChange("password")}
+                // type={values.showPassword ? "text" : "Password"}
+                // value={doctorData.password}
+                id="haslo"
+                label="haslo"
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
                       aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
+                      // onClick={handleClickShowPassword}
+                      //  onMouseDown={handleMouseDownPassword}
                     >
-                      {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                      {/* {values.showPassword ? <VisibilityOff /> : <Visibility />} */}
                     </IconButton>
                   </InputAdornment>
                 }
               />
             </FormControl>
-            <Grid />
+
             <TextField
               fullWidth
-              id="standard-basic"
-              label="PESEL"
-              variant="standard"
-            />
-            <Grid />
-            <TextField
-              fullWidth
-              label="numer PWZ"
+              label="pwz"
               variant="standard"
               required
-              id="outlined-required"
+              id="pwz"
+              // data={doctorData.pwz}
             />
-            <Grid />
-            <TextField id="standard-basic" label="płeć" variant="standard" />
           </Grid>
-          <FormControl>
-            <RadioGroup
-              aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="inna"
-              name="radio-buttons-group"
-            >
-              <FormControlLabel
-                value="kobieta"
-                control={
-                  <Radio
-                    sx={{
-                      "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-                    }}
-                  />
-                }
-                label="kobieta"
-              />
-              <FormControlLabel
-                control={
-                  <Radio
-                    sx={{
-                      "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-                    }}
-                  />
-                }
-                value="mężczyzna"
-                label="mężczyzna"
-              />
-              <FormControlLabel
-                value="inna"
-                control={
-                  <Radio
-                    sx={{
-                      "&.Mui-checked": { color: "rgba(253, 105, 139, 0.85)" },
-                    }}
-                  />
-                }
-                label="inna"
-              />
-            </RadioGroup>
-          </FormControl>
-        </Grid>
 
-        <Grid item alignSelf="flex-end">
-          <ButtonToProfile />
-        </Grid>
+          <Grid item alignSelf="flex-end">
+            <Button
+              variant="outlined"
+              sx={{
+                width: "204px",
+                height: "95px",
+                color: "black",
+                backgroundColor: "rgba(106, 144, 100, 0.37)",
+                fontFamily: "Sora",
+                borderColor: "rgba(106, 144, 100, 0.37)",
+              }}
+              // handleDataChange={() => {
+              //  addDoctor;
+              // }}
+              onClick={handleDataChange}
+            >
+              PRZEJDŹ DO STRONY GŁÓWNEJ
+            </Button>
+          </Grid>
+        </Grid>{" "}
       </Grid>
     </div>
   );

@@ -17,7 +17,7 @@ const Test = function () {
   // };
 
   const getDiseases = () => {
-    Axios.get("http://localhost:5080/Diseases").then((response) => {
+    Axios.get("https://localhost:7080/Diseases").then((response) => {
       setDiseases(response.data);
       console.log(response);
     });

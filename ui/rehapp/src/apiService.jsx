@@ -5,7 +5,7 @@ const addDiseases = async () => {
     method: "POST",
 
     body: JSON.stringify({
-      label: "asdfghjkl",
+      label: "htrsgf",
     }),
   });
   return response.json();

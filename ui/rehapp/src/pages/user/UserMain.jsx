@@ -5,7 +5,7 @@ import NavBarek from "../../coponents/userPage/NavBarek";
 
 const UserMain = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarek />
       <Grid
         container
@@ -20,7 +20,7 @@ const UserMain = function ({ title }) {
           <Grid
             container
             direction="row"
-            spacing="50px"
+            spacing="30px"
             justifyContent="space-around"
             alignContent="center"
           >
@@ -104,7 +104,7 @@ const UserMain = function ({ title }) {
           </Grid>
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 UserMain.defaultProps = {

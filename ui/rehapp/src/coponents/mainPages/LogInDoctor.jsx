@@ -24,7 +24,6 @@ const LogInDoctor = function () {
       </Grid>
       <Grid item>
         <Button
-          item
           variant="outlined"
           sx={{
             width: "143px",

@@ -1,13 +1,33 @@
 /* eslint-disable react/prop-types */
 import { Grid, TextField } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
+import Axios from "axios";
+import { useEffect, useState, useCallback } from "react";
+import FormLabel from "@mui/material/FormLabel";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 import EditDocSave from "../../coponents/docPage/buttons/EditDocSave";
-import Specializations from "../../coponents/docPage/Specializations";
 
 const DocEdit = function ({ title }) {
+  const [doctor, setDoctor] = useState(null);
+  const [doctorID, setDoctorID] = useState(1);
+
+  const getPatient = useCallback(() => {
+    Axios.get(`http://localhost:5080/Doctors/${doctorID}`).then((response) => {
+      setDoctor(response.data);
+      console.log(response);
+    });
+  }, [doctorID]);
+
+  useEffect(() => {
+    getPatient();
+  }, [getPatient]);
+
+  useEffect(() => {
+    setDoctorID(1);
+  }, [setDoctorID]);
+
   return (
-    <content>
+    <div>
       <NavBarekDoc />{" "}
       <Grid
         container
@@ -36,6 +56,11 @@ const DocEdit = function ({ title }) {
             <Grid item>
               <Grid container direction="column" spacing="50px">
                 <Grid item>
+                  <FormLabel component="legend">
+                    {!!doctor && (
+                      <strong key={doctor.d}>{doctor.firstName} </strong>
+                    )}
+                  </FormLabel>
                   <TextField
                     id="standard-basic"
                     label="imię"
@@ -43,6 +68,11 @@ const DocEdit = function ({ title }) {
                   />
                 </Grid>
                 <Grid item>
+                  <FormLabel component="legend">
+                    {!!doctor && (
+                      <strong key={doctor.d}>{doctor.lastName} </strong>
+                    )}
+                  </FormLabel>
                   <TextField
                     id="standard-basic"
                     label="nazwisko"
@@ -50,20 +80,20 @@ const DocEdit = function ({ title }) {
                   />
                 </Grid>
                 <Grid item>
+                  <FormLabel component="legend">
+                    {!!doctor && <strong key={doctor.d}>{doctor.mail} </strong>}
+                  </FormLabel>
                   <TextField
                     id="standard-basic"
                     label="e-mail"
                     variant="standard"
                   />
                 </Grid>
+
                 <Grid item>
-                  <TextField
-                    id="standard-basic"
-                    label="PESEL"
-                    variant="standard"
-                  />
-                </Grid>
-                <Grid item>
+                  <FormLabel component="legend">
+                    {!!doctor && <strong key={doctor.d}>{doctor.pwz} </strong>}
+                  </FormLabel>
                   <TextField
                     id="standard-basic"
                     label="numer PWZ"
@@ -72,16 +102,13 @@ const DocEdit = function ({ title }) {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item>
-              <Specializations />
-            </Grid>
           </Grid>
         </Grid>
         <Grid item alignSelf="flex-end">
           <EditDocSave />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 DocEdit.defaultProps = {

@@ -13,29 +13,40 @@ public class PatientsLogic
         _rehappContext = rehappContext;
     }
 
-    public async Task<Patient> AddPatientAsync(PatientViewModel patientViewModel)
+
+    public async Task<PatientViewModel> AddPatientAsync(PatientViewModel patientViewModel)
     {
-        var patient = new Patient
+        var patient = new PatientViewModel()
         {
-            Name = patientViewModel.Name, Surname = patientViewModel.Surname, Weight = patientViewModel.Weight,
-            Height = patientViewModel.Height, Pesel = patientViewModel.Pesel, Mail = patientViewModel.Mail
+            FirstName = patientViewModel.FirstName, LastName = patientViewModel.LastName,
+            Pesel = patientViewModel.Pesel, Mail = patientViewModel.Mail, Allergie = patientViewModel.Allergie,
+            Diet = patientViewModel.Diet, Disease = patientViewModel.Disease,
+            Password = patientViewModel.Password,
+            CovidCourse = patientViewModel.CovidCourse,
+            CovidTest = patientViewModel.CovidTest,
         };
-        _rehappContext.Patients.Add(patient);
-        await _rehappContext.SaveChangesAsync();
-        return patient;
+        var check = _rehappContext.Patients.FirstOrDefault(s => s.Mail == patient.Mail);
+        if (check == null)
+        {
+            _rehappContext.Patients.Add(patient);
+            await _rehappContext.SaveChangesAsync();
+            return patient;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public async Task<IEnumerable<PatientViewModel>> GetPatientsAsync()
     {
         return await _rehappContext.Patients.Select(patient => new PatientViewModel
         {
-            Name = patient.Name,
+            FirstName = patient.FirstName,
             Id = patient.Id,
-            Surname = patient.Surname,
-            Height = patient.Height,
+            LastName = patient.LastName,
             Mail = patient.Mail,
             Pesel = patient.Pesel,
-            Weight = patient.Weight
         }).ToListAsync();
     }
 
@@ -45,12 +56,40 @@ public class PatientsLogic
         return new PatientViewModel
         {
             Id = patient.Id,
-            Name = patient.Name,
-            Surname = patient.Surname,
-            Height = patient.Height,
+            FirstName = patient.FirstName,
+            LastName = patient.LastName,
             Mail = patient.Mail,
             Pesel = patient.Pesel,
-            Weight = patient.Weight
+            Password = patient.Password,
+            Allergie = patient.Allergie,
+            Diet = patient.Diet,
+            Disease = patient.Disease,
+            CovidCourse = patient.CovidCourse,
+            CovidTest = patient.CovidTest
         };
+    }
+
+    public async Task<PatientViewModel?> GetPatientByCredentials(string userMail, string userPassword)
+    {
+        var patient = await _rehappContext.Patients.FirstOrDefaultAsync(d => d.Mail == userMail);
+        if (patient != null)
+        {
+            return new PatientViewModel
+            {
+                FirstName = patient.FirstName,
+                LastName = patient.LastName,
+                Id = patient.Id,
+                Mail = patient.Mail,
+                Password = patient.Password,
+                Pesel = patient.Pesel,
+                Diet = patient.Diet,
+                Allergie = patient.Allergie,
+                Disease = patient.Disease,
+                CovidTest = patient.CovidTest,
+                CovidCourse = patient.CovidCourse
+            };
+        }
+
+        return null;
     }
 }

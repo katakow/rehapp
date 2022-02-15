@@ -1,4 +1,4 @@
-import { Grid, TextField, FormControl, Button } from "@mui/material";
+import { Grid, TextField, FormControl, Button, FormLabel } from "@mui/material";
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
 import { useState, React } from "react";
@@ -61,7 +61,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
                   label="nazwisko"
                   variant="standard"
                   value={newValues.surname}
-                  onChange={handleChange("surname")}
+                  // onChange={handleChange("surname")}
                 />
               </Grid>
               <Grid item>
@@ -71,7 +71,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
                   label="e-mail"
                   variant="standard"
                   value={newValues.email}
-                  onChange={handleChange("email")}
+                  // onChange={handleChange("email")}
                 />
               </Grid>
               <Grid item>
@@ -82,7 +82,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
                   <Input
                     type={newValues.showPassword ? "text" : "password"}
                     value={newValues.password}
-                    onChange={handleChange("password")}
+                    // onChange={handleChange("password")}
                   />
                 </FormControl>
               </Grid>
@@ -91,43 +91,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
           <Grid item>
             <Grid container direction="column" justifyContent="space-around">
               <Grid item>
-                <TextField
-                  fullWidth
-                  id="standard-basic"
-                  label="PESEL"
-                  variant="standard"
-                  value={newValues.pesel}
-                  onChange={handleChange("pesel")}
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  fullWidth
-                  id="standard-basic"
-                  label="wzrost [cm]"
-                  variant="standard"
-                  value={newValues.height}
-                  onChange={handleChange("height")}
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  fullWidth
-                  id="standard-basic"
-                  label="waga [kg]"
-                  variant="standard"
-                  value={newValues.weight}
-                  onChange={handleChange("weight")}
-                />
-              </Grid>
-              <Grid item>
-                <TextField
-                  id="standard-basic"
-                  label="płeć"
-                  variant="standard"
-                  value={newValues.gender}
-                  onChange={handleChange("gender")}
-                />
+                <FormLabel component="legend"> Płeć</FormLabel>
               </Grid>
             </Grid>
             <Sex />
@@ -139,7 +103,6 @@ const RegisterForm1 = function (rootValues, setRootValues) {
           <Grid item>Strona 1/4</Grid>
           <Grid item>
             <Button
-              item
               variant="outlined"
               sx={{
                 width: "160px",
@@ -153,7 +116,7 @@ const RegisterForm1 = function (rootValues, setRootValues) {
                 handleClickSetValues(setRootValues);
               }}
               onClick={() => {
-                navigate("/register?id=2");
+                navigate("/register/2");
               }}
             >
               NASTĘPNA STRONA

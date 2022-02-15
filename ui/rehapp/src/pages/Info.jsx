@@ -8,7 +8,7 @@ import NavBarLogin from "../coponents/mainPages/NavBarLogin";
 
 const Info = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarLogin />
       <Grid
         container
@@ -41,7 +41,7 @@ const Info = function ({ title }) {
           Przydatne linki:
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 Info.defaultProps = {

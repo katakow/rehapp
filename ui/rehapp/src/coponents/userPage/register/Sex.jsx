@@ -24,6 +24,7 @@ export default function RadioButtonsGroup() {
             }
             value="kobieta"
             label="kobieta"
+            name="kobieta"
           />
           <FormControlLabel
             control={
@@ -35,6 +36,7 @@ export default function RadioButtonsGroup() {
             }
             value="mężczyzna"
             label="mężczyzna"
+            name="mężczyzna"
           />
           <FormControlLabel
             control={
@@ -46,6 +48,7 @@ export default function RadioButtonsGroup() {
             }
             value="inna"
             label="inna"
+            name="inna"
           />
         </RadioGroup>
       </FormControl>

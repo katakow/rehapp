@@ -5,7 +5,6 @@ const EditUser = function () {
   const navigate = useNavigate();
   return (
     <Button
-      item
       variant="outlined"
       sx={{
         width: "143px",

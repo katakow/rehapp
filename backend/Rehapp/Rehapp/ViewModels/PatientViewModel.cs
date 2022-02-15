@@ -1,12 +1,19 @@
+using Microsoft.AspNetCore.Identity;
+
 namespace Rehapp.ViewModels;
 
-public class PatientViewModel
+public class PatientViewModel : IdentityUser
 {
     public int Id { get; set; }
-    public string Name { get; set; }
-    public string Surname { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
     public string Pesel { get; set; }
     public string Mail { get; set; }
-    public double Weight { get; set; }
-    public int Height { get; set; }
+
+    public string Password { get; set; }
+    public string Diet { get; set; }
+    public string Allergie { get; set; }
+    public string Disease { get; set; }
+    public string CovidTest { get; set; }
+    public string CovidCourse { get; set; }
 }

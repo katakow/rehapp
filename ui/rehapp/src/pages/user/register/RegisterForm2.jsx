@@ -13,7 +13,6 @@ import FormControl from "@mui/material/FormControl";
 import PrevBToR1 from "../../../coponents/userPage/register/buttons/PrevButton";
 
 const RegisterForm2 = function (rootValues, setRootValues) {
-  const vaccines = ["grypa", "tężec", "krztusiec", "różyczka"];
   const diet = [
     "wegetariańska",
     "wegańska",
@@ -116,36 +115,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
               </Grid>
             </Container>
           </Grid>
-          <Grid item>
-            <Container>
-              <FormLabel component="legend">odbyte szczepienia</FormLabel>
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-              >
-                <FormGroup>
-                  {vaccines.map((d) => (
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          sx={{
-                            "&.Mui-checked": {
-                              color: "rgba(253, 105, 139, 0.85)",
-                            },
-                          }}
-                          value={newValues.vaccines}
-                          onChange={handleChange("vaccines")}
-                        />
-                      }
-                      label={d}
-                    />
-                  ))}
-                </FormGroup>
-              </Grid>
-            </Container>
-          </Grid>
+
           <Grid item>
             <Container>
               <FormLabel component="legend">alergie</FormLabel>
@@ -225,7 +195,6 @@ const RegisterForm2 = function (rootValues, setRootValues) {
               </Grid>
               <Grid item>
                 <Button
-                  item
                   variant="outlined"
                   sx={{
                     width: "160px",
@@ -239,7 +208,7 @@ const RegisterForm2 = function (rootValues, setRootValues) {
                     handleClickSetValues(setRootValues);
                   }}
                   onClick={() => {
-                    navigate("/register?id=3");
+                    navigate("", { id: 3 });
                   }}
                 >
                   NASTĘPNA STRONA

@@ -5,7 +5,7 @@ import EditUserSave from "../../coponents/userPage/buttons/EditUserSave";
 
 const UserEdit1 = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarek />
       <Grid container direction="column" spacing="20px">
         <Grid item>
@@ -60,22 +60,6 @@ const UserEdit1 = function ({ title }) {
                     fullWidth
                   />
                 </Grid>
-                <Grid item>
-                  <TextField
-                    id="standard-basic"
-                    label="waga [kg]"
-                    variant="standard"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid item>
-                  <TextField
-                    id="standard-basic"
-                    label="wzrost [cm]"
-                    variant="standard"
-                    fullWidth
-                  />
-                </Grid>
               </Grid>
             </Grid>
             <Grid item>
@@ -84,14 +68,6 @@ const UserEdit1 = function ({ title }) {
                   <TextField
                     id="standard-basic"
                     label="choroby współistniejące"
-                    variant="standard"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid item>
-                  <TextField
-                    id="standard-basic"
-                    label="odbyte szczepienia"
                     variant="standard"
                     fullWidth
                   />
@@ -125,14 +101,7 @@ const UserEdit1 = function ({ title }) {
                     fullWidth
                   />
                 </Grid>
-                <Grid item>
-                  <TextField
-                    id="standard-basic"
-                    label="objawy podczas COVID-19"
-                    variant="standard"
-                    fullWidth
-                  />
-                </Grid>
+
                 <Grid item>
                   <TextField
                     id="standard-basic"
@@ -149,22 +118,6 @@ const UserEdit1 = function ({ title }) {
                     fullWidth
                   />
                 </Grid>
-                <Grid item>
-                  <TextField
-                    id="standard-basic"
-                    label="szczepienie na COVID-19"
-                    variant="standard"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid item>
-                  <TextField
-                    id="standard-basic"
-                    label="nazwa szczepionki"
-                    variant="standard"
-                    fullWidth
-                  />
-                </Grid>
               </Grid>
             </Grid>
           </Grid>
@@ -173,7 +126,7 @@ const UserEdit1 = function ({ title }) {
           <EditUserSave />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 UserEdit1.defaultProps = {

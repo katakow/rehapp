@@ -7,7 +7,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
 
 export default function SimpleBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(0);
 
   const navigate = useNavigate();
 
@@ -16,12 +16,12 @@ export default function SimpleBottomNavigation() {
       <Box sx={{ width: 50 }}>
         <BottomNavigation
           showLabels
-          value={value}
-          onChange={(_event, newValue) => {
-            setValue(newValue);
-          }}
+          // value={value}
+          // onChange={(_event, newValue) => {
+          //   setValue(newValue);
+          // }}
           onClick={() => {
-            navigate("/");
+            navigate("/main");
           }}
         >
           <BottomNavigationAction

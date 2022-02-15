@@ -5,7 +5,7 @@ import UserExamPrev from "../../coponents/userPage/buttons/UserExamPrev";
 
 const UserExam2 = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarek />
       <Grid container direction="column" spacing="100px">
         <Grid item>
@@ -29,7 +29,7 @@ const UserExam2 = function ({ title }) {
           <UserExamPrev />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 UserExam2.defaultProps = {

@@ -8,7 +8,7 @@ import UserExamNext from "../../coponents/userPage/buttons/UserExamNext";
 
 const UserExam = function ({ title }) {
   return (
-    <content>
+    <div>
       <NavBarek />
       <Grid container direction="column" spacing="90px">
         <Grid item>
@@ -245,82 +245,6 @@ const UserExam = function ({ title }) {
                       }}
                     />
                   }
-                  label="krew w kale"
-                />
-              </FormGroup>
-            </Grid>
-            <Grid item>
-              <FormGroup>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "rgba(253, 105, 139, 0.85)",
-                        },
-                      }}
-                    />
-                  }
-                  label="wysypka"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "rgba(253, 105, 139, 0.85)",
-                        },
-                      }}
-                    />
-                  }
-                  label="ból gardła"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "rgba(253, 105, 139, 0.85)",
-                        },
-                      }}
-                    />
-                  }
-                  label="zaczerwienione oczy"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "rgba(253, 105, 139, 0.85)",
-                        },
-                      }}
-                    />
-                  }
-                  label="wysokie ciśnienie"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "rgba(253, 105, 139, 0.85)",
-                        },
-                      }}
-                    />
-                  }
-                  label="duszności wysiłkowe"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "rgba(253, 105, 139, 0.85)",
-                        },
-                      }}
-                    />
-                  }
                   label="brak"
                 />
               </FormGroup>
@@ -331,7 +255,7 @@ const UserExam = function ({ title }) {
           <UserExamNext />
         </Grid>
       </Grid>
-    </content>
+    </div>
   );
 };
 UserExam.defaultProps = {

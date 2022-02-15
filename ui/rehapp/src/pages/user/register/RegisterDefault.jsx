@@ -1,61 +1,78 @@
+/* eslint-disable no-shadow */
 /* eslint-disable react/no-unstable-nested-components */
-import { useState, React } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState, React } from "react";
+// import Axios from "axios";
+import {
+  Grid,
+  TextField,
+  FormControl,
+  FormLabel,
+  Radio,
+  RadioGroup,
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
+  InputLabel,
+  Input,
+} from "@mui/material";
 import NavBar from "../../../coponents/mainPages/NavBar";
-import RegisterForm1 from "./RegisterForm1";
-import RegisterForm2 from "./RegisterForm2";
-import RegisterForm3 from "./RegisterForm3";
-import SumUpForms from "./FormEnd";
-import RegisterForm4 from "./RegisterForm4";
 
-const RegisterDefault = function (koncowe) {
-  console.log(koncowe);
-  // setValues(koncowe);
-  const { id } = useParams();
+const RegisterDefault = function () {
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [diseases, setDiseases] = useState([]);
+  const [allergies, setAlleriges] = useState([]);
+  const [diet, setDiet] = useState([]);
 
-  const [values, setValues] = useState({
-    name: "none",
-    surname: "none",
-    email: "none",
-    password: "none",
-    pesel: "none",
-    height: "none",
-    weight: "none",
-    gender: "none",
-    diseases: "none",
-    vaccines: "none",
-    alergies: "none",
-    diet: "none",
-    covidTest: "none",
-    symptoms: "none",
-    courseOfCovid: "none",
-    drugs: "none",
-    covidVaccine: "none",
-    vaccineName: "none",
-  });
+  useEffect(() => {
+    fetch("https://localhost:7080/Diseases")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setDiseases(result);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+  }, []);
+  useEffect(() => {
+    fetch("https://localhost:7080/Allergies")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setAlleriges(result);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+  }, []);
+  useEffect(() => {
+    fetch("https://localhost:7080/Diet")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setDiet(result);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+  }, []);
 
-  const setRootValues = (newValues) => {
-    console.log("new values", newValues);
-    setValues(newValues);
-    console.log("Values: ", values);
-  };
-
-  const ShowForms = function () {
-    switch (id) {
-      case 1:
-        return <>{RegisterForm1(setRootValues)}</>;
-      case 2:
-        return <>{RegisterForm2(setRootValues)}</>;
-      case 3:
-        return <> {RegisterForm3(setRootValues)}</>;
-      case 4:
-        return <> {RegisterForm4(setRootValues)}</>;
-      case 5:
-        return <> {SumUpForms(values)}</>;
-      default:
-        return <>{RegisterForm3(setRootValues)}</>;
-    }
-  };
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
@@ -68,7 +85,219 @@ const RegisterDefault = function (koncowe) {
         </p>
         <p>Dziękujemy!</p>
       </h1>
-      <p>{ShowForms}</p>
+      <Grid
+        container
+        direction="column"
+        justifyContent="space-around"
+        spacing="100"
+      >
+        <Grid item>
+          <Grid container direction="row" justifyContent="space-around">
+            <Grid item>
+              <Grid container direction="column" justifyContent="space-around">
+                <Grid item>
+                  <TextField
+                    fullWidth
+                    id="imie"
+                    label="imię"
+                    variant="standard"
+                  />
+                </Grid>
+                <Grid item>
+                  <TextField
+                    fullWidth
+                    id="nazwisko"
+                    label="nazwisko"
+                    variant="standard"
+                  />
+                </Grid>
+                <Grid item>
+                  <TextField
+                    fullWidth
+                    id="mail"
+                    label="mail"
+                    variant="standard"
+                  />
+                </Grid>
+                <Grid item>
+                  <FormControl fullWidth variant="standard">
+                    <InputLabel
+                      htmlFor="standard-adornment-password"
+                      id="password"
+                      label="password"
+                    >
+                      hasło
+                    </InputLabel>
+                    <Input
+                      // type={newValues.showPassword ? "text" : "password"}
+                      // value={newValues.password}id="password"
+                      label="password"
+                    />
+                  </FormControl>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction="column"
+          justifyContent="space-around"
+          spacing="200"
+        >
+          <Grid item>
+            <Grid container direction="row" justifyContent="space-around">
+              <Grid item>
+                <FormLabel component="legend">
+                  choroby współistniejące
+                </FormLabel>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Grid item>
+                    <FormGroup>
+                      {diseases.map((d) => (
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              sx={{
+                                "&.Mui-checked": {
+                                  color: "rgba(253, 105, 139, 0.85)",
+                                },
+                              }}
+                              key={d.id}
+                            />
+                          }
+                          label={d.label}
+                        />
+                      ))}
+                    </FormGroup>
+                  </Grid>
+                </Grid>
+              </Grid>
+
+              <Grid item>
+                <FormLabel component="legend">alergie</FormLabel>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <FormGroup>
+                    {allergies.map((d) => (
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            sx={{
+                              "&.Mui-checked": {
+                                color: "rgba(253, 105, 139, 0.85)",
+                              },
+                            }}
+                            key={d.id}
+                          />
+                        }
+                        label={d.label}
+                      />
+                    ))}
+                  </FormGroup>
+                </Grid>
+              </Grid>
+              <Grid item>
+                <FormLabel component="legend">stosowana dieta</FormLabel>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <FormControl>
+                    <RadioGroup
+                      aria-labelledby="demo-radio-buttons-group-label"
+                      defaultValue="brak"
+                      name="radio-buttons-group"
+                    >
+                      {diet.map((d) => (
+                        <FormControlLabel
+                          value="wegetariańska"
+                          control={
+                            <Radio
+                              sx={{
+                                "&.Mui-checked": {
+                                  color: "rgba(253, 105, 139, 0.85)",
+                                },
+                              }}
+                              key={d.id}
+                            />
+                          }
+                          label={d.label}
+                        />
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction="column"
+          justifyContent="space-around"
+          spacing="60"
+        >
+          <Grid item alignSelf="center">
+            <FormLabel component="legend">
+              Czy kiedykolwiek miałeś pozytywny wynik testu na COVID-19?
+            </FormLabel>
+            <Grid
+              container
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <TextField
+                fullWidth
+                id="standard-basic"
+                label="Czy miałeś pozytywny wynik testu na COVID-19? Wpisz 'tak' lub 'nie'"
+                variant="standard"
+              />
+            </Grid>
+          </Grid>
+          <Grid item alignSelf="center">
+            ODPOWIEDZ TYLKO, JEŚLI POWYŻEJ ZAZNACZYŁAŚ / ZAZNACZYŁEŚ{" "}
+            <strong>TAK</strong>
+          </Grid>
+          <Grid item>
+            <Grid container direction="row" justifyContent="space-around">
+              <Grid item />
+              <Grid item>
+                <FormLabel component="legend" maxWidth>
+                  jak przeszłaś / przeszedłeś COVID-19?
+                </FormLabel>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Grid item>
+                    <TextField
+                      fullWidth
+                      id=""
+                      label="Jak przeszłaś/ przeszedłeś COVID-19? Wpisz jedną z czterech dostępnych opcji: 'bezobjawowo', 'lekko', 'średnio', 'ciężko'"
+                      variant="standard"
+                    />
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   );
 };

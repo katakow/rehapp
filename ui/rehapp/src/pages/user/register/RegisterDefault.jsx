@@ -25,7 +25,7 @@ const RegisterDefault = function () {
   const [diet, setDiet] = useState([]);
 
   useEffect(() => {
-    fetch("https://localhost:7080/Diseases")
+    fetch("http://localhost:5080/Diseases")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -39,7 +39,7 @@ const RegisterDefault = function () {
       );
   }, []);
   useEffect(() => {
-    fetch("https://localhost:7080/Allergies")
+    fetch("http://localhost:5080/Allergies")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -53,7 +53,11 @@ const RegisterDefault = function () {
       );
   }, []);
   useEffect(() => {
+<<<<<<< HEAD
     fetch("https://localhost:7080/Diets")
+=======
+    fetch("http://localhost:5080/Diet")
+>>>>>>> master
       .then((res) => res.json())
       .then(
         (result) => {

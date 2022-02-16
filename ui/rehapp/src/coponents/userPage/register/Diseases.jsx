@@ -17,7 +17,7 @@ export default function CheckboxLabels() {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("https://localhost:7080/Diseases")
+    fetch("http://localhost:5080/Diseases")
       .then((res) => res.json())
       .then(
         (result) => {

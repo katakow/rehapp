@@ -27,20 +27,12 @@ const Register = function () {
   });
 const [error, setError] = useState(null);
   const addDoctor = async () => {
-<<<<<<< HEAD
-    
-    const response = await fetch(
-      "https://localhost:7080/Doctors/Doctors/register",
-      {
-        mode: "cors",
-        headers: { accept: "*/*", "Content-Type": "application/json" },
-        method: "POST",
-=======
+
     const response = await fetch("http://localhost:5080/Doctors/register", {
       mode: "cors",
       headers: { accept: "*/*", "Content-Type": "application/json" },
       method: "POST",
->>>>>>> master
+
 
         body: JSON.stringify({
           "FirstName": doctorData.FirstName,

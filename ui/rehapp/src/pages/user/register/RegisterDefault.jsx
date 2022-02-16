@@ -53,11 +53,7 @@ const RegisterDefault = function () {
       );
   }, []);
   useEffect(() => {
-<<<<<<< HEAD
-    fetch("https://localhost:7080/Diets")
-=======
     fetch("http://localhost:5080/Diet")
->>>>>>> master
       .then((res) => res.json())
       .then(
         (result) => {

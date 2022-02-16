@@ -42,6 +42,7 @@ const RegisterDefault = function () {
   const [error, setError] = useState(null);
 
   const [diseases, setDiseases] = useState([]);
+  const [selectedDiaseases, setSelectedDiaseases] = useState([]);
   const [allergies, setAlleriges] = useState([]);
   const [diet, setDiets] = useState([]);
 
@@ -63,6 +64,10 @@ const RegisterDefault = function () {
   useEffect(() => {
     getDiseases();
   }, [getDiseases]);
+
+  useEffect(() => {
+    console.log(selectedDiaseases);
+  }, [selectedDiaseases]);
 
   const getAllergies = useCallback(() => {
     fetch("http://localhost:5080/Allergies", {
@@ -136,6 +141,16 @@ const RegisterDefault = function () {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
+
+  const handleDiseaseChange = (checked, disease) => {
+    if (checked) {
+      setSelectedDiaseases([...selectedDiaseases, disease]);
+    } else {
+      setSelectedDiaseases(
+        selectedDiaseases.filter((item) => item.id !== disease.id)
+      );
+    }
+  };
 
   const handleDataChange = async () => {
     setPatientData();
@@ -247,6 +262,9 @@ const RegisterDefault = function () {
                                     color: "rgba(253, 105, 139, 0.85)",
                                   },
                                 }}
+                                onChange={(e) =>
+                                  handleDiseaseChange(e.target.checked, d)
+                                }
                               />
                             }
                             id="choroba"

@@ -5,8 +5,6 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-window.$loggedPerson = "";
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

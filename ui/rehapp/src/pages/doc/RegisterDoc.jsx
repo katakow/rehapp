@@ -29,7 +29,7 @@ const [error, setError] = useState(null);
   const addDoctor = async () => {
 
     const response = await fetch("http://localhost:5080/Doctors/register", {
-      mode: "cors",
+      // mode: "cors",
       headers: { accept: "*/*", "Content-Type": "application/json" },
       method: "POST",
 

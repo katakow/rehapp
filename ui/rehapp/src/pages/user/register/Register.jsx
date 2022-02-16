@@ -10,13 +10,11 @@ import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import { useState, React } from "react";
-// import { useParams } from "react-router-dom";
 import Sex from "../../../coponents/userPage/register/Sex";
 import NavBar from "../../../coponents/mainPages/NavBar";
 import ButtonToR2 from "../../../coponents/userPage/register/buttons/ButtonToR2";
 
 const Register = function () {
-  // const { id } = useParams();
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
@@ -38,22 +36,7 @@ const Register = function () {
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
-  // const addPatient = async () => {
-  //   const response = await fetch("http://localhost:3000/register", {
-  //     mode: "cors",
-  //     headers: { accept: "*/*", "Content-Type": "application/json" },
-  //     method: "POST",
 
-  //     body: JSON.stringify({
-  //       name:
-  //     }),
-  //   });
-  //   return response.json();
-  // };
-
-  // const assignVariables = () =>{
-  //  var name: document.getElementById("name").value;
-  // }
   return (
     <div>
       <NavBar />

@@ -69,6 +69,11 @@ public class PatientsLogic
         };
     }
 
+    public PatientViewModel GetPatientByMail(string mail)
+    {
+        return _rehappContext.Patients.Where(p => p.Mail == mail).Single();
+    }
+
     public async Task<PatientViewModel?> GetPatientByCredentials(string userMail, string userPassword)
     {
         var patient = await _rehappContext.Patients.FirstOrDefaultAsync(d => d.Mail == userMail);

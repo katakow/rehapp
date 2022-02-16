@@ -30,4 +30,5 @@ public class AllergiesController : ControllerBase
         var allergies = await _allergiesLogic.AddAllergieAsync(allergiesViewModel);
         return Ok(allergies);
     }
+    
 }

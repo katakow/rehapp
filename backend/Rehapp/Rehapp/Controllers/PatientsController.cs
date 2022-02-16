@@ -12,15 +12,17 @@ namespace Rehapp.Controllers;
 public class PatientsController : ControllerBase
 {
     private readonly PatientsLogic _patientsLogic;
+    private readonly SymptomLogic _symptomLogic;
     private readonly SignInManager<PatientViewModel> _signInManager;
     private readonly UserManager<PatientViewModel> _userManager;
 
     public PatientsController(PatientsLogic patientLogic, SignInManager<PatientViewModel> signInManager,
-        UserManager<PatientViewModel> userManager)
+        UserManager<PatientViewModel> userManager, SymptomLogic symptomLogic)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _patientsLogic = patientLogic;
+        _symptomLogic = symptomLogic;
     }
 
     [HttpGet]
@@ -48,24 +50,8 @@ public class PatientsController : ControllerBase
     [HttpPost("/Patients/register")]
     public async Task<IActionResult> Registration([FromBody] Registration model)
     {
-        //var user = new Patient
-        //{
-        //  Login = model.Login,
-        //Mail = model.Email,
-        //    FirstName = model.FirstName,
-        //    LastName = model.LastName,
-        //Disease = model.Diseases,
-        // Diet = model.Diet,
-        //Allergie = model.Allergie,
-        //};
-
-        //if (result.Succeeded)
-        // {
-        //   await signInManager.SignInAsync(user, isPersistent: false);
-        //}
-
         PatientViewModel Test = new PatientViewModel();
-        //Test.Login = model.Login;
+
         Test.FirstName = model.FirstName;
         Test.LastName = model.LastName;
         Test.Mail = model.Email;
@@ -81,11 +67,11 @@ public class PatientsController : ControllerBase
         // POPRAWIC RETURNY 
         if (await this._patientsLogic.AddPatientAsync(Test) != null)
         {
-            return new JsonResult(Test);
+            return Ok(Test.Id);
         }
         else
         {
-            return new JsonResult("E - mail jest w bazie!");
+            return Ok("E - mail jest w bazie!");
         }
     }
 
@@ -96,11 +82,27 @@ public class PatientsController : ControllerBase
         if (patient != null)
         {
             await _signInManager.PasswordSignInAsync(patient.Mail, patient.Password, false, false);
-            return Ok(patient);
+            return Ok(patient.Id);
         }
         else
         {
             return BadRequest("Taki pacjent nie istnieje");
         }
+    }
+
+    [HttpPost("/Patient/addSymptoms")]
+    public async Task<IActionResult> addSymptoms([FromBody] ICollection<SymptomViewModel> symptoms,
+        [FromQuery] string mail)
+    {
+        var user = _patientsLogic.GetPatientByMail(mail);
+        foreach (var el in symptoms)
+        {
+            SymptomViewModel symptom = new SymptomViewModel();
+            symptom.Id = user.Id;
+            symptom.symptom = el.symptom;
+            await _symptomLogic.addSymptom(symptom);
+        }
+
+        return Ok(user);
     }
 }

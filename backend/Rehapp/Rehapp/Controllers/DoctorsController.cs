@@ -45,26 +45,9 @@ public class DoctorsController : ControllerBase
         return Ok(doctor);
     }
 
-    [HttpPost("/Doctors/register")]
+    [HttpPost("Doctors/register")]
     public async Task<IActionResult> Registration([FromBody] RegistrationDoctor models)
     {
-        //var user = new Patient
-        //{
-        //  Login = model.Login,
-        //Mail = model.Email,
-        //    FirstName = model.FirstName,
-        //    LastName = model.LastName,
-        // Sex = model.Sex,
-        //Disease = model.Diseases,
-        // Diet = model.Diet,
-        //Allergie = model.Allergie,
-        //};
-
-        //if (result.Succeeded)
-        // {
-        //   await signInManager.SignInAsync(user, isPersistent: false);
-        //}
-
         DoctorViewModel Test = new DoctorViewModel();
         Test.FirstName = models.FirstName;
         Test.LastName = models.LastName;
@@ -76,7 +59,7 @@ public class DoctorsController : ControllerBase
         // POPRAWIC RETURNY 
         if (await this._doctorsLogic.AddDoctorAsync(Test) != null)
         {
-            return Ok(Test);
+            return Ok(Test.Id);
         }
         else
         {
@@ -91,7 +74,7 @@ public class DoctorsController : ControllerBase
         if (doctor != null)
         { 
             await _signInManager.PasswordSignInAsync(doctor.Mail, doctor.Password,false,false);
-            return RedirectToPage("https://localhost:3000/doc/main");
+            return Ok(doctor.Id);
         }
         else
         {

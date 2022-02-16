@@ -1,15 +1,8 @@
 ﻿<Properties StartupConfiguration="{3ABBCEA9-C14A-4240-A0AC-0898AFB7CB05}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/kasia/Desktop/repo/rehapp/backend/Rehapp/Rehapp/Controllers/PatientAccountController.cs" relfile="Rehapp/Controllers/PatientAccountController.cs" line="37" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Rehapp PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Rehapp/Program.cs">
     <Files>
-      <File FileName="Rehapp/Controllers/PatientAccountController.cs" Line="58" Column="21" />
       <File FileName="Rehapp/Program.cs" Line="41" Column="29" />
     </Files>
     <Pads>
@@ -30,5 +23,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Rehapp PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/kasia/Desktop/repo/rehapp/backend/Rehapp/Rehapp/Controllers/PatientAccountController.cs" relfile="Rehapp/Controllers/PatientAccountController.cs" line="37" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

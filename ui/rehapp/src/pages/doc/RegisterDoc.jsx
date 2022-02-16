@@ -1,52 +1,22 @@
+/* eslint-disable no-shadow */
+/* eslint-disable prettier/prettier */
 /* eslint-disable react/prop-types */
 
 import * as React from "react";
 import { Grid, TextField, Button } from "@mui/material";
-// import Visibility from "@mui/icons-material/Visibility";
-// import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
 import FormControl from "@mui/material/FormControl";
-// import Axios from "axios";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavBar from "../../coponents/mainPages/NavBar";
+// import loggedPerson from "../LoggedPerson";
 
 const Register = function () {
-  // const navigate = useNavigate();
-  // const handleMouseDownPassword = (event) => {
-  //   event.preventDefault();
-  // };
 
-  // const [values, setValues] = useState({
-  //   amount: "",
-  //   Password: "",
-  //   weight: "",
-  //   weightRange: "",
-  //   showPassword: false,
-  // });
-  // const handleClickShowPassword = () => {
-  //   setValues({
-  //     ...values,
-  //     showPassword: !values.showPassword,
-  //   });
-  // };
-  // const handleChange = (prop) => (event) => {
-  //   setValues({ ...values, [prop]: event.target.value });
-  // };
-  // const setNewDoctorData = () => {
-  //   setDoctorData({
-  //     ...doctorData,
-  //     FirstName: !doctorData.firstName,
-  //     LastName: !doctorData.lastName,
-  //     Mail: !doctorData.mail,
-  //     Password: !doctorData.password,
-  //     Pwz: !doctorData.pwz,
-  //     Sex: !doctorData.sex,
-  //   });
-  // };
+  const navigate = useNavigate();
   const [doctorData, setDoctorData] = useState({
     FirstName: "",
     LastName: "",
@@ -55,20 +25,49 @@ const Register = function () {
     Pwz: "",
     Id: "",
   });
-
+const [error, setError] = useState(null);
   const addDoctor = async () => {
-    const response = await fetch("https://localhost:7080/Doctors/register", {
-      mode: "cors",
-      headers: { accept: "*/*", "Content-Type": "application/json" },
-      method: "POST",
+    
+    const response = await fetch(
+      "https://localhost:7080/Doctors/Doctors/register",
+      {
+        mode: "cors",
+        headers: { accept: "*/*", "Content-Type": "application/json" },
+        method: "POST",
 
-      body: JSON.stringify({ doctorData }),
-    });
-    return response.json();
+        body: JSON.stringify({
+          "FirstName": doctorData.FirstName,
+          "LastName": doctorData.LastName,
+          "Email": doctorData.Mail,
+          "Password": doctorData.Password,
+          "Pwz": doctorData.Pwz,
+        }),
+      })
+      .then((res) => { 
+        if(res.status >= 400 && res.status < 600) {
+          throw new Error("Bad response from server");
+        }
+        res.json()})
+      .then(
+        (result) => {
+          console.log(result);
+          navigate("/doc/main")
+          return response.json();
+        },
+        (error) => {
+          setError(error);
+        }
+      )
+    
+   
+    // navigate("/doc/main")
+    // return response.json();
   };
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const handleDataChange = async () => {
-    // setDoctorData({ ...doctorData, [prop]: event.target.data });
     setDoctorData();
     console.log(doctorData);
     doctorData.FirstName = document.getElementById("imie").value;
@@ -76,7 +75,7 @@ const Register = function () {
     doctorData.Mail = document.getElementById("mail").value;
     doctorData.Password = document.getElementById("haslo").value;
     doctorData.Pwz = document.getElementById("pwz").value;
-    doctorData.Id = "2436";
+    
 
     console.log(doctorData);
     try {
@@ -85,6 +84,7 @@ const Register = function () {
     } catch (err) {
       console.log(err);
     }
+
   };
   return (
     <div>
@@ -108,7 +108,6 @@ const Register = function () {
               id="imie"
               label="imię"
               variant="standard"
-              // data={doctorData.FirstName}
             />
 
             <TextField
@@ -116,7 +115,6 @@ const Register = function () {
               id="nazwisko"
               label="nazwisko"
               variant="standard"
-              // data={doctorData.lastName}
             />
 
             <TextField
@@ -124,7 +122,6 @@ const Register = function () {
               id="mail"
               label="mail"
               variant="standard"
-              // data={doctorData.mail}
             />
 
             <FormControl fullWidth variant="standard">
@@ -132,19 +129,12 @@ const Register = function () {
                 hasło
               </InputLabel>
               <Input
-                // type={values.showPassword ? "text" : "Password"}
-                // value={doctorData.password}
                 id="haslo"
                 label="haslo"
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
-                      aria-label="toggle password visibility"
-                      // onClick={handleClickShowPassword}
-                      //  onMouseDown={handleMouseDownPassword}
-                    >
-                      {/* {values.showPassword ? <VisibilityOff /> : <Visibility />} */}
-                    </IconButton>
+                      aria-label="toggle password visibility" />
                   </InputAdornment>
                 }
               />
@@ -156,7 +146,6 @@ const Register = function () {
               variant="standard"
               required
               id="pwz"
-              // data={doctorData.pwz}
             />
           </Grid>
 
@@ -171,9 +160,7 @@ const Register = function () {
                 fontFamily: "Sora",
                 borderColor: "rgba(106, 144, 100, 0.37)",
               }}
-              // handleDataChange={() => {
-              //  addDoctor;
-              // }}
+
               onClick={handleDataChange}
             >
               PRZEJDŹ DO STRONY GŁÓWNEJ

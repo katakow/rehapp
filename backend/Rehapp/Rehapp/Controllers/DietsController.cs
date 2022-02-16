@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Rehapp.Database;
 using Rehapp.Logic;
 using Rehapp.ViewModels;
 
@@ -9,9 +10,11 @@ namespace Rehapp.Controllers;
 public class DietsController: ControllerBase
 {
     private readonly DietsLogic _dietsLogic;
+    private readonly SymptomLogic _symtomLogic;
 
-    public DietsController(DietsLogic dietsLogic)
+    public DietsController(DietsLogic dietsLogic, SymptomLogic symptomLogic)
     {
+        _symtomLogic = symptomLogic;
         _dietsLogic = dietsLogic;
     }
 

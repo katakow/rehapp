@@ -34,16 +34,19 @@ builder.Services.AddScoped<DiseasesLogic>();
 builder.Services.AddScoped<PatientsLogic>();
 builder.Services.AddScoped<AllergiesLogic>();
 builder.Services.AddScoped<DietsLogic>();
+builder.Services.AddScoped<SymptomLogic>();
+
 builder.Services.AddIdentity<DoctorViewModel, IdentityRole>(options =>
 {
     options.SignIn.RequireConfirmedEmail = false;
 
 }).AddEntityFrameworkStores<RehappContext>() .AddDefaultTokenProviders();
 builder.Services.AddIdentityCore<PatientViewModel>(options =>
-{
-    options.SignIn.RequireConfirmedEmail = false;
+    {
+        options.SignIn.RequireConfirmedEmail = false;
 
-}).AddRoles<IdentityRole>().AddEntityFrameworkStores<RehappContext>().AddDefaultTokenProviders().AddSignInManager();
+    }).AddRoles<IdentityRole>().AddEntityFrameworkStores<RehappContext>().AddDefaultTokenProviders()
+    .AddSignInManager();
 
 builder.Services.AddIdentityCore<AdminViewModel>(options =>
 {

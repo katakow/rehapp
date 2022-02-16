@@ -55,4 +55,40 @@ public class AdminLogic
             LastName = deletedUser.LastName
         };
     }
+    public async Task<AllergiesViewModel?> DeleteAllergie(int id)
+    {
+        var deletedAllergie = await _rehappContext.Allergies.FirstOrDefaultAsync(p => p.Id == id);
+        _rehappContext.Allergies.Remove(deletedAllergie);
+        _rehappContext.SaveChanges();
+
+        return new AllergiesViewModel
+        {
+            Id = deletedAllergie.Id,
+            Label = deletedAllergie.Label
+        };
+    }
+    public async Task<DiseaseViewModel?> DeleteDiseases(int id)
+    {
+        var deletedDiseases = await _rehappContext.Disease.FirstOrDefaultAsync(p => p.Id == id);
+        _rehappContext.Disease.Remove(deletedDiseases);
+        _rehappContext.SaveChanges();
+
+        return new DiseaseViewModel()
+        {
+            Id = deletedDiseases.Id,
+            Label = deletedDiseases.Label
+        };
+    }
+    public async Task<DietsViewModel?> DeleteDiets(int id)
+    {
+        var deletedDiets = await _rehappContext.Diets.FirstOrDefaultAsync(p => p.Id == id);
+        _rehappContext.Diets.Remove(deletedDiets);
+        _rehappContext.SaveChanges();
+
+        return new DietsViewModel
+        {
+            Id = deletedDiets.Id,
+            Label = deletedDiets.Label
+        };
+    }
 }

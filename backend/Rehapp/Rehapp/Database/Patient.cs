@@ -16,6 +16,8 @@ public class Patient
     public string Disease { get; set; }
     public string CovidTest { get; set; }
     public string CovidCourse { get; set; }
+    
+    public ICollection<Symptom> symptoms { get; set; }
 
     public ICollection<Doctor> Doctors { get; set; }
 

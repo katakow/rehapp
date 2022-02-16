@@ -21,7 +21,7 @@ public class DoctorsLogic
             Pwz = doctorViewModel.Pwz, Mail = doctorViewModel.Mail,
             Password = doctorViewModel.Password
         };
-        
+
         var check = _rehappContext.Doctors.FirstOrDefault(s => s.Pwz == doctor.Pwz);
         if (check == null)
         {
@@ -33,7 +33,7 @@ public class DoctorsLogic
         {
             return null;
         }
-        
+
         //_rehappContext.Doctors.Add(doctor);
         //await _rehappContext.SaveChangesAsync();
         //return doctor;
@@ -52,12 +52,11 @@ public class DoctorsLogic
         }).ToListAsync();
     }
 
-    public async Task<DoctorViewModel?>GetDoctorByCredentials(string mail, string password)
+    public async Task<DoctorViewModel?> GetDoctorByCredentials(string mail, string password)
     {
         var doctor = await _rehappContext.Doctors.FirstOrDefaultAsync(d => d.Mail == mail);
         if (doctor != null)
         {
-
             return new DoctorViewModel
             {
                 FirstName = doctor.FirstName,
@@ -70,7 +69,6 @@ public class DoctorsLogic
         }
 
         return null;
-
     }
 
     public async Task<DoctorViewModel> GetDoctorAsync(int Id)

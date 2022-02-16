@@ -1,3 +1,4 @@
+ @@ -1,39 +0,0 @@
 *.swp
 *.*~
 project.lock.json
@@ -37,3 +38,4 @@ msbuild.wrn
 
 # Visual Studio 2015
 .vs/
+No newline at end of file

@@ -7,7 +7,7 @@ using Rehapp.ViewModels;
 namespace Rehapp.Controllers;
 
 [ApiController]
-[EnableCors("AllowAllHeaders")]
+// [EnableCors("AllowAllHeaders")]
 [Route("[controller]")]
 public class DiseasesController : ControllerBase
 {
@@ -30,6 +30,6 @@ public class DiseasesController : ControllerBase
     public async Task<IActionResult> Create(DiseaseViewModel diseaseViewModel)
     {
         var disease = await _diseasesLogic.AddDiseaseAsync(diseaseViewModel);
-        return Ok(disease);
+        return Ok(disease.Id);
     }
 }

@@ -9,7 +9,6 @@ import Main from "./pages/Main";
 import Test from "./pages/Test";
 import ErrorPage from "./pages/ErrorPage";
 import Info from "./pages/Info";
-import RegisterEnd from "./pages/user/register/RegisterEnd";
 import DocMain from "./pages/doc/DocMain";
 import DocProfile from "./pages/doc/DocProfile";
 import DocInfo from "./pages/doc/DocInfo";
@@ -40,7 +39,6 @@ const App = function () {
           <Route path="/main" element={<Main />} />
           <Route path="/info" element={<Info />} />
           <Route path="/register" element={<RegisterDefault />} />
-          <Route path="/register/end" element={<RegisterEnd />} />
 
           <Route path="/user/profile" element={<UserProfile />} />
           <Route path="/user/profileEdit" element={<UserEdit />} />

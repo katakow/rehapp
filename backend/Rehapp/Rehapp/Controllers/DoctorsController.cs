@@ -46,7 +46,7 @@ public class DoctorsController : ControllerBase
         return Ok(doctor);
     }
 
-    [HttpPost("Doctors/register")]
+    [HttpPost("/Doctors/register")]
     public async Task<IActionResult> Registration([FromBody] RegistrationDoctor models)
     {
         DoctorViewModel Test = new DoctorViewModel();

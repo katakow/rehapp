@@ -13,10 +13,6 @@ namespace Rehapp.ViewModels
             ErrorMessage = "Entered email is not valid!")]
         public string Email { get; set; }
 
-       //[Required(AllowEmptyStrings = false, ErrorMessage = "Login jest wymagany!")]
-        //[MinLength(5, ErrorMessage = "Login nie może być krótszy niż 5 znaków!")]
-        //public string Login { get; set; }
-
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{8,}$",
             ErrorMessage = "Password must have a letter, a number, a special symbol and at least 8 characters!")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Hasło jest wymagane!")]

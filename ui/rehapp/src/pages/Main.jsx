@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import { Button, Container, Grid } from "@mui/material";
 import CoronavirusIcon from "@mui/icons-material/Coronavirus";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +9,7 @@ import LogInDoctor from "../coponents/mainPages/LogInDoctor";
 
 const Main = function () {
   const navigate = useNavigate();
+
   return (
     <div>
       <NavBarLogin />

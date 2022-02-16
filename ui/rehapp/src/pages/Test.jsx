@@ -1,17 +1,23 @@
 /* eslint-disable no-unused-vars */
 import { Button, TextField } from "@mui/material";
-import Axios from "axios";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 import addDiseases from "../apiService";
 
 const Test = function () {
   const [diseases, setDiseases] = useState([]);
 
   const getDiseases = () => {
-    Axios.get("http://localhost:5080/Diseases").then((response) => {
-      setDiseases(response.data);
-      console.log(response);
-    });
+    fetch("http://localhost:5080/Diseases", {
+      headers: { accept: "*/*", "Content-Type": "application/json" },
+      method: "GET",
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setDiseases(data);
+      });
   };
 
   return (

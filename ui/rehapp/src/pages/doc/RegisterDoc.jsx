@@ -1,5 +1,4 @@
 /* eslint-disable no-shadow */
-/* eslint-disable prettier/prettier */
 /* eslint-disable react/prop-types */
 
 import * as React from "react";
@@ -10,13 +9,11 @@ import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
 import FormControl from "@mui/material/FormControl";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import NavBar from "../../coponents/mainPages/NavBar";
 
-
 const Register = function () {
-
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [doctorData, setDoctorData] = useState({
     FirstName: "",
     LastName: "",
@@ -25,40 +22,36 @@ const Register = function () {
     Pwz: "",
     Id: "",
   });
-const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
   const addDoctor = async () => {
-
     const response = await fetch("http://localhost:5080/Doctors/register", {
-      // mode: "cors",
       headers: { accept: "*/*", "Content-Type": "application/json" },
       method: "POST",
 
-
-        body: JSON.stringify({
-          "FirstName": doctorData.FirstName,
-          "LastName": doctorData.LastName,
-          "Email": doctorData.Mail,
-          "Password": doctorData.Password,
-          "Pwz": doctorData.Pwz,
-        }),
-      })
-      .then((res) => { 
-        if(res.status >= 400 && res.status < 600) {
-          throw new Error("NIEPOPRAWNE DANE LOGOWANIA")
-          
+      body: JSON.stringify({
+        FirstName: doctorData.FirstName,
+        LastName: doctorData.LastName,
+        Email: doctorData.Mail,
+        Password: doctorData.Password,
+        Pwz: doctorData.Pwz,
+      }),
+    })
+      .then((res) => {
+        if (res.status >= 400 && res.status < 600) {
+          throw new Error("NIEPOPRAWNE DANE LOGOWANIA");
         }
-        res.json()})
+        res.json();
+      })
       .then(
         (result) => {
           console.log(result);
-          navigate("/doc/main")
           return response.json();
+          // navigate("/doc/main");
         },
         (error) => {
-          
           setError(error);
         }
-      )
+      );
   };
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -72,7 +65,6 @@ const [error, setError] = useState(null);
     doctorData.Mail = document.getElementById("mail").value;
     doctorData.Password = document.getElementById("haslo").value;
     doctorData.Pwz = document.getElementById("pwz").value;
-    
 
     console.log(doctorData);
     try {
@@ -81,7 +73,6 @@ const [error, setError] = useState(null);
     } catch (err) {
       console.log(err);
     }
-
   };
   return (
     <div>
@@ -100,12 +91,7 @@ const [error, setError] = useState(null);
       >
         <Grid item>
           <Grid>
-            <TextField
-              fullWidth
-              id="imie"
-              label="imię"
-              variant="standard"
-            />
+            <TextField fullWidth id="imie" label="imię" variant="standard" />
 
             <TextField
               fullWidth
@@ -114,12 +100,7 @@ const [error, setError] = useState(null);
               variant="standard"
             />
 
-            <TextField
-              fullWidth
-              id="mail"
-              label="mail"
-              variant="standard"
-            />
+            <TextField fullWidth id="mail" label="mail" variant="standard" />
 
             <FormControl fullWidth variant="standard">
               <InputLabel htmlFor="standard-adornment-password">
@@ -130,8 +111,7 @@ const [error, setError] = useState(null);
                 label="haslo"
                 endAdornment={
                   <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility" />
+                    <IconButton aria-label="toggle password visibility" />
                   </InputAdornment>
                 }
               />
@@ -157,7 +137,6 @@ const [error, setError] = useState(null);
                 fontFamily: "Sora",
                 borderColor: "rgba(106, 144, 100, 0.37)",
               }}
-
               onClick={handleDataChange}
             >
               PRZEJDŹ DO STRONY GŁÓWNEJ

@@ -74,6 +74,7 @@ public class PatientsController : ControllerBase
         else
         {
             return Ok("E - mail jest w bazie!");
+            
         }
     }
 
@@ -107,4 +108,46 @@ public class PatientsController : ControllerBase
 
         return Ok(user);
     }
+    
+    /* [HttpGet("/Patient/EditData")]
+    public async Task <IActionResult> EditPersonalData()
+    {
+        var patient = await userManager.GetPatientAsync();
+        PatientViewModel _patient = new PatientViewModel
+        {
+            FirstName = patient.FirstName,
+            LastName = patient.LastName,
+            Mail = patient.Mail,
+            Pesel = patient.Pesel,
+            Password = patient.Password,
+            Allergie = patient.Allergie,
+            Diet = patient.Diet,
+            Disease = patient.Disease,
+            CovidCourse = patient.CovidCourse,
+            CovidTest = patient.CovidTest
+        };
+
+        return Ok(_patient);
+    }
+    
+    [HttpPost("/Patient/Update")]
+    public async Task<IActionResult> EditPersonalData(PatientViewModel model)
+    {
+        if(ModelState.IsValid)
+        {
+            var user = await userManager.GetUserAsync(HttpContext.User);
+
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+            user.Street = model.Street;
+            user.ApartmentNumber = model.ApartmentNumber;
+            user.Postcode = model.Postcode;
+            user.City = model.City;
+            user.PhoneNumber = model.PhoneNumber;
+
+            Account updatedAccount = accountRepository.Update(user);
+            return RedirectToAction("Index");
+        }
+        return View();
+    }*/
 }

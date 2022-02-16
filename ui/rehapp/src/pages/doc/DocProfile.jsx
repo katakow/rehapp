@@ -11,7 +11,7 @@ const DocProfile = function ({ title }) {
   const [doctor, setDoctor] = useState(null);
   const [doctorID, setDoctorID] = useState(1);
 
-  const getPatient = useCallback(() => {
+  const getDoctor = useCallback(() => {
     Axios.get(`http://localhost:5080/Doctors/${doctorID}`).then((response) => {
       setDoctor(response.data);
       console.log(response);
@@ -19,8 +19,8 @@ const DocProfile = function ({ title }) {
   }, [doctorID]);
 
   useEffect(() => {
-    getPatient();
-  }, [getPatient]);
+    getDoctor();
+  }, [getDoctor]);
 
   useEffect(() => {
     setDoctorID(1);

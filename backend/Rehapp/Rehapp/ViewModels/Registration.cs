@@ -31,10 +31,8 @@ namespace Rehapp.ViewModels
         [MinLength(3, ErrorMessage = "Nazwisko nie może być krótsze niż 3 znaki!")]
         public string LastName { get; set; }
 
-        //[RegularExpression(@"^(?=.*[0-9])$", ErrorMessage = "PESEL musi składać się z samych cyfr!")]
-        //[MinLength(11, ErrorMessage = "PESEL musi mieć 11 znaków!")]
-        //[MaxLength(11, ErrorMessage = "PESEL musi mieć 11 znaków!")]
-        //[Required(AllowEmptyStrings = false, ErrorMessage = "PESEL jest wymagany!")]
+        [RegularExpression(@"^([0-9]){11}$", ErrorMessage = "PESEL musi składać się z 11 cyfr!")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "PESEL jest wymagany!")]
         public string Pesel { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = " Należy wybrać przynjamniej jedną ditę lub 'brak'  !")]

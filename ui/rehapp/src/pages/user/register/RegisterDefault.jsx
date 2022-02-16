@@ -19,7 +19,7 @@ import NavBar from "../../../coponents/mainPages/NavBar";
 
 const RegisterDefault = function () {
   const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [diseases, setDiseases] = useState([]);
   const [allergies, setAlleriges] = useState([]);
   const [diet, setDiet] = useState([]);
@@ -29,11 +29,11 @@ const RegisterDefault = function () {
       .then((res) => res.json())
       .then(
         (result) => {
-          setIsLoaded(true);
+          // setIsLoaded(true);
           setDiseases(result);
         },
         (error) => {
-          setIsLoaded(true);
+          // setIsLoaded(true);
           setError(error);
         }
       );
@@ -43,11 +43,11 @@ const RegisterDefault = function () {
       .then((res) => res.json())
       .then(
         (result) => {
-          setIsLoaded(true);
+          // setIsLoaded(true);
           setAlleriges(result);
         },
         (error) => {
-          setIsLoaded(true);
+          //  setIsLoaded(true);
           setError(error);
         }
       );
@@ -57,11 +57,11 @@ const RegisterDefault = function () {
       .then((res) => res.json())
       .then(
         (result) => {
-          setIsLoaded(true);
+          // setIsLoaded(true);
           setDiet(result);
         },
         (error) => {
-          setIsLoaded(true);
+          // setIsLoaded(true);
           setError(error);
         }
       );
@@ -69,9 +69,6 @@ const RegisterDefault = function () {
 
   if (error) {
     return <div>Error: {error.message}</div>;
-  }
-  if (!isLoaded) {
-    return <div>Loading...</div>;
   }
 
   return (

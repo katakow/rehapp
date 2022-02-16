@@ -6,6 +6,7 @@ import { useState } from "react";
 import Footer from "./coponents/Footer";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
+import Test from "./pages/Test";
 import ErrorPage from "./pages/ErrorPage";
 import Info from "./pages/Info";
 import RegisterEnd from "./pages/user/register/RegisterEnd";
@@ -34,6 +35,8 @@ const App = function () {
       <UserContext.Provider value={value}>
         <Routes>
           <Route path="/" element={<Start />} />
+          <Route path="/Test" element={<Test />} />
+
           <Route path="/main" element={<Main />} />
           <Route path="/info" element={<Info />} />
           <Route path="/register" element={<RegisterDefault />} />

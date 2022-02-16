@@ -12,7 +12,7 @@ import FormControl from "@mui/material/FormControl";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../coponents/mainPages/NavBar";
-// import loggedPerson from "../LoggedPerson";
+
 
 const Register = function () {
 
@@ -45,7 +45,8 @@ const [error, setError] = useState(null);
       })
       .then((res) => { 
         if(res.status >= 400 && res.status < 600) {
-          throw new Error("Bad response from server");
+          throw new Error("NIEPOPRAWNE DANE LOGOWANIA")
+          
         }
         res.json()})
       .then(
@@ -55,13 +56,10 @@ const [error, setError] = useState(null);
           return response.json();
         },
         (error) => {
+          
           setError(error);
         }
       )
-    
-   
-    // navigate("/doc/main")
-    // return response.json();
   };
   if (error) {
     return <div>Error: {error.message}</div>;

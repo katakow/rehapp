@@ -1,21 +1,16 @@
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/no-cycle */
 /* eslint-disable react/prop-types */
 import { Grid } from "@mui/material";
 import FormLabel from "@mui/material/FormLabel";
 import PersonIcon from "@mui/icons-material/Person";
 import Axios from "axios";
-import { useEffect, useState, useCallback, useContext } from "react";
+import { useEffect, useState, useCallback } from "react";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 import EditDoc from "../../coponents/docPage/buttons/EditDoc";
-import UserContext from "../../App";
 
 const DocProfile = function ({ title }) {
   const [doctor, setDoctor] = useState(null);
   const [doctorID, setDoctorID] = useState(1);
 
-  const { user, setUser } = useContext(UserContext);
   const getPatient = useCallback(() => {
     Axios.get(`http://localhost:5080/Doctors/${doctorID}`).then((response) => {
       setDoctor(response.data);

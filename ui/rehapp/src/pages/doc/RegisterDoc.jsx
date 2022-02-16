@@ -57,7 +57,7 @@ const Register = function () {
   });
 
   const addDoctor = async () => {
-    const response = await fetch("https://localhost:7080/Doctors/register", {
+    const response = await fetch("http://localhost:5080/Doctors/register", {
       mode: "cors",
       headers: { accept: "*/*", "Content-Type": "application/json" },
       method: "POST",

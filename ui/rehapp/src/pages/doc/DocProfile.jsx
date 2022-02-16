@@ -9,7 +9,7 @@ import EditDoc from "../../coponents/docPage/buttons/EditDoc";
 
 const DocProfile = function ({ title }) {
   const [doctor, setDoctor] = useState(null);
-  const [doctorID, setDoctorID] = useState(1);
+  const [doctorID, setDoctorID] = useState(0);
 
   const getDoctor = useCallback(() => {
     Axios.get(`http://localhost:5080/Doctors/${doctorID}`).then((response) => {
@@ -19,11 +19,12 @@ const DocProfile = function ({ title }) {
   }, [doctorID]);
 
   useEffect(() => {
-    getDoctor();
-  }, [getDoctor]);
+    if (doctorID) getDoctor();
+  }, [getDoctor, doctorID]);
 
   useEffect(() => {
-    setDoctorID(1);
+    const userId = localStorage.getItem("userId");
+    setDoctorID(userId);
   }, [setDoctorID]);
 
   return (
@@ -74,7 +75,9 @@ const DocProfile = function ({ title }) {
                 <Grid item>
                   <FormLabel component="legend">e-mail</FormLabel>
                   <FormLabel component="legend">
-                    {!!doctor && <strong key={doctor.id}>{doctor.em} </strong>}
+                    {!!doctor && (
+                      <strong key={doctor.id}>{doctor.mail} </strong>
+                    )}
                   </FormLabel>
                 </Grid>
               </Grid>

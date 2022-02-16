@@ -142,16 +142,6 @@ const RegisterDefault = function () {
     return <div>Error: {error.message}</div>;
   }
 
-  const handleDiseaseChange = (checked, disease) => {
-    if (checked) {
-      setSelectedDiaseases([...selectedDiaseases, disease]);
-    } else {
-      setSelectedDiaseases(
-        selectedDiaseases.filter((item) => item.id !== disease.id)
-      );
-    }
-  };
-
   const handleDataChange = async () => {
     setPatientData();
     console.log(patientData);
@@ -161,7 +151,7 @@ const RegisterDefault = function () {
     patientData.Password = document.getElementById("haslo").value;
     patientData.Pesel = document.getElementById("pesel").value;
     patientData.Diet = "brak";
-    patientData.Diseases = "brak";
+    patientData.Diseases = selectedDiaseases;
     patientData.Allergies = "brak";
     patientData.CovidCourse = document.getElementById("covid").value;
     patientData.CovidTest = document.getElementById("test").value;
@@ -174,6 +164,18 @@ const RegisterDefault = function () {
       console.log(err);
     }
   };
+
+  const handleDiseaseChange = (checked, disease) => {
+    if (checked) {
+      setSelectedDiaseases([...selectedDiaseases, disease]);
+    } else {
+      setSelectedDiaseases(
+        selectedDiaseases.filter((item) => item.id !== disease.id)
+      );
+    }
+    handleDataChange();
+  };
+
   return (
     <div>
       <NavBar />

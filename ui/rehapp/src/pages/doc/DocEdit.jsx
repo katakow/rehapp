@@ -9,9 +9,9 @@ import EditDocSave from "../../coponents/docPage/buttons/EditDocSave";
 
 const DocEdit = function ({ title }) {
   const [doctor, setDoctor] = useState(null);
-  const [doctorID, setDoctorID] = useState(1);
+  const [doctorID, setDoctorID] = useState(0);
 
-  const getPatient = useCallback(() => {
+  const getDoctor = useCallback(() => {
     Axios.get(`http://localhost:5080/Doctors/${doctorID}`).then((response) => {
       setDoctor(response.data);
       console.log(response);
@@ -19,11 +19,12 @@ const DocEdit = function ({ title }) {
   }, [doctorID]);
 
   useEffect(() => {
-    getPatient();
-  }, [getPatient]);
+    if (doctorID) getDoctor();
+  }, [getDoctor, doctorID]);
 
   useEffect(() => {
-    setDoctorID(1);
+    const userId = localStorage.getItem("userId");
+    setDoctorID(userId);
   }, [setDoctorID]);
 
   return (

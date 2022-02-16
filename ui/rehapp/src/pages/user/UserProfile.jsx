@@ -9,7 +9,7 @@ import EditUser from "../../coponents/userPage/buttons/EditUser";
 
 const UserProfile = function ({ title }) {
   const [patient, setPatient] = useState(null);
-  const [patientID, setPatientID] = useState(7);
+  const [patientID, setPatientID] = useState(0);
 
   const getPatient = useCallback(() => {
     Axios.get(`http://localhost:5080/Patients/${patientID}`).then(
@@ -21,11 +21,13 @@ const UserProfile = function ({ title }) {
   }, [patientID]);
 
   useEffect(() => {
-    getPatient();
-  }, [getPatient]);
+    if (patientID) getPatient();
+  }, [getPatient, patientID]);
 
   useEffect(() => {
-    setPatientID(7);
+    const userId = localStorage.getItem("userId");
+    console.log(userId);
+    setPatientID(userId);
   }, [setPatientID]);
 
   return (

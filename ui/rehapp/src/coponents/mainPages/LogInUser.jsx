@@ -4,12 +4,9 @@
 import { Grid, TextField, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { login } from "../../auth";
 
 const LogIn = function () {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   const [patientData, setPatientData] = useState({
     Mail: "",
@@ -17,16 +14,9 @@ const LogIn = function () {
     Id: "",
   });
   const [error, setError] = useState(null);
-  const submitForm = () => {
-    if (email === "" || password === "") {
-      setError("Fields are required");
-      return;
-    }
-    login({ email, password });
-  };
 
   const loginPatient = async () => {
-    const response = await fetch("http://localhost:5080/Patients/Login", {
+    fetch("http://localhost:5080/Patients/Login", {
       headers: { accept: "*/*", "Content-Type": "application/json" },
       method: "POST",
 
@@ -39,12 +29,13 @@ const LogIn = function () {
         if (res.status >= 400 && res.status < 600) {
           throw new Error("NIEPOPRAWNE DANE LOGOWANIA");
         }
-        res.json();
+        return res.json();
       })
       .then(
         (result) => {
-          console.log(result);
-          return response.json();
+          console.log("result", result);
+          localStorage.setItem("userId", result);
+          // return response.json();
           // navigate("/doc/main");
         },
         (error) => {
@@ -79,19 +70,10 @@ const LogIn = function () {
           id="email"
           label="e-mail / PESEL"
           variant="standard"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
         />
       </Grid>
       <Grid item>
-        <TextField
-          fullWidth
-          id="password"
-          label="hasło"
-          variant="standard"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <TextField fullWidth id="password" label="hasło" variant="standard" />
       </Grid>
       <Grid item>
         <Button
@@ -107,7 +89,6 @@ const LogIn = function () {
           onClick={() => {
             handleDataChange();
             navigate("/user/main");
-            submitForm();
           }}
         >
           ZALOGUJ SIĘ

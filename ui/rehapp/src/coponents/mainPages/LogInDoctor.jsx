@@ -13,7 +13,7 @@ const LogInDoctor = function () {
   });
   const [error, setError] = useState(null);
   const loginDoctor = async () => {
-    const response = await fetch("http://localhost:5080/Doctors/Login", {
+    fetch("http://localhost:5080/Doctors/Login", {
       headers: { accept: "*/*", "Content-Type": "application/json" },
       method: "POST",
 
@@ -26,13 +26,12 @@ const LogInDoctor = function () {
         if (res.status >= 400 && res.status < 600) {
           throw new Error("NIEPOPRAWNE DANE LOGOWANIA");
         }
-        res.json();
+        return res.json();
       })
       .then(
         (result) => {
-          console.log(result);
-          return response.json();
-          // navigate("/doc/main");
+          console.log("result", result);
+          localStorage.setItem("userId", result);
         },
         (error) => {
           setError(error);

@@ -9,13 +9,25 @@ import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Axios from "axios";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
 
 const DocPatients = function ({ title }) {
   const navigate = useNavigate();
   const [patients, setPatients] = useState([]);
+  const [patient, setPatient] = useState(null);
+  const [patientID, setPatientID] = useState(0);
+
+  const getPatient = useCallback(() => {
+    Axios.get(`http://localhost:5080/Patients/${patientID}`).then(
+      (response) => {
+        setPatient(response.data);
+        console.log(response);
+        console.log(patient);
+      }
+    );
+  }, [patientID]);
 
   const getPatients = () => {
     Axios.get("http://localhost:5080/Patients").then((response) => {
@@ -24,6 +36,15 @@ const DocPatients = function ({ title }) {
     });
   };
 
+  useEffect(() => {
+    if (patientID) getPatient();
+  }, [getPatient, patientID]);
+
+  useEffect(() => {
+    const userId = localStorage.getItem("userId");
+    console.log(userId);
+    setPatientID(userId);
+  }, [setPatientID]);
   return (
     <div>
       <NavBarekDoc />

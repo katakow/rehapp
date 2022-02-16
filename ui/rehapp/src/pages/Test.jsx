@@ -5,16 +5,7 @@ import { useEffect, useState } from "react";
 import addDiseases from "../apiService";
 
 const Test = function () {
-  // const [error, setError] = useState(null);
-  // const [isLoaded, setIsLoaded] = useState(false);
   const [diseases, setDiseases] = useState([]);
-  // const config = {
-  //   mode: "cors",
-  //   headers: {
-  //     accept: "*/*",
-  //     "Content-Type": "application/json",
-  //   },
-  // };
 
   const getDiseases = () => {
     Axios.get("http://localhost:5080/Diseases").then((response) => {

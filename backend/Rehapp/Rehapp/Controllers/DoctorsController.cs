@@ -56,8 +56,6 @@ public class DoctorsController : ControllerBase
         Test.Password = models.Password;
         Test.Pwz = models.Pwz;
 
-        //TODO
-        // POPRAWIC RETURNY 
         if (await this._doctorsLogic.AddDoctorAsync(Test) != null)
         {
             return Ok(Test);

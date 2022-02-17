@@ -18,11 +18,7 @@ builder.Services.AddScoped<RehappContext>();
 builder.Services.AddDbContext<RehappContext>();
 builder.Services.AddScoped<DoctorsLogic>();
 builder.Services.AddScoped<AdminLogic>();
-builder.Services.AddScoped<DiseasesLogic>();
 builder.Services.AddScoped<PatientsLogic>();
-builder.Services.AddScoped<AllergiesLogic>();
-builder.Services.AddScoped<DietsLogic>();
-builder.Services.AddScoped<SymptomLogic>();
 
 builder.Services.AddIdentity<DoctorViewModel, IdentityRole>(options =>
 {

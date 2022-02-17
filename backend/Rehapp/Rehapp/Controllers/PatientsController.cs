@@ -14,17 +14,15 @@ namespace Rehapp.Controllers;
 public class PatientsController : ControllerBase
 {
     private readonly PatientsLogic _patientsLogic;
-    private readonly SymptomLogic _symptomLogic;
     private readonly SignInManager<PatientViewModel> _signInManager;
     private readonly UserManager<PatientViewModel> _userManager;
 
     public PatientsController(PatientsLogic patientLogic, SignInManager<PatientViewModel> signInManager,
-        UserManager<PatientViewModel> userManager, SymptomLogic symptomLogic)
+        UserManager<PatientViewModel> userManager)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _patientsLogic = patientLogic;
-        _symptomLogic = symptomLogic;
     }
 
     [HttpGet]
@@ -58,15 +56,10 @@ public class PatientsController : ControllerBase
         Test.LastName = model.LastName;
         Test.Mail = model.Email;
         Test.Password = model.Password;
-        //Test.Diet = model.Diet;
-        //Test.Disease = model.Diseases;
-        //Test.Allergie = model.Allergie;
         Test.CovidCourse = model.CovidCourse;
         Test.CovidTest = model.CovidTest;
         Test.Pesel = model.Pesel;
 
-        //TODO
-        // POPRAWIC RETURNY 
         if (await this._patientsLogic.AddPatientAsync(Test) != null)
         {
             return Ok(Test);
@@ -74,7 +67,6 @@ public class PatientsController : ControllerBase
         else
         {
             return Ok("E - mail jest w bazie!");
-            
         }
     }
 
@@ -93,61 +85,4 @@ public class PatientsController : ControllerBase
         }
     }
 
-    [HttpPost("/Patient/addSymptoms")]
-    public async Task<IActionResult> addSymptoms([FromBody] ICollection<SymptomViewModel> symptoms,
-        [FromQuery] string mail)
-    {
-        var user = _patientsLogic.GetPatientByMail(mail);
-        foreach (var el in symptoms)
-        {
-            SymptomViewModel symptom = new SymptomViewModel();
-            symptom.Id = user.Id;
-            symptom.symptom = el.symptom;
-            await _symptomLogic.addSymptom(symptom);
-        }
-
-        return Ok(user);
-    }
-    
-    /* [HttpGet("/Patient/EditData")]
-    public async Task <IActionResult> EditPersonalData()
-    {
-        var patient = await userManager.GetPatientAsync();
-        PatientViewModel _patient = new PatientViewModel
-        {
-            FirstName = patient.FirstName,
-            LastName = patient.LastName,
-            Mail = patient.Mail,
-            Pesel = patient.Pesel,
-            Password = patient.Password,
-            Allergie = patient.Allergie,
-            Diet = patient.Diet,
-            Disease = patient.Disease,
-            CovidCourse = patient.CovidCourse,
-            CovidTest = patient.CovidTest
-        };
-
-        return Ok(_patient);
-    }
-    
-    [HttpPost("/Patient/Update")]
-    public async Task<IActionResult> EditPersonalData(PatientViewModel model)
-    {
-        if(ModelState.IsValid)
-        {
-            var user = await userManager.GetUserAsync(HttpContext.User);
-
-            user.FirstName = model.FirstName;
-            user.LastName = model.LastName;
-            user.Street = model.Street;
-            user.ApartmentNumber = model.ApartmentNumber;
-            user.Postcode = model.Postcode;
-            user.City = model.City;
-            user.PhoneNumber = model.PhoneNumber;
-
-            Account updatedAccount = accountRepository.Update(user);
-            return RedirectToAction("Index");
-        }
-        return View();
-    }*/
 }

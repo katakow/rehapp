@@ -30,16 +30,6 @@ namespace Rehapp.ViewModels
         [RegularExpression(@"^([0-9]){11}$", ErrorMessage = "PESEL musi składać się z 11 cyfr!")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "PESEL jest wymagany!")]
         public string Pesel { get; set; }
-
-       // [Required(AllowEmptyStrings = false, ErrorMessage = " Należy wybrać przynjamniej jedną ditę lub 'brak'  !")]
-       
-       // public string Diet { get; set; }
-
-       // [Required(AllowEmptyStrings = false, ErrorMessage = "Należy wybrać przynjamniej jedną alergię lub 'brak' !")]
-      //  public string Allergie { get; set; }
-
-       // [Required(AllowEmptyStrings = false, ErrorMessage = "Należy wybrać przynjamniej jedną chorbę lub 'brak' !")]
-       // public string Diseases { get; set; }
         
         [RegularExpression(@"^(tak|nie)$", ErrorMessage = "Proszę wpisać jedną z dwóch opcji: tak; nie")]
 

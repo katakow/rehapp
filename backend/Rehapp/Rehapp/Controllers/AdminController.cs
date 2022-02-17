@@ -49,19 +49,5 @@ public class AdminController : ControllerBase
     {
         return Ok(await _adminLogic.DeleteDoctor(id));
     }
-    [HttpDelete("/Allergies")]
-    public async Task<IActionResult> DeleteAllergie([FromQuery] int id)
-    {
-        return Ok(await _adminLogic.DeleteDoctor(id));
-    }
-    [HttpDelete("/Diseases")]
-    public async Task<IActionResult> DeleteDiseases([FromQuery] int id)
-    {
-        return Ok(await _adminLogic.DeleteDiseases(id));
-    }
-    [HttpDelete("/Diets")]
-    public async Task<IActionResult> DeleteDiets([FromQuery] int id)
-    {
-        return Ok(await _adminLogic.DeleteDiets(id));
-    }
+  
 }

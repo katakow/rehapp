@@ -22,8 +22,7 @@ public class PatientsLogic
         var patient = new PatientViewModel()
         {
             FirstName = patientViewModel.FirstName, LastName = patientViewModel.LastName,
-            Pesel = patientViewModel.Pesel, Mail = patientViewModel.Mail, //Allergie = patientViewModel.Allergie,
-           // Diet = patientViewModel.Diet, Disease = patientViewModel.Disease,
+            Pesel = patientViewModel.Pesel, Mail = patientViewModel.Mail, 
             Password = patientViewModel.Password,
             CovidCourse = patientViewModel.CovidCourse,
             CovidTest = patientViewModel.CovidTest,
@@ -64,9 +63,6 @@ public class PatientsLogic
             Mail = patient.Mail,
             Pesel = patient.Pesel,
             Password = patient.Password,
-           // Allergie = patient.Allergie,
-         //   Diet = patient.Diet,
-          //  Disease = patient.Disease,
             CovidCourse = patient.CovidCourse,
             CovidTest = patient.CovidTest
         };
@@ -90,9 +86,6 @@ public class PatientsLogic
                 Mail = patient.Mail,
                 Password = patient.Password,
                 Pesel = patient.Pesel,
-               // Diet = patient.Diet,
-               // Allergie = patient.Allergie,
-               // Disease = patient.Disease,
                 CovidTest = patient.CovidTest,
                 CovidCourse = patient.CovidCourse
             };

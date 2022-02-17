@@ -1,110 +1,122 @@
 /* eslint-disable no-shadow */
-import { useState, React, useCallback, useEffect } from "react";
-
+import { useState, React } from "react";
+import { useNavigate } from "react-router-dom";
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
 import {
   Grid,
   Button,
   TextField,
   FormControl,
   FormLabel,
-  Radio,
-  RadioGroup,
-  FormGroup,
-  FormControlLabel,
-  Checkbox,
+  // Radio,
+  // RadioGroup,
+  // FormGroup,
+  // FormControlLabel,
+  // Checkbox,
   InputLabel,
   Input,
 } from "@mui/material";
-
-import InputAdornment from "@mui/material/InputAdornment";
-import IconButton from "@mui/material/IconButton";
-
-// import { useNavigate } from "react-router-dom";
-
-import NavBar from "../../../coponents/mainPages/NavBar";
+import NavBar from "../../coponents/mainPages/NavBar";
 
 const RegisterDefault = function () {
+  const navigate = useNavigate();
+
   // zapisz dane usera
-  // const navigate = useNavigate();
   const [patientData, setPatientData] = useState({
     FirstName: "",
     LastName: "",
     Mail: "",
     Password: "",
     Pesel: "",
-    Diet: "",
-    Allergies: "",
-    Diseases: "",
+    // Diet: "",
+    // Allergies: "",
+    // Diseases: "",
     CovidTest: "",
     CovidCourse: "",
     Id: "",
   });
   const [error, setError] = useState(null);
+  // const [diseases, setDiseases] = useState([]);
+  // const [selectedDiaseases, setSelectedDiaseases] = useState([]);
+  // const [selectedDiets, setSelectedDiets] = useState([]);
+  // const [selectedAllergies, setSelectedAllergies] = useState([]);
+  // const [allergies, setAlleriges] = useState([]);
+  // const [diet, setDiets] = useState([]);
 
-  const [diseases, setDiseases] = useState([]);
-  const [selectedDiaseases, setSelectedDiaseases] = useState([]);
-  const [allergies, setAlleriges] = useState([]);
-  const [diet, setDiets] = useState([]);
+  // wyswietlanie chorób z bazy
 
-  // wyswietlanie diet, chorób i alergi z bazy
+  // const getDiseases = useCallback(() => {
+  //   fetch("http://localhost:5080/Diseases", {
+  //     headers: { accept: "*/*", "Content-Type": "application/json" },
+  //     method: "GET",
+  //   })
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setDiseases(data);
+  //     });
+  // }, [diseases.id]);
 
-  const getDiseases = useCallback(() => {
-    fetch("http://localhost:5080/Diseases", {
-      headers: { accept: "*/*", "Content-Type": "application/json" },
-      method: "GET",
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setDiseases(data);
-      });
-  }, [diseases.id]);
+  // useEffect(() => {
+  //   getDiseases();
+  // }, [getDiseases]);
 
-  useEffect(() => {
-    getDiseases();
-  }, [getDiseases]);
+  // useEffect(() => {
+  //   console.log(selectedDiaseases);
+  // }, [selectedDiaseases]);
 
-  useEffect(() => {
-    console.log(selectedDiaseases);
-  }, [selectedDiaseases]);
+  // // wyswietlanie alergi z bazy
 
-  const getAllergies = useCallback(() => {
-    fetch("http://localhost:5080/Allergies", {
-      headers: { accept: "*/*", "Content-Type": "application/json" },
-      method: "GET",
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setAlleriges(data);
-      });
-  }, [allergies.id]);
+  // const getAllergies = useCallback(() => {
+  //   fetch("http://localhost:5080/Allergies", {
+  //     headers: { accept: "*/*", "Content-Type": "application/json" },
+  //     method: "GET",
+  //   })
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setAlleriges(data);
+  //     });
+  // }, [allergies.id]);
 
-  useEffect(() => {
-    getAllergies();
-  }, [getAllergies]);
+  // useEffect(() => {
+  //   getAllergies();
+  // }, [getAllergies]);
 
-  const getDiets = useCallback(() => {
-    fetch("http://localhost:5080/Diets", {
-      headers: { accept: "*/*", "Content-Type": "application/json" },
-      method: "GET",
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setDiets(data);
-      });
-  }, [diet.id]);
+  // useEffect(() => {
+  //   console.log(selectedAllergies);
+  // }, [selectedAllergies]);
 
-  useEffect(() => {
-    getDiets();
-  }, [getDiets]);
+  // // wyswietlanie diet z bazy
+
+  // const getDiets = useCallback(() => {
+  //   fetch("http://localhost:5080/Diets", {
+  //     headers: { accept: "*/*", "Content-Type": "application/json" },
+  //     method: "GET",
+  //   })
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setDiets(data);
+  //     });
+  // }, [diet.id]);
+
+  // useEffect(() => {
+  //   getDiets();
+  // }, [getDiets]);
+
+  // useEffect(() => {
+  //   console.log(selectedDiets);
+  // }, [selectedDiets]);
+
+  // dodawanie pacjenta do bazy
 
   const addPatient = async () => {
-    const response = await fetch("http://localhost:5080/Patients/register", {
+    fetch("http://localhost:5080/Patients/register", {
       headers: { accept: "*/*", "Content-Type": "application/json" },
       method: "POST",
 
@@ -114,9 +126,9 @@ const RegisterDefault = function () {
         Email: patientData.Mail,
         Password: patientData.Password,
         Pesel: patientData.Pesel,
-        Diet: patientData.Diet,
-        Diseases: patientData.Diseases,
-        Allergies: patientData.Allergies,
+        // Diet: patientData.Diet,
+        // Diseases: patientData.Diseases,
+        // Allergies: patientData.Allergies,
         CovidCourse: patientData.CovidCourse,
         CovidTest: patientData.CovidTest,
       }),
@@ -125,13 +137,12 @@ const RegisterDefault = function () {
         if (res.status >= 400 && res.status < 600) {
           throw new Error("NIEPOPRAWNE DANE LOGOWANIA");
         }
-        res.json();
+        return res.json();
       })
       .then(
         (result) => {
           console.log(result);
-          // navigate("/doc/main");
-          return response.json();
+          navigate("/main");
         },
         (error) => {
           setError(error);
@@ -150,9 +161,9 @@ const RegisterDefault = function () {
     patientData.Mail = document.getElementById("mail").value;
     patientData.Password = document.getElementById("haslo").value;
     patientData.Pesel = document.getElementById("pesel").value;
-    patientData.Diet = "brak";
-    patientData.Diseases = selectedDiaseases;
-    patientData.Allergies = "brak";
+    // patientData.Diet = selectedDiets.label;
+    // patientData.Diseases = selectedDiaseases.label;
+    // patientData.Allergies = selectedAllergies;
     patientData.CovidCourse = document.getElementById("covid").value;
     patientData.CovidTest = document.getElementById("test").value;
 
@@ -160,21 +171,40 @@ const RegisterDefault = function () {
     try {
       const response = await addPatient();
       console.log(response);
+      // localStorage.setItem("userId", response);
     } catch (err) {
       console.log(err);
     }
   };
 
-  const handleDiseaseChange = (checked, disease) => {
-    if (checked) {
-      setSelectedDiaseases([...selectedDiaseases, disease]);
-    } else {
-      setSelectedDiaseases(
-        selectedDiaseases.filter((item) => item.id !== disease.id)
-      );
-    }
-    handleDataChange();
-  };
+  // const handleDiseaseChange = (checked, disease) => {
+  //   if (checked) {
+  //     setSelectedDiaseases([...selectedDiaseases, disease]);
+  //   } else {
+  //     setSelectedDiaseases(
+  //       selectedDiaseases.filter((item) => item.id !== disease.id)
+  //     );
+  //   }
+  //   handleDataChange();
+  // };
+  // const handleAllergiesChange = (checked, allergies) => {
+  //   if (checked) {
+  //     setSelectedAllergies([...selectedAllergies, allergies]);
+  //   } else {
+  //     setSelectedAllergies(
+  //       selectedAllergies.filter((item) => item.id !== allergies.id)
+  //     );
+  //   }
+  //   handleDataChange();
+  // };
+  // const handleDietsChange = (checked, diet) => {
+  //   if (checked) {
+  //     setSelectedDiets([...selectedDiets, diet]);
+  //   } else {
+  //     setSelectedDiets(selectedDiets.filter((item) => item.id !== diet.id));
+  //   }
+  //   handleDataChange();
+  // };
 
   return (
     <div>
@@ -236,7 +266,7 @@ const RegisterDefault = function () {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item>
+            {/* <Grid item>
               <Grid
                 container
                 direction="row"
@@ -265,7 +295,7 @@ const RegisterDefault = function () {
                                   },
                                 }}
                                 onChange={(e) =>
-                                  handleDiseaseChange(e.target.checked, d)
+                                  handleDiseaseChange(e.target.checked, d.label)
                                 }
                               />
                             }
@@ -297,6 +327,9 @@ const RegisterDefault = function () {
                                   color: "rgba(253, 105, 139, 0.85)",
                                 },
                               }}
+                              onChange={(e) =>
+                                handleAllergiesChange(e.target.checked, d.label)
+                              }
                             />
                           }
                           id="alergia"
@@ -331,6 +364,9 @@ const RegisterDefault = function () {
                                     color: "rgba(253, 105, 139, 0.85)",
                                   },
                                 }}
+                                onChange={(e) =>
+                                  handleDietsChange(e.target.checked, d.label)
+                                }
                               />
                             }
                             id="dieta"
@@ -343,7 +379,7 @@ const RegisterDefault = function () {
                   </Grid>
                 </Grid>
               </Grid>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
         <Grid item>
@@ -368,8 +404,8 @@ const RegisterDefault = function () {
                   />
                 </Grid>
                 <Grid item>
-                  ODPOWIEDZ TYLKO, JEŚLI POWYŻEJ ZAZNACZYŁAŚ / ZAZNACZYŁEŚ{" "}
-                  <strong>TAK</strong>
+                  JEŚLI ODPOWIEDZIAŁAŚ / ODPOWIEDZIAŁEŚ PRZECZĄCO NA POWYŻSZE
+                  PYTANIE WPISZ <strong>brak</strong>
                 </Grid>
                 <Grid item>
                   <FormLabel component="legend">
@@ -379,7 +415,7 @@ const RegisterDefault = function () {
                   <TextField
                     fullWidth
                     id="covid"
-                    label=" Wpisz jedną opcję: 'bezobjawowo', 'lekko', 'średnio', 'ciężko'"
+                    label=" Wpisz jedną opcję: 'bezobjawowo', 'lekko', 'średnio', 'ciężko', 'brak' "
                     variant="standard"
                   />
                 </Grid>
@@ -396,7 +432,9 @@ const RegisterDefault = function () {
                   fontFamily: "Sora",
                   borderColor: "rgba(106, 144, 100, 0.37)",
                 }}
-                onClick={handleDataChange}
+                onClick={() => {
+                  handleDataChange();
+                }}
               >
                 PRZEJDŹ DO STRONY GŁÓWNEJ
               </Button>

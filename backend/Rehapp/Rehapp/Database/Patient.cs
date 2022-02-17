@@ -12,9 +12,9 @@ public class Patient
     public string Pesel { get; set; }
     public string Mail { get; set; }
     public string Password { get; set; }
-    public string Diet { get; set; }
-    public string Allergie { get; set; }
-    public string Disease { get; set; }
+    //public string Diet { get; set; }
+    //public string Allergie { get; set; }
+    //public string Disease { get; set; }
     public string CovidTest { get; set; }
     public string CovidCourse { get; set; }
     

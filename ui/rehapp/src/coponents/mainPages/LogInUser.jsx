@@ -27,7 +27,7 @@ const LogIn = function () {
     })
       .then((res) => {
         if (res.status >= 400 && res.status < 600) {
-          throw new Error("NIEPOPRAWNE DANE LOGOWANIA");
+          throw new Error("NIEPOPRAWNE DANE");
         }
         return res.json();
       })
@@ -35,8 +35,6 @@ const LogIn = function () {
         (result) => {
           console.log("result", result);
           localStorage.setItem("userId", result);
-          // return response.json();
-          // navigate("/doc/main");
         },
         (error) => {
           setError(error);

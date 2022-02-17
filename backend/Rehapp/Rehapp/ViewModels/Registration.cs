@@ -31,23 +31,23 @@ namespace Rehapp.ViewModels
         [Required(AllowEmptyStrings = false, ErrorMessage = "PESEL jest wymagany!")]
         public string Pesel { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = " Należy wybrać przynjamniej jedną ditę lub 'brak'  !")]
+       // [Required(AllowEmptyStrings = false, ErrorMessage = " Należy wybrać przynjamniej jedną ditę lub 'brak'  !")]
        
-        public string Diet { get; set; }
+       // public string Diet { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Należy wybrać przynjamniej jedną alergię lub 'brak' !")]
-        public string Allergie { get; set; }
+       // [Required(AllowEmptyStrings = false, ErrorMessage = "Należy wybrać przynjamniej jedną alergię lub 'brak' !")]
+      //  public string Allergie { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Należy wybrać przynjamniej jedną chorbę lub 'brak' !")]
-        public string Diseases { get; set; }
+       // [Required(AllowEmptyStrings = false, ErrorMessage = "Należy wybrać przynjamniej jedną chorbę lub 'brak' !")]
+       // public string Diseases { get; set; }
         
         [RegularExpression(@"^(tak|nie)$", ErrorMessage = "Proszę wpisać jedną z dwóch opcji: tak; nie")]
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Proszę wpisać jedną z dwóch opcji: tak; nie")]
         public string CovidTest { get; set; }
-        [RegularExpression(@"^(bezobjawowo|lekko|średnio|ciężko)$", 
-            ErrorMessage = "Proszę wpisać jedną z czterech opcji: bezobjawowo; lekko; średnio; ciężko")]
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Proszę wpisać jedną z czterech opcji: bezobjawowo; lekko; średnio; ciężko")]
+        [RegularExpression(@"^(bezobjawowo|lekko|średnio|ciężko|brak)$", 
+            ErrorMessage = "Proszę wpisać jedną z pięciu opcji: bezobjawowo; lekko; średnio; ciężko")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Proszę wpisać jedną z pięciu opcji: bezobjawowo; lekko; średnio; ciężko; brak")]
         public string CovidCourse{ get; set; }
     }
 }

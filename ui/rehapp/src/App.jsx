@@ -2,7 +2,6 @@
 /* eslint-disable func-names */
 import * as React from "react";
 import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
 import Footer from "./coponents/Footer";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
@@ -18,45 +17,39 @@ import DocEditPatient from "./pages/doc/DocEditPatient";
 import UserProfile from "./pages/user/UserProfile";
 import UserMain from "./pages/user/UserMain";
 import UserInfo from "./pages/user/UserInfo";
-import UserExam from "./pages/user/UserExam";
-import UserExam2 from "./pages/user/UserExam2";
+// import UserExam from "./pages/user/UserExam";
+import UserCheck from "./pages/user/UserCheck";
 import UserRec from "./pages/user/UserRec";
 import UserEdit from "./pages/user/UserEdit";
 import RegisterDoc from "./pages/doc/RegisterDoc";
-import RegisterDefault from "./pages/user/register/RegisterDefault";
+import RegisterDefault from "./pages/user/RegisterDefault";
 
 export const UserContext = React.createContext({});
 const App = function () {
-  const [user, setUser] = useState();
-  const value = { user, setUser };
   return (
     <div>
-      <UserContext.Provider value={value}>
-        <Routes>
-          <Route path="/" element={<Start />} />
-          <Route path="/Test" element={<Test />} />
-
-          <Route path="/main" element={<Main />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/register" element={<RegisterDefault />} />
-
-          <Route path="/user/profile" element={<UserProfile />} />
-          <Route path="/user/profileEdit" element={<UserEdit />} />
-          <Route path="/user/main" element={<UserMain />} />
-          <Route path="/user/info" element={<UserInfo />} />
-          <Route path="/user/rec" element={<UserRec />} />
-          <Route path="/user/exam" element={<UserExam />} />
-          <Route path="/user/exam2" element={<UserExam2 />} />
-          <Route path="/doc/main" element={<DocMain />} />
-          <Route path="/doc/profile" element={<DocProfile />} />
-          <Route path="/doc/patients" element={<DocPatients />} />
-          <Route path="/doc/patientsEdit" element={<DocEditPatient />} />
-          <Route path="/doc/info" element={<DocInfo />} />
-          <Route path="/doc/edit" element={<DocEdit />} />
-          <Route path="/register/doc" element={<RegisterDoc />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </UserContext.Provider>
+      <Routes>
+        <Route path="/" element={<Start />} />
+        <Route path="/Test" element={<Test />} />
+        <Route path="/main" element={<Main />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/register" element={<RegisterDefault />} />
+        <Route path="/user/profile" element={<UserProfile />} />
+        <Route path="/user/profileEdit" element={<UserEdit />} />
+        <Route path="/user/main" element={<UserMain />} />
+        <Route path="/user/info" element={<UserInfo />} />
+        <Route path="/user/rec" element={<UserRec />} />
+        {/* // <Route path="/user/exam" element={<UserExam />} /> */}
+        <Route path="/user/check" element={<UserCheck />} />
+        <Route path="/doc/main" element={<DocMain />} />
+        <Route path="/doc/profile" element={<DocProfile />} />
+        <Route path="/doc/patients" element={<DocPatients />} />
+        <Route path="/doc/patientsEdit" element={<DocEditPatient />} />
+        <Route path="/doc/info" element={<DocInfo />} />
+        <Route path="/doc/edit" element={<DocEdit />} />
+        <Route path="/register/doc" element={<RegisterDoc />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
       <Footer />
     </div>
   );

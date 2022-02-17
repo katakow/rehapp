@@ -37,8 +37,8 @@ const UserMain = function ({ title }) {
                   }}
                 >
                   <div className="box">
-                    W zakładce Mój profil możesz zobaczyć i edytować wszystkie
-                    dane wprowadzone przez Ciebie przy rejestracji.
+                    W zakładce Mój profil możesz zobaczyć wszystkie dane
+                    wprowadzone przez Ciebie przy rejestracji.
                   </div>
                 </Box>
               </Grid>

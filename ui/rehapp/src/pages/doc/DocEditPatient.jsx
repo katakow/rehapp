@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 
-import { Grid, TextField } from "@mui/material";
+import { Grid } from "@mui/material";
 import Axios from "axios";
 import { useEffect, useState, useCallback } from "react";
 import FormLabel from "@mui/material/FormLabel";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
-import EditPatientSave from "../../coponents/docPage/buttons/EditPatientSave";
+// import EditPatientSave from "../../coponents/docPage/buttons/EditPatientSave";
 
 const DocPatients = function ({ title }) {
   const [patient, setPatient] = useState(null);
-  const [patientID, setPatientID] = useState(6);
+  const [patientID, setPatientID] = useState(0);
 
   const getPatient = useCallback(() => {
     Axios.get(`http://localhost:5080/Patients/${patientID}`).then(
@@ -21,11 +21,13 @@ const DocPatients = function ({ title }) {
   }, [patientID]);
 
   useEffect(() => {
-    getPatient();
-  }, [getPatient]);
+    if (patientID) getPatient();
+  }, [getPatient, patientID]);
 
   useEffect(() => {
-    setPatientID(6);
+    const userId = localStorage.getItem("patientId");
+    console.log(userId);
+    setPatientID(userId);
   }, [setPatientID]);
 
   return (
@@ -64,7 +66,7 @@ const DocPatients = function ({ title }) {
                   </FormLabel>
                 </Grid>
 
-                <Grid item>
+                {/* <Grid item>
                   <FormLabel>alergie</FormLabel>
                   <FormLabel component="legend">
                     {" "}
@@ -91,7 +93,7 @@ const DocPatients = function ({ title }) {
                       <strong key={patient.id}>{patient.disease} </strong>
                     )}
                   </FormLabel>
-                </Grid>
+                </Grid> */}
                 <Grid item>
                   <FormLabel>pozytywny wynik testu na COVID-19</FormLabel>
                   <FormLabel component="legend">
@@ -114,7 +116,7 @@ const DocPatients = function ({ title }) {
               </Grid>
             </Grid>
 
-            <Grid item>
+            {/* <Grid item>
               <Grid
                 container
                 direction="column"
@@ -202,17 +204,17 @@ const DocPatients = function ({ title }) {
                   </Grid>
                 </Grid>
               </Grid>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
         <Grid item alignSelf="flex-end">
-          <EditPatientSave />
+          {/* <EditPatientSave /> */}
         </Grid>
       </Grid>
     </div>
   );
 };
 DocPatients.defaultProps = {
-  title: "Edytuj zalecenia / badania",
+  title: "Zalecenia i  badania",
 };
 export default DocPatients;

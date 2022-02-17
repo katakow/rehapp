@@ -5,7 +5,6 @@ import PersonIcon from "@mui/icons-material/Person";
 import Axios from "axios";
 import { useEffect, useState, useCallback } from "react";
 import NavBarekDoc from "../../coponents/docPage/NavBarekDoc";
-import EditDoc from "../../coponents/docPage/buttons/EditDoc";
 
 const DocProfile = function ({ title }) {
   const [doctor, setDoctor] = useState(null);
@@ -95,7 +94,7 @@ const DocProfile = function ({ title }) {
           </Grid>
         </Grid>
         <Grid item alignSelf="flex-end">
-          <EditDoc />
+          {/* <EditDoc /> */}
         </Grid>
       </Grid>
     </div>

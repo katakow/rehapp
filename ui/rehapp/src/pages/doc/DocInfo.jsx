@@ -38,7 +38,18 @@ const DocInfo = function ({ title }) {
           </Grid>
         </Grid>
         <Grid item alignSelf="flex-end">
-          Przydatne linki:
+          <Grid container direction="column" spacing="10">
+            <Grid item>Przydatne linki:</Grid>
+            <Grid item>
+              {" "}
+              <a href="https://pacjent.gov.pl/koronawirus"> Strona rządowa </a>
+            </Grid>
+            <Grid item>
+              <a href="https://www.mp.pl/pacjent/choroby-zakazne/koronawirus">
+                Artykuły naukowe{" "}
+              </a>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </div>

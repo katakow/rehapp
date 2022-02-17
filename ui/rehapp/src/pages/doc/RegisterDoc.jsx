@@ -9,11 +9,11 @@ import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
 import FormControl from "@mui/material/FormControl";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavBar from "../../coponents/mainPages/NavBar";
 
 const Register = function () {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [doctorData, setDoctorData] = useState({
     FirstName: "",
     LastName: "",
@@ -24,7 +24,7 @@ const Register = function () {
   });
   const [error, setError] = useState(null);
   const addDoctor = async () => {
-    const response = await fetch("http://localhost:5080/Doctors/register", {
+    fetch("http://localhost:5080/Doctors/register", {
       headers: { accept: "*/*", "Content-Type": "application/json" },
       method: "POST",
 
@@ -40,13 +40,13 @@ const Register = function () {
         if (res.status >= 400 && res.status < 600) {
           throw new Error("NIEPOPRAWNE DANE LOGOWANIA");
         }
-        res.json();
+        return res.json();
       })
       .then(
         (result) => {
           console.log(result);
-          return response.json();
-          // navigate("/doc/main");
+          // return response.json();
+          navigate("/main");
         },
         (error) => {
           setError(error);

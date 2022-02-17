@@ -37,8 +37,8 @@ const UserMain = function ({ title }) {
                   }}
                 >
                   <div className="box">
-                    W zakładce Mój profil możesz zobaczyć i edytować wszystkie
-                    dane wprowadzone przez Ciebie przy rejestracji.
+                    W zakładce Mój profil możesz zobaczyć wszystkie dane
+                    wprowadzone przez Ciebie przy rejestracji.
                   </div>
                 </Box>
               </Grid>
@@ -56,8 +56,8 @@ const UserMain = function ({ title }) {
                   }}
                 >
                   <div className="box">
-                    W zakładce Pacjenci możesz przejrzeć i edytować dane
-                    wszystkich pacjentów.
+                    W zakładce Pacjenci możesz przejrzeć dane wszystkich
+                    pacjentów.
                   </div>
                 </Box>
               </Grid>

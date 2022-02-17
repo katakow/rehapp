@@ -58,7 +58,7 @@ export default function SimpleBottomNavigation() {
             />
           }
           onClick={() => {
-            navigate("/user/exam");
+            navigate("/user/check");
           }}
         />
         <BottomNavigationAction

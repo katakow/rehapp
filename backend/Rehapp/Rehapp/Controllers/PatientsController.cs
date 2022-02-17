@@ -58,9 +58,9 @@ public class PatientsController : ControllerBase
         Test.LastName = model.LastName;
         Test.Mail = model.Email;
         Test.Password = model.Password;
-        Test.Diet = model.Diet;
-        Test.Disease = model.Diseases;
-        Test.Allergie = model.Allergie;
+        //Test.Diet = model.Diet;
+        //Test.Disease = model.Diseases;
+        //Test.Allergie = model.Allergie;
         Test.CovidCourse = model.CovidCourse;
         Test.CovidTest = model.CovidTest;
         Test.Pesel = model.Pesel;
@@ -69,7 +69,7 @@ public class PatientsController : ControllerBase
         // POPRAWIC RETURNY 
         if (await this._patientsLogic.AddPatientAsync(Test) != null)
         {
-            return Ok(Test.Id);
+            return Ok(Test);
         }
         else
         {

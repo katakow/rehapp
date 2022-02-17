@@ -16,12 +16,8 @@ export default function SimpleBottomNavigation() {
       <Box sx={{ width: 50 }}>
         <BottomNavigation
           showLabels
-          // value={value}
-          // onChange={(_event, newValue) => {
-          //   setValue(newValue);
-          // }}
           onClick={() => {
-            navigate("/main");
+            navigate("/");
           }}
         >
           <BottomNavigationAction

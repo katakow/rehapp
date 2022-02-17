@@ -5,7 +5,6 @@ import { Grid, FormLabel } from "@mui/material";
 import Axios from "axios";
 import { useEffect, useState, useCallback } from "react";
 import NavBarek from "../../coponents/userPage/NavBarek";
-import EditUser from "../../coponents/userPage/buttons/EditUser";
 
 const UserProfile = function ({ title }) {
   const [patient, setPatient] = useState(null);
@@ -92,7 +91,7 @@ const UserProfile = function ({ title }) {
                     </Grid>
                   </Grid>
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                   <Grid container direction="column" spacing="50px">
                     <Grid item>
                       <FormLabel component="legend">
@@ -124,7 +123,7 @@ const UserProfile = function ({ title }) {
                       </FormLabel>
                     </Grid>
                   </Grid>
-                </Grid>
+                </Grid> */}
                 <Grid item>
                   <Grid container direction="column" spacing="50px">
                     <Grid item>
@@ -154,13 +153,13 @@ const UserProfile = function ({ title }) {
           </Grid>
         </Grid>
         <Grid item alignSelf="flex-end">
-          <EditUser />
+          {/* <EditUser /> */}
         </Grid>
       </Grid>
     </div>
   );
 };
 UserProfile.defaultProps = {
-  title: "Tu możesz przejrzeć i edytować wprowadzone wcześniej dane",
+  title: "Tu możesz przejrzeć wprowadzone wcześniej dane",
 };
 export default UserProfile;

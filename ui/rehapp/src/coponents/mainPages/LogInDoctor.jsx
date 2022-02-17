@@ -24,7 +24,7 @@ const LogInDoctor = function () {
     })
       .then((res) => {
         if (res.status >= 400 && res.status < 600) {
-          throw new Error("NIEPOPRAWNE DANE LOGOWANIA");
+          throw new Error("NIEPOPRAWNE DANE");
         }
         return res.json();
       })

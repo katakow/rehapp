@@ -60,7 +60,7 @@ public class DoctorsController : ControllerBase
         // POPRAWIC RETURNY 
         if (await this._doctorsLogic.AddDoctorAsync(Test) != null)
         {
-            return Ok(Test.Id);
+            return Ok(Test);
         }
         else
         {

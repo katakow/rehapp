@@ -32,6 +32,7 @@ const LogInDoctor = function () {
         (result) => {
           console.log("result", result);
           localStorage.setItem("userId", result);
+          navigate("/doc/main");
         },
         (error) => {
           setError(error);
@@ -83,7 +84,6 @@ const LogInDoctor = function () {
           }}
           onClick={() => {
             handleDataChange();
-            navigate("/doc/main");
           }}
         >
           ZALOGUJ SIĘ

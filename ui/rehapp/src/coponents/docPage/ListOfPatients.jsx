@@ -15,9 +15,6 @@ export default function FolderList() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [patients, setPatients] = useState([]);
 
-  // Note: the empty deps array [] means
-  // this useEffect will run once
-  // similar to componentDidMount()
   useEffect(() => {
     fetch("http://localhost:5080/Patients")
       .then((res) => res.json())
@@ -26,9 +23,6 @@ export default function FolderList() {
           setIsLoaded(true);
           setPatients(result);
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           setIsLoaded(true);
           setError(error);

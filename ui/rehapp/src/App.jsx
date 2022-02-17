@@ -5,24 +5,20 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./coponents/Footer";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
-import Test from "./pages/Test";
 import ErrorPage from "./pages/ErrorPage";
 import Info from "./pages/Info";
-import DocMain from "./pages/doc/DocMain";
-import DocProfile from "./pages/doc/DocProfile";
-import DocInfo from "./pages/doc/DocInfo";
-import DocEdit from "./pages/doc/DocEdit";
-import DocPatients from "./pages/doc/DocPatients";
-import DocEditPatient from "./pages/doc/DocEditPatient";
-import UserProfile from "./pages/user/UserProfile";
-import UserMain from "./pages/user/UserMain";
-import UserInfo from "./pages/user/UserInfo";
-// import UserExam from "./pages/user/UserExam";
-import UserCheck from "./pages/user/UserCheck";
-import UserRec from "./pages/user/UserRec";
-import UserEdit from "./pages/user/UserEdit";
-import RegisterDoc from "./pages/doc/RegisterDoc";
-import RegisterDefault from "./pages/user/RegisterDefault";
+import DocMain from "./pages/doctor/DoctorMain";
+import DocProfile from "./pages/doctor/DoctorProfile";
+import DocInfo from "./pages/doctor/DoctorInfo";
+import DocPatients from "./pages/doctor/DoctorSeeAllPatients";
+import DocSeePatient from "./pages/doctor/DoctorSeePatient";
+import UserProfile from "./pages/patient/PatientProfile";
+import UserMain from "./pages/patient/PatientMain";
+import UserInfo from "./pages/patient/PatientInfo";
+import UserCheck from "./pages/patient/PatientTests";
+import UserRec from "./pages/patient/PatientRecommendations";
+import RegisterDoc from "./pages/doctor/DoctorRegister";
+import RegisterDefault from "./pages/patient/PatientRegister";
 
 export const UserContext = React.createContext({});
 const App = function () {
@@ -30,23 +26,19 @@ const App = function () {
     <div>
       <Routes>
         <Route path="/" element={<Start />} />
-        <Route path="/Test" element={<Test />} />
         <Route path="/main" element={<Main />} />
         <Route path="/info" element={<Info />} />
         <Route path="/register" element={<RegisterDefault />} />
         <Route path="/user/profile" element={<UserProfile />} />
-        <Route path="/user/profileEdit" element={<UserEdit />} />
         <Route path="/user/main" element={<UserMain />} />
         <Route path="/user/info" element={<UserInfo />} />
         <Route path="/user/rec" element={<UserRec />} />
-        {/* // <Route path="/user/exam" element={<UserExam />} /> */}
         <Route path="/user/check" element={<UserCheck />} />
         <Route path="/doc/main" element={<DocMain />} />
         <Route path="/doc/profile" element={<DocProfile />} />
         <Route path="/doc/patients" element={<DocPatients />} />
-        <Route path="/doc/patientsEdit" element={<DocEditPatient />} />
+        <Route path="/doc/patientsEdit" element={<DocSeePatient />} />
         <Route path="/doc/info" element={<DocInfo />} />
-        <Route path="/doc/edit" element={<DocEdit />} />
         <Route path="/register/doc" element={<RegisterDoc />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

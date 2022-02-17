@@ -57,7 +57,7 @@ const Main = function () {
                           navigate("/register");
                         }}
                       >
-                        ZAREJESTRUJ SIĘ
+                        ZAREJESTRUJ SIĘ JAKO PACJENT
                       </Button>
                     </Grid>
                     <Grid item>

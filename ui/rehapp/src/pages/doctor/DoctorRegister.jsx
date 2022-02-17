@@ -45,7 +45,6 @@ const Register = function () {
       .then(
         (result) => {
           console.log(result);
-          // return response.json();
           navigate("/main");
         },
         (error) => {

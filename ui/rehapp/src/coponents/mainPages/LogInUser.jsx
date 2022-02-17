@@ -35,6 +35,7 @@ const LogIn = function () {
         (result) => {
           console.log("result", result);
           localStorage.setItem("userId", result);
+          navigate("/user/main");
         },
         (error) => {
           setError(error);
@@ -86,7 +87,6 @@ const LogIn = function () {
           }}
           onClick={() => {
             handleDataChange();
-            navigate("/user/main");
           }}
         >
           ZALOGUJ SIĘ

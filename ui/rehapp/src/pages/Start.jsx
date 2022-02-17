@@ -2,11 +2,9 @@
 /* eslint-disable func-names */
 /* eslint-disable react/prop-types */
 
-import { Grid } from "@mui/material";
+import { Grid, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import CoronavirusIcon from "@mui/icons-material/Coronavirus";
-import StartButtonInfo from "../coponents/mainPages/StartButtonInfo";
-import StartButtonMain from "../coponents/mainPages/StartButtonMain";
 import Header from "../coponents/mainPages/Header";
 
 const MainPage = function ({ title }) {
@@ -36,22 +34,37 @@ const MainPage = function ({ title }) {
           alignItems="center"
         >
           <Grid item>
-            <button1
+            <Button
+              variant="text"
+              sx={{
+                width: 500,
+                height: 200,
+                color: "rgba(253, 105, 139, 0.85)",
+                fontFamily: "Sora",
+              }}
               onClick={() => {
                 navigate("/info");
               }}
             >
-              <StartButtonInfo />
-            </button1>
+              Jeśli chcesz dowiedzieć się więcej na temat COVID-19, kliknij
+              tutaj!
+            </Button>
           </Grid>
           <Grid item>
-            <button2
+            <Button
+              variant="text"
+              sx={{
+                width: 480,
+                height: 200,
+                color: "rgba(106, 144, 100, 0.85)",
+                fontFamily: "Sora",
+              }}
               onClick={() => {
                 navigate("/main");
               }}
             >
-              <StartButtonMain />
-            </button2>
+              Jeśli chcesz dołączyć do nas lub się zalogować, kliknij tutaj!
+            </Button>
           </Grid>
         </Grid>
       </Grid>
